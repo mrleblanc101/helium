@@ -1,12 +1,10 @@
 <template>
     <div>
-        <!-- <Transition name="fade"> -->
-            <div v-if="preloading" class="preload">
-                <div>
-                    <img inline src="@/assets/svg/logo-preload.svg" />
-                </div>
+        <div v-if="!preloadHasRun" class="preload" @animationend.self="ended">
+            <div>
+                <img inline src="@/assets/svg/logo-preload.svg" />
             </div>
-        <!-- </Transition> -->
+        </div>
         <div class="overlay-footer">
             <AppHeader />
             <Nuxt />
@@ -20,13 +18,19 @@ export default {
     name: 'DefaultLayout',
     data() {
         return {
-            preloading: true,
+            preloadHasRun: false,
         };
     },
     created() {
-        setTimeout(() => {
-            // this.preloading = false;
-        }, 2000);
+        this.preloadHasRun = this.$cookies.get('preloadHasRun');
+    },
+    methods: {
+        ended() {
+            this.preloadHasRun = true;
+            this.$cookies.set('preloadHasRun', true, {
+                maxAge: 60 * 60 * 24
+            });
+        }
     }
 };
 </script>
@@ -50,9 +54,9 @@ export default {
     justify-content: center;
     background-color: $color-blue;
     overflow: hidden;
-    animation: raise-the-curtain 1s ease forwards 1.5s;
+    animation: raise-the-curtain 1s ease forwards 2s;
     svg {
-        animation: fade 1s ease forwards 0.75s;
+        animation: fade 1s ease forwards 1.5s;
         fill: $color-white;
         width: 130px;
         @media (min-width: 768px) {

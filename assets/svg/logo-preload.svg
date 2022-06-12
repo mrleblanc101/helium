@@ -14,6 +14,7 @@
       <rect id="Rectangle_114" data-name="Rectangle 114" width="132.855" height="131.201"/>
     </clipPath>
   </defs>
+  <!-- TODO: Fix animation off-center -->
   <g id="Groupe_85" data-name="Groupe 85">
     <g class="animating" id="Groupe_84" data-name="Groupe 84" clip-path="url(#clip-path)">
       <path id="Tracé_226" data-name="Tracé 226" d="M89.183,9.541l-.709-.216.386-1.26a1.988,1.988,0,0,1-2.365.718c-1.516-.466-2.38-1.766-1.77-3.76S86.785,2.418,88.3,2.9a2.615,2.615,0,0,1,1.974,2.82l-.83-.082A1.81,1.81,0,0,0,88.084,3.59c-1.06-.333-2.007.108-2.493,1.7s.053,2.478,1.116,2.8a1.918,1.918,0,0,0,2.431-1.085l-1.293-.4.3-.675,1.961.6Z" transform="translate(-1.833 -0.059)"/>

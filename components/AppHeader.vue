@@ -2,7 +2,7 @@
     <header class="header max-width-container">
         <NuxtLink to="/">
             <img v-if="$route.name === 'index'" inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
-            <img v-else inline class="icon-logo" src="@/assets/svg/logo-big.svg" alt="Hélium" />
+            <img v-else inline class="icon-logo-big" src="@/assets/svg/logo-expertises.svg" alt="Hélium" />
         </NuxtLink>
         <div class="nav-wrapper">
             <nav class="nav-main">
@@ -100,13 +100,14 @@ a {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 100%;
+            top: 75%;
             opacity: 0;
             transition: all 150ms ease;
         }
         &.nuxt-link-exact-active,
         &:hover {
             &::before {
+                top: 100%;
                 color: $color-blue;
                 opacity: 1;
             }
@@ -130,6 +131,11 @@ a {
 }
 .icon-logo {
     width: 126px;
+}
+.icon-logo-big {
+    width: 850px;
+    position: absolute;
+    left: (-130px - 40px);
 }
 .icon-social {
     width: 24px;
