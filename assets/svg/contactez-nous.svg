@@ -5,6 +5,7 @@
             transform-origin: center;
             animation: rotate 6s infinite linear;
         }
+        svg:focus .animating,
         svg:hover .animating {
             /* animation-play-state: paused; */
             animation-direction: reverse;

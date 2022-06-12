@@ -1,5 +1,5 @@
 <template>
-    <header class="max-width-container">
+    <header class="header max-width-container">
         <NuxtLink to="/">
             <img v-if="$route.name === 'index'" inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
             <img v-else inline class="icon-logo" src="@/assets/svg/logo-big.svg" alt="Hélium" />
@@ -62,7 +62,7 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-header {
+.header {
     position: absolute;
     top: 0;
     left: 0;
@@ -80,12 +80,16 @@ nav {
         padding: 0;
     }
 }
+a {
+    color: currentColor;
+    text-decoration: none;
+}
 .nav-wrapper {
     display: flex;
     align-items: center;
 }
 .nav-main {
-    padding-right: 25px;
+    gap: 0 25px;
     a {
         position: relative;
         display: inline-block;
@@ -129,9 +133,5 @@ nav {
 }
 .icon-social {
     width: 24px;
-}
-a {
-    color: currentColor;
-    text-decoration: none;
 }
 </style>
