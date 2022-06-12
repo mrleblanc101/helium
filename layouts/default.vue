@@ -28,10 +28,10 @@ export default {
         ended() {
             this.preloadHasRun = true;
             this.$cookies.set('preloadHasRun', true, {
-                maxAge: 60 * 60 * 24
+                maxAge: 60 * 60 * 24,
             });
-        }
-    }
+        },
+    },
 };
 </script>
 
