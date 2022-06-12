@@ -58,9 +58,7 @@
 </template>
 
 <script>
-export default {
-
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -94,7 +92,7 @@ nav {
         font-size: 20px;
         padding: 10px 35px;
         &::before {
-            content: "\2022";
+            content: '\2022';
             position: absolute;
             left: 50%;
             transform: translateX(-50%);

@@ -60,13 +60,20 @@
                             <a href="tel:418-961-8858">(418) 961-8858</a>
                         </div>
                         <NuxtLink to="/contact">
-                            <img inline class="icon-contact" src="@/assets/svg/contactez-nous.svg" alt="Contactez-nous">
+                            <img
+                                inline
+                                class="icon-contact"
+                                src="@/assets/svg/contactez-nous.svg"
+                                alt="Contactez-nous"
+                            />
                             <span class="visuallyhidden">Contactez-nous</span>
                         </NuxtLink>
                     </div>
                 </div>
                 <div class="copyright">
-                    <NuxtLink to="/"><img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" /></NuxtLink>
+                    <NuxtLink to="/"
+                        ><img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium"
+                    /></NuxtLink>
                     <div><small>Tous droits réservés. Agence Hélium © 2022</small></div>
                 </div>
             </div>
@@ -75,8 +82,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -115,7 +121,7 @@ nav {
         padding: 35px 0;
         transition: all 150ms ease;
         &::before {
-            content: "\2022";
+            content: '\2022';
             position: absolute;
             left: 0;
             opacity: 0;
