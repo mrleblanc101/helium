@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="copyright">
-                    <NuxtLink to="/"><img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium"></img></NuxtLink>
+                    <NuxtLink to="/"><img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" /></NuxtLink>
                     <div><small>Tous droits réservés. Agence Hélium © 2022</small></div>
                 </div>
             </div>
