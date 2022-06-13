@@ -156,6 +156,7 @@ a {
         display: inline-block;
         font-size: 70px;
         padding: 35px 0;
+        transition: all 150ms ease;
         @media (min-width: 1024px) {
             padding: 10px 35px;
             font-size: 20px;
@@ -172,9 +173,6 @@ a {
                 top: 75%;
                 opacity: 0;
             }
-        }
-        &.nuxt-link-exact-active {
-            color: $color-blue;
         }
         &:hover {
             @media (max-width: 1023px) {

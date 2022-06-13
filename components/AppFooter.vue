@@ -108,7 +108,6 @@ export default {};
         justify-content: space-between;
         align-content: space-between;
         align-items: stretch;
-        gap: 70px;
     }
 }
 nav {
@@ -202,7 +201,7 @@ a {
         font-weight: 400;
         margin-bottom: 28px;
         @media (min-width: 1024px) {
-            font-size: 76px;
+            font-size: 70px;
         }
     }
 }
