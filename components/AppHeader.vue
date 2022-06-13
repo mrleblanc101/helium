@@ -29,38 +29,7 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-social">
-                <ul>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Facebook</span>
-                            <img inline class="icon-social" src="@/assets/svg/facebook.svg" alt="Facebook" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Instagram</span>
-                            <img inline class="icon-social" src="@/assets/svg/instagram.svg" alt="Instagram" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Behance</span>
-                            <img inline class="icon-social" src="@/assets/svg/behance.svg" alt="Behance" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">LinkedIn</span>
-                            <img inline class="icon-social" src="@/assets/svg/linkedin.svg" alt="LinkedIn" />
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <NavSocial />
         </div>
     </header>
 </template>

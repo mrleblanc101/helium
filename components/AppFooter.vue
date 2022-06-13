@@ -17,42 +17,11 @@
                     </li>
                 </ul>
             </nav>
-            <nav class="nav-social">
-                <ul>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Facebook</span>
-                            <img inline class="icon-social" src="@/assets/svg/facebook.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Instagram</span>
-                            <img inline class="icon-social" src="@/assets/svg/instagram.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">Behance</span>
-                            <img inline class="icon-social" src="@/assets/svg/behance.svg" />
-                        </a>
-                    </li>
-                    <li>
-                        <!-- TODO: Lien -->
-                        <a href="" target="_blank">
-                            <span class="visuallyhidden">LinkedIn</span>
-                            <img inline class="icon-social" src="@/assets/svg/linkedin.svg" />
-                        </a>
-                    </li>
-                </ul>
-            </nav>
+            <NavSocial />
             <div class="col-infos">
                 <h2>Travaillons ensemble!</h2>
                 <div class="contact-wrapper">
-                    <div>
+                    <div class="contact-wrapper-links">
                         <a href="mailto:info@agencehelium.com">info@agencehelium.com</a>
                         <a href="tel:418-961-8858">(418) 961-8858</a>
                     </div>
@@ -63,9 +32,10 @@
                 </div>
             </div>
             <div class="copyright">
-                <NuxtLink to="/">
+                <NuxtLink class="logo-wrapper" to="/">
                     <img inline class="icon-logo" src="@/assets/svg/logo.svg" />
                 </NuxtLink>
+                <NavSocial />
                 <small>Tous droits réservés. Agence Hélium © 2022</small>
             </div>
         </div>
@@ -99,8 +69,9 @@ export default {};
     width: 100%;
     gap: 24px;
     align-items: center;
+    justify-content: space-evenly;
     height: 100%;
-    padding: 70px 20px 40px;
+    padding: 50px 20px;
     @media (min-width: 1024px) {
         padding: 0 40px;
         height: (650px + 80px);
@@ -157,20 +128,9 @@ a {
     }
 }
 .nav-social {
-    @media (max-width: 1023px) {
-        order: 3;
-    }
-    ul {
-        display: flex;
-        margin: -10px;
-    }
-    a {
-        display: flex;
-        padding: 10px;
-        transition: all 150ms ease;
-        &:hover {
-            opacity: 0.7;
-        }
+    display: none;
+    @media (min-width: 1024px) {
+        display: block;
     }
 }
 .icon-logo {
@@ -182,16 +142,11 @@ a {
         width: 184px;
     }
 }
-.icon-social {
-    width: 24px;
-}
 .col-infos {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto 0;
     @media (min-width: 1024px) {
-        margin: 0;
         align-items: flex-end;
     }
     h2 {
@@ -200,9 +155,9 @@ a {
         font-size: 30px;
         font-weight: 400;
         margin-bottom: 28px;
+        margin-top: 0;
         @media (min-width: 1024px) {
             font-size: 70px;
-            margin-top: 0;
         }
     }
 }
@@ -228,17 +183,27 @@ a {
             text-decoration: underline;
         }
     }
+    .contact-wrapper-links {
+        display: none;
+        @media (min-width: 767px) {
+            display: block;
+        }
+    }
 }
 .copyright {
     text-align: center;
     @media (min-width: 1024px) {
         text-align: right;
     }
-    @media (max-width: 1023px) {
-        order: 4;
+    .nav-social {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        @media (min-width: 1024px) {
+            display: none;
+        }
     }
-
-    a {
+    .logo-wrapper {
         display: none;
         margin-bottom: 40px;
         @media (min-width: 1024px) {
