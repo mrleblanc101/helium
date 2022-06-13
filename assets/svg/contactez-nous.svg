@@ -53,6 +53,6 @@
                 <path data-name="Tracé 208" d="m91.246 148.881 3.341-.738 3.881 4.5a5.321 5.321 0 0 1 .607-.159l3.341-.738-1.123-5.083 3.059-.675 3.64 16.471-6.4 1.415c-4 .883-6.978-.754-7.753-4.26a5.331 5.331 0 0 1 1.975-5.693Zm13.1 11.616-1.352-6.118-3.341.739c-2.023.447-3 1.724-2.548 3.771s1.876 2.794 3.9 2.347Z"/>
             </g>
         </g>
-        <text data-name="→" transform="translate(58.5 121.435)" font-size="90" font-family="PPRadioGrotesk-Light, PP Radio Grotesk" font-weight="300"><tspan x="0" y="0">→</tspan></text>
+        <text data-name="→" transform="translate(58.5 121.435)" font-size="90" font-family="PP Radio Grotesk" font-weight="300"><tspan x="0" y="0">→</tspan></text>
     </g>
 </svg>

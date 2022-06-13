@@ -3,6 +3,10 @@ import svgo from './svgoConfig.js';
 export default {
     target: 'static',
 
+    router: {
+        base: '/helium/',
+    },
+
     head: {
         title: 'Hélium',
         htmlAttrs: {
@@ -17,11 +21,7 @@ export default {
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     },
 
-    css: [
-        { src: '@/assets/scss/normalize.scss', lang: 'scss' },
-        { src: '@/assets/scss/fonts.scss', lang: 'scss' },
-        { src: '@/assets/scss/app.scss', lang: 'scss' },
-    ],
+    css: [{ src: '@/assets/scss/app.scss', lang: 'scss' }],
 
     plugins: [],
 

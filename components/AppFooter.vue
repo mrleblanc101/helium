@@ -89,7 +89,7 @@ export default {};
     background-color: $color-blue;
     color: $color-white;
     text-align: center;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         text-align: left;
     }
 }
@@ -101,7 +101,7 @@ export default {};
     align-items: center;
     height: 100%;
     padding: 70px 20px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         padding: 0 40px;
         height: (650px + 80px);
         flex-wrap: wrap;
@@ -128,7 +128,7 @@ a {
 .nav-main {
     ul {
         margin: -15px 0;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             margin: -35px 0;
         }
     }
@@ -138,7 +138,7 @@ a {
         font-size: 30px;
         padding: 15px 0;
         transition: all 150ms ease;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             font-size: 60px;
             padding: 35px 0;
         }
@@ -158,7 +158,7 @@ a {
     }
 }
 .nav-social {
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
         order: 3;
     }
     ul {
@@ -179,7 +179,7 @@ a {
 }
 .icon-contact {
     width: 90px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         width: 184px;
     }
 }
@@ -191,7 +191,7 @@ a {
     flex-direction: column;
     align-items: center;
     margin: auto 0;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         margin: 0;
         align-items: flex-end;
     }
@@ -201,7 +201,7 @@ a {
         font-size: 30px;
         font-weight: 400;
         margin-bottom: 28px;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             font-size: 76px;
         }
     }
@@ -210,7 +210,7 @@ a {
     display: inline-flex;
     flex-direction: column;
     gap: 10px 30px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -220,7 +220,7 @@ a {
     a {
         color: $color-alto;
         display: block;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             font-size: 30px;
             line-height: 1.3;
         }
@@ -231,17 +231,17 @@ a {
 }
 .copyright {
     text-align: center;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         text-align: right;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 1023px) {
         order: 4;
     }
 
     a {
         display: none;
         margin-bottom: 40px;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             display: block;
         }
     }
