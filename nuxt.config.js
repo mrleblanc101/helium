@@ -3,6 +3,8 @@ import svgo from './svgoConfig.js';
 export default {
     target: 'static',
 
+    ssr: false,
+
     router: {
         base: '/helium/',
     },
