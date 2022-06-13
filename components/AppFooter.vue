@@ -202,6 +202,7 @@ a {
         margin-bottom: 28px;
         @media (min-width: 1024px) {
             font-size: 70px;
+            margin-top: 0;
         }
     }
 }
