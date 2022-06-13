@@ -10,23 +10,24 @@ export default {
     head: {
         title: 'Hélium',
         htmlAttrs: {
-            lang: 'en',
+            lang: 'fr',
         },
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
+            { name: 'theme-color', content: '#242aff' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
             { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-            { rel: 'mask-icon', href: '/safari-pinned-tab.ico', color: '#0000ff' },
+            { rel: 'mask-icon', href: '/safari-pinned-tab.ico', color: '#242aff' },
             { rel: 'manifest', href: '/site.webmanifest' },
         ],
     },
 
-    loading: { color: '#0000ff', height: '5px' },
+    loading: { color: '#242aff', height: '5px' },
 
     css: [{ src: '@/assets/scss/app.scss', lang: 'scss' }],
 

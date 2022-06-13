@@ -20,6 +20,7 @@ export default {
         };
     },
     created() {
+        console.log('preloadHasRun', this.$cookies.get('preloadHasRun'));
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
     },
     methods: {
@@ -38,7 +39,9 @@ export default {
     position: relative;
     z-index: 2;
     background-color: $color-white;
-    margin-bottom: 100vh;
+    @media (min-width: 1024px) {
+        margin-bottom: 100vh;
+    }
 }
 .preload {
     position: fixed;

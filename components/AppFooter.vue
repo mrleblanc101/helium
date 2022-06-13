@@ -48,11 +48,6 @@ export default {};
 
 <style lang="scss" scoped>
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
     display: flex;
     align-items: center;
     height: 100vh;
@@ -60,6 +55,11 @@ export default {};
     color: $color-white;
     text-align: center;
     @media (min-width: 1024px) {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
         text-align: left;
     }
 }
