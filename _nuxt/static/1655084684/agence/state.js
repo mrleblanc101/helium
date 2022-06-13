@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fhelium\u002F_nuxt\u002Fstatic\u002F1655084684",layout:"default",error:{statusCode:404,path:a,message:"This page could not be found"},serverRendered:false,routePath:a,config:{_app:{basePath:"\u002Fhelium\u002F",assetsPath:"\u002Fhelium\u002F_nuxt\u002F",cdnURL:null},content:{dbHash:"9ee6285e"}}}}("\u002Fagence"));
