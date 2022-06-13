@@ -113,10 +113,12 @@ a {
     right: 0;
     bottom: 0;
     left: 0;
+    height: 100dvh;
     background-color: $color-blue;
     align-items: center;
     justify-content: center;
     transition: clip-path 750ms cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate3d(0, 0, 0);
     clip-path: circle(0% at 100% 0);
     padding: 40px;
     @media (min-width: 1024px) {
@@ -154,7 +156,7 @@ a {
     a {
         position: relative;
         display: inline-block;
-        font-size: 70px;
+        font-size: 44px;
         padding: 35px 0;
         transition: all 150ms ease;
         @media (min-width: 1024px) {
@@ -227,6 +229,7 @@ a {
     border: none;
     background: none;
     padding: 0;
+    color: $color-black;
     transition-delay: 500ms;
     @media (min-width: 1024px) {
         display: none;

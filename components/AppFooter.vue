@@ -100,7 +100,7 @@ export default {};
     gap: 24px;
     align-items: center;
     height: 100%;
-    padding: 70px 20px;
+    padding: 70px 20px 40px;
     @media (min-width: 1024px) {
         padding: 0 40px;
         height: (650px + 80px);
