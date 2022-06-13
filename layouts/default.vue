@@ -1,9 +1,7 @@
 <template>
     <div>
         <div v-if="!preloadHasRun" class="preload" @animationend.self="ended">
-            <div>
-                <img inline src="@/assets/svg/logo-preload.svg" />
-            </div>
+            <img inline src="@/assets/svg/logo-preload.svg" />
         </div>
         <div class="overlay-footer">
             <AppHeader />
