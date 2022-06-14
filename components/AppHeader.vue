@@ -4,12 +4,12 @@
             <img v-if="$route.name === 'index'" inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
             <img v-else inline class="icon-logo-big" src="@/assets/svg/logo-expertises.svg" alt="Hélium" />
         </NuxtLink>
-        <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="isOpen = !isOpen">
+        <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
         </button>
-        <div class="nav-wrapper">
+        <div ref="nav" class="nav-wrapper">
             <NuxtLink to="/">
                 <img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
             </NuxtLink>
@@ -35,6 +35,8 @@
 </template>
 
 <script>
+import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 export default {
     data() {
         return {
@@ -44,6 +46,19 @@ export default {
     watch: {
         $route() {
             this.isOpen = false;
+        },
+    },
+    beforeDestroy() {
+        clearAllBodyScrollLocks();
+    },
+    methods: {
+        toggle() {
+            this.isOpen = !this.isOpen;
+            if (this.isOpen) {
+                disableBodyScroll(this.$refs.nav);
+            } else {
+                enableBodyScroll(this.$refs.nav);
+            }
         },
     },
 };
@@ -58,8 +73,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 38px 20px;
-    height: 114px;
+    padding: 22px 20px;
+    @media (min-width: 1024px) {
+        padding: 38px 20px;
+    }
 }
 nav {
     ul {
@@ -89,7 +106,7 @@ a {
     transition: clip-path 750ms cubic-bezier(0.32, 0, 0.67, 0);
     transform: translate3d(0, 0, 0);
     clip-path: circle(0% at 100% 0);
-    padding: 40px;
+    padding: 22px;
     @media (min-width: 1024px) {
         position: static;
         color: $color-black;
@@ -105,7 +122,7 @@ a {
     }
     .icon-logo {
         position: absolute;
-        top: 42px;
+        top: 22px;
         left: 20px;
         @media (min-width: 1024px) {
             display: none;
@@ -213,8 +230,6 @@ a {
         transition: all 0.3s ease-in-out;
     }
     &.is-open {
-        position: fixed;
-        right: 20px;
         color: $color-white;
         transition-delay: 0ms;
         .line {
