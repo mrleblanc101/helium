@@ -19,17 +19,49 @@ button,
 .max-width-container {
     max-width: (1650px + 80px);
     margin: 0 auto;
-    padding: 20px;
+    padding: 36px;
     @media (min-width: 768px) {
         padding: 40px;
     }
 }
 section {
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     &:nth-child(even) {
-        background: grey;
+        background: $color-black;
+        color: $color-white;
+    }
+}
+img {
+    max-width: 100%;
+}
+.button.primary {
+    position: relative;
+    display: inline-block;
+    border: 1px solid $color-white;
+    color: $color-white;
+    padding: 10px 33px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 20px;
+    &::before {
+        content: "";
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        opacity: 0.15;
+        background-color: $color-white;
+        transition: height 400ms ease;
+    }
+    &:hover {
+        &::before {
+            height: 100%;
+        }
     }
 }

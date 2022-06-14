@@ -67,15 +67,16 @@ export default {
 <style lang="scss" scoped>
 .header {
     position: absolute;
+    z-index: 10;
     top: 0;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 20px;
+    padding: 22px 36px;
     @media (min-width: 1024px) {
-        padding: 38px 20px;
+        padding: 38px 36px;
     }
 }
 nav {
@@ -124,7 +125,7 @@ a {
     .icon-logo {
         position: absolute;
         top: 22px;
-        left: 20px;
+        left: 36px;
         @media (min-width: 1024px) {
             display: none;
         }
