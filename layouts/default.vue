@@ -20,19 +20,16 @@ export default {
         };
     },
     created() {
-        console.log('preloadHasRun', this.$cookies.get('preloadHasRun'));
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
     },
     methods: {
         ended() {
-            console.log('before', this.preloadHasRun);
             this.$nextTick(() => {
                 this.preloadHasRun = true;
                 this.$cookies.set('preloadHasRun', true, {
                     maxAge: 60 * 60 * 24,
                     path: '/',
                 });
-                console.log('after', this.preloadHasRun);
             });
         },
     },

@@ -126,7 +126,7 @@ a {
         position: relative;
         display: inline-block;
         font-size: 44px;
-        padding: 35px 0;
+        padding: 22px 0;
         transition: all 150ms ease;
         @media (min-width: 1024px) {
             padding: 10px 35px;
