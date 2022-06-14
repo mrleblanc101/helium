@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="479.344" height="386.767" viewBox="0 0 479.344 386.767">
+  <g id="Groupe_213" data-name="Groupe 213" transform="translate(-1266.656 -3594.616)">
+    <g id="Groupe_16" data-name="Groupe 16" transform="translate(801.398 -1469.607)">
+      <path id="Tracé_16" data-name="Tracé 16" d="M381.768,190.884c0,105.422-85.462,190.883-190.884,190.883S0,296.306,0,190.884,85.462,0,190.884,0,381.768,85.461,381.768,190.884" transform="translate(521.677 5066.724)" fill="none" stroke="#fff" stroke-width="5"/>
+      <g id="Groupe_14" data-name="Groupe 14" transform="translate(844.378 5207.833)">
+        <path id="Tracé_19" data-name="Tracé 19" d="M588.389,307.8a50.112,50.112,0,1,1-50.112-50.113A50.113,50.113,0,0,1,588.389,307.8" transform="translate(-488.165 -257.682)" fill="#fc6210"/>
+        <text id="Concurrence" transform="translate(50.112 55.612)" fill="#fff" font-size="14" font-family="PPRadioGrotesk-Regular, PP Radio Grotesk" letter-spacing="0.05em"><tspan x="-40.761" y="0">Concurrence</tspan></text>
+      </g>
+      <g id="Groupe_17" data-name="Groupe 17" transform="translate(465.258 5191.921)">
+        <path id="Tracé_19-2" data-name="Tracé 19" d="M620.212,323.707a66.024,66.024,0,1,1-66.023-66.025,66.025,66.025,0,0,1,66.023,66.025" transform="translate(-488.165 -257.682)" fill="#2400ff"/>
+        <text id="Votre_marque" data-name="Votre
+marque" transform="translate(65.569 61.024)" fill="#fff" font-size="21" font-family="PPRadioGrotesk-Regular, PP Radio Grotesk" letter-spacing="0.05em"><tspan x="-24.791" y="0">Votre</tspan><tspan x="-35.427" y="25">marque</tspan></text>
+      </g>
+      <text id="Clients" transform="translate(712.561 5272.107)" fill="#fff" font-size="36" font-family="PPRadioGrotesk-Bold, PP Radio Grotesk" font-weight="700" letter-spacing="0.03em"><tspan x="-56.772" y="0">Clients</tspan></text>
+    </g>
+  </g>
+</svg>
