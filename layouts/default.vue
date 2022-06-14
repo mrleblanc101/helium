@@ -52,7 +52,8 @@ export default {
     left: 0;
     bottom: 0;
     right: 0;
-    height: 100dvh;
+    height: 100vh;
+    will-change: auto;
     display: flex;
     align-items: center;
     justify-content: center;

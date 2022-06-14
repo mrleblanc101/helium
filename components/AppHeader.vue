@@ -97,9 +97,9 @@ a {
     flex-direction: column;
     top: 0;
     right: 0;
-    bottom: 0;
     left: 0;
-    height: 100dvh;
+    height: 100vh;
+    will-change: auto;
     background-color: $color-blue;
     align-items: center;
     justify-content: center;
@@ -108,6 +108,7 @@ a {
     clip-path: circle(0% at 100% 0);
     padding: 22px;
     @media (min-width: 1024px) {
+        height: auto;
         position: static;
         color: $color-black;
         clip-path: none;
@@ -142,8 +143,8 @@ a {
     a {
         position: relative;
         display: inline-block;
-        font-size: 44px;
-        padding: 22px 0;
+        font-size: 40px;
+        padding: 20px 0;
         transition: all 150ms ease;
         @media (min-width: 1024px) {
             padding: 10px 35px;
