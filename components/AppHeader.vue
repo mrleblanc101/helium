@@ -99,7 +99,7 @@ a {
     top: 0;
     right: 0;
     left: 0;
-    height: 100vh;
+    bottom: 0;
     will-change: auto;
     background-color: $color-blue;
     align-items: center;
@@ -109,7 +109,6 @@ a {
     clip-path: circle(0% at 100% 0);
     padding: 22px;
     @media (min-width: 1024px) {
-        height: auto;
         position: static;
         color: $color-black;
         clip-path: none;

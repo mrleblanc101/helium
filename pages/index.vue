@@ -34,7 +34,7 @@
                     <NuxtLink class="button primary" to="/expertise">En savoir plus</NuxtLink>
                 </div>
                 <div>
-                    <img src="@/assets/svg/img-experience.svg" alt="" />
+                    <img src="@/assets/svg/img-experience.svg" alt="" width="520px" />
                 </div>
             </div>
         </section>
@@ -56,8 +56,18 @@
                         des solutions en fonction de votre clientèle cible.
                     </p>
                 </div>
-                <div>
-                    <img src="@/assets/svg/img-experience.svg" alt="" />
+                <div class="bubbles">
+                    <button
+                        v-for="(slide, index) in slides"
+                        :key="`slide-${index}`"
+                        type="button"
+                        class="bubble"
+                        :class="{ 'is-active': index === currentSlide }"
+                        @click="changeSlide(index)"
+                    >
+                        <span class="index">{{ index + 1 }}</span>
+                        <span class="label" v-html="slide"></span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -84,6 +94,33 @@ export default {
         VueTyper,
         MarqueeText,
     },
+    data() {
+        return {
+            interval: null,
+            currentSlide: 0,
+            slides: [
+                'Stratégie <br />de marque',
+                'Identité <br />visuelle',
+                'Déploiement <br />de la marque',
+                'Communications',
+            ],
+        };
+    },
+    created() {
+        this.resetInterval();
+    },
+    methods: {
+        changeSlide(index) {
+            this.currentSlide = index;
+            this.resetInterval();
+        },
+        resetInterval() {
+            clearInterval(this.interval);
+            this.interval = setInterval(() => {
+                this.currentSlide = this.currentSlide !== 3 ? this.currentSlide + 1 : 0;
+            }, 3000);
+        },
+    },
 };
 </script>
 
@@ -91,12 +128,24 @@ export default {
 .section-home {
     position: relative;
     h1 {
-        font-size: 60px;
-        max-width: 1060px;
+        font-size: 30px;
+        max-width: 300px;
         margin: 0 auto;
         font-weight: 400;
+        @media (min-width: 768px) {
+            font-size: 60px;
+            max-width: 1060px;
+        }
+        @media (max-width: 767px) {
+            br {
+                display: none;
+            }
+        }
         .vue-typer {
-            display: inline-block;
+            display: block;
+            @media (min-width: 768px) {
+                display: inline-block;
+            }
         }
         ::v-deep .typed {
             color: $color-blue;
@@ -109,18 +158,31 @@ export default {
         display: flex;
         white-space: nowrap;
         bottom: 90px;
-        font-size: 50px;
+        font-size: 30px;
         color: $color-blue;
+        @media (min-width: 768px) {
+            font-size: 50px;
+        }
     }
 }
 .section-hero {
     h2 {
-        font-size: 60px;
+        font-size: 20px;
         max-width: 1060px;
         margin: 0 auto;
         font-weight: 400;
         text-align: center;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 60px;
+            line-height: 1.2;
+        }
         svg {
+            @media (max-width: 767px) {
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 32px;
+            }
             fill: $color-blue;
         }
     }
@@ -132,32 +194,120 @@ export default {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap-reverse;
         gap: 50px 100px;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
     }
     h2 {
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 400;
         max-width: 700px;
         margin: 0;
         margin-bottom: 36px;
+        @media (min-width: 768px) {
+            font-size: 60px;
+        }
     }
     p {
-        font-size: 24px;
+        font-size: 16px;
         opacity: 0.7;
         max-width: 700px;
         margin-bottom: 62px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 24px;
+        }
+    }
+}
+.section-experience {
+    overflow: hidden;
+    .bubbles {
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        @media (max-width: 1023px) {
+            max-width: 400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+    .bubble {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 145px;
+        height: 145px;
+        color: $color-white;
+        text-align: center;
+        z-index: 0;
+        appearance: none;
+        background: none;
+        border: none;
+        &:not(.is-active) {
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: $color-blue;
+            z-index: -1;
+            transition: all 300ms ease;
+        }
+        .index {
+            font-size: 28px;
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+            opacity: 1;
+            transition: all 300ms ease;
+        }
+        .label {
+            font-size: 24px;
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+            opacity: 0;
+            transition: all 300ms ease;
+        }
+        &.is-active {
+            &::before {
+                transform: scale(1.35);
+            }
+            .label {
+                opacity: 1;
+            }
+            .index {
+                opacity: 0;
+            }
+        }
     }
 }
 .section-projets {
     min-height: 0;
-    padding: 120px 0 170px;
+    padding: 100px 0;
     justify-content: flex-start;
+    @media (min-width: 768px) {
+        padding: 140px 0;
+    }
     .marquee {
         display: flex;
         white-space: nowrap;
-        font-size: 100px;
+        font-size: 40px;
         color: $color-blue;
         text-transform: uppercase;
+        @media (min-width: 768px) {
+            font-size: 100px;
+        }
     }
 }
 </style>
