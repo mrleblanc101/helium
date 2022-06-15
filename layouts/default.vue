@@ -60,7 +60,6 @@ export default {
     bottom: 0;
     right: 0;
     height: 100vh;
-    height: 100lvh;
     will-change: auto;
     display: flex;
     align-items: center;
