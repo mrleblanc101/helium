@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="!preloadHasRun" class="preload" @animationend.self="ended">
+        <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
             <img inline src="@/assets/svg/logo-preload.svg" />
         </div>
         <div class="overlay-footer">
@@ -22,7 +22,7 @@ export default {
         };
     },
     created() {
-        disableBodyScroll();
+        disableBodyScroll(this.$refs.preload);
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
     },
     beforeDestroy() {
@@ -31,8 +31,8 @@ export default {
     methods: {
         ended() {
             this.$nextTick(() => {
+                enableBodyScroll(this.$refs.preload);
                 this.preloadHasRun = true;
-                enableBodyScroll();
                 this.$cookies.set('preloadHasRun', true, {
                     maxAge: 60 * 60 * 24,
                     path: '/',
