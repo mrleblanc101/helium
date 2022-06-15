@@ -12,6 +12,8 @@
 </template>
 
 <script>
+import { clearAllBodyScrollLocks, disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
+
 export default {
     name: 'DefaultLayout',
     data() {
@@ -20,12 +22,17 @@ export default {
         };
     },
     created() {
+        disableBodyScroll();
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
+    },
+    beforeDestroy() {
+        clearAllBodyScrollLocks();
     },
     methods: {
         ended() {
             this.$nextTick(() => {
                 this.preloadHasRun = true;
+                enableBodyScroll();
                 this.$cookies.set('preloadHasRun', true, {
                     maxAge: 60 * 60 * 24,
                     path: '/',
