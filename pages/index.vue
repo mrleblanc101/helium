@@ -110,7 +110,7 @@ export default {
             ],
         };
     },
-    created() {
+    mounted() {
         this.resetInterval();
     },
     methods: {
