@@ -22,10 +22,10 @@ export default {
             { name: 'theme-color', content: '#242aff' },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
-            { rel: 'mask-icon', href: '/safari-pinned-tab.ico', color: '#242aff' },
-            { rel: 'manifest', href: '/site.webmanifest' },
+            { rel: 'icon', type: 'image/x-icon', href: '/helium/favicon.ico' },
+            { rel: 'apple-touch-icon', href: '/helium/apple-touch-icon.png' },
+            { rel: 'mask-icon', href: '/helium/safari-pinned-tab.ico', color: '#242aff' },
+            { rel: 'manifest', href: '/helium/site.webmanifest' },
         ],
     },
 
