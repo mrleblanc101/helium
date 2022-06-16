@@ -33,8 +33,18 @@
                     </p>
                     <NuxtLink class="button primary" to="/expertise">En savoir plus</NuxtLink>
                 </div>
-                <div>
-                    <img src="@/assets/svg/img-experience.svg" alt="" width="520px" />
+                <div class="bubbles">
+                    <button
+                        v-for="(slide, index) in slides"
+                        :key="`slide-${index}`"
+                        type="button"
+                        class="bubble"
+                        :class="{ 'is-active': index === currentSlide }"
+                        @click="changeSlide(index)"
+                    >
+                        <span class="index">{{ index + 1 }}</span>
+                        <span class="label" v-html="slide"></span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -56,19 +66,7 @@
                         des solutions en fonction de votre clientèle cible.
                     </p>
                 </div>
-                <div class="bubbles">
-                    <button
-                        v-for="(slide, index) in slides"
-                        :key="`slide-${index}`"
-                        type="button"
-                        class="bubble"
-                        :class="{ 'is-active': index === currentSlide }"
-                        @click="changeSlide(index)"
-                    >
-                        <span class="index">{{ index + 1 }}</span>
-                        <span class="label" v-html="slide"></span>
-                    </button>
-                </div>
+                <div v-html="imgExperience"></div>
             </div>
         </section>
         <section class="section-projets">
@@ -87,6 +85,7 @@
 <script>
 import { VueTyper } from 'vue-typer';
 import MarqueeText from 'vue-marquee-text-component';
+import imgExperience from '@/assets/svg/img-experience.svg?raw';
 
 export default {
     name: 'HomePage',
@@ -98,6 +97,7 @@ export default {
         return {
             interval: null,
             currentSlide: 0,
+            imgExperience,
             slides: [
                 'Stratégie <br />de marque',
                 'Identité <br />visuelle',
@@ -222,7 +222,7 @@ export default {
         }
     }
 }
-.section-experience {
+.section-expertises {
     overflow: hidden;
     .bubbles {
         display: flex;
@@ -290,6 +290,12 @@ export default {
                 opacity: 0;
             }
         }
+    }
+}
+.section-experience {
+    ::v-deep svg {
+        width: 100%;
+        max-width: 520px;
     }
 }
 .section-projets {

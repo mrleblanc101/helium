@@ -39,7 +39,7 @@ export default {
 
     buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
 
-    modules: ['@nuxt/content', 'cookie-universal-nuxt'],
+    modules: ['@nuxtjs/svg', '@nuxt/content', 'cookie-universal-nuxt'],
 
     content: {},
 
