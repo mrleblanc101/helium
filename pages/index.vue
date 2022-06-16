@@ -31,7 +31,7 @@
                         Si vous êtes une nouvelle entreprise, nous vous aiderons jusqu’à votre lancement, si vous avez
                         déjà une entreprise, nous vous aiderons à atteindre vos objectifs.
                     </p>
-                    <NuxtLink class="button primary" to="/expertise">En savoir plus</NuxtLink>
+                    <NuxtLink class="button secondary" to="/expertise">En savoir plus</NuxtLink>
                 </div>
                 <div class="bubbles">
                     <button
@@ -129,6 +129,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:nth-of-type(even) {
+        background: $color-black;
+        color: $color-white;
+    }
+}
 .section-home {
     position: relative;
     h1 {
@@ -322,7 +331,6 @@ export default {
 }
 .project-link {
     img {
-        width: 100%;
         display: block;
     }
 }

@@ -1,8 +1,21 @@
 <template>
     <header class="header max-width-container" :class="{ 'is-open': isOpen }">
         <NuxtLink to="/">
-            <img v-if="$route.name === 'index'" inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
-            <img v-else inline class="icon-logo-big" src="@/assets/svg/logo-expertises.svg" alt="Hélium" />
+            <img
+                v-if="$route.name === 'expertises'"
+                inline
+                class="icon-logo-big"
+                src="@/assets/svg/logo-expertises.svg"
+                alt="Hélium"
+            />
+            <img
+                v-else-if="$route.name === 'agence'"
+                inline
+                class="icon-logo-big"
+                src="@/assets/svg/logo-agence.svg"
+                alt="Hélium"
+            />
+            <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
         </NuxtLink>
         <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
             <span class="line"></span>
@@ -201,9 +214,15 @@ a {
     width: 126px;
 }
 .icon-logo-big {
-    width: 850px;
+    width: 320px;
     position: absolute;
-    left: (-130px - 40px);
+    left: -58px;
+    top: -74px;
+    @media (min-width: 768px) {
+        width: 850px;
+        left: (-130px - 40px);
+        top: auto;
+    }
 }
 .icon-social {
     width: 24px;

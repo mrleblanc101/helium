@@ -1,0 +1,45 @@
+.button {
+    appearance: none;
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: $color-black;
+    &.primary {
+        position: relative;
+        display: inline-block;
+        border: 1px solid $color-blue;
+        background-color: $color-blue;
+        color: $color-white;
+        padding: 10px 33px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    &.secondary {
+        position: relative;
+        display: inline-block;
+        border: 1px solid currentColor;
+        color: currentColor;
+        padding: 10px 33px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 20px;
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0;
+            opacity: 0.15;
+            background-color: currentColor;
+            transition: height 400ms ease;
+        }
+        &:hover {
+            &::before {
+                height: 100%;
+            }
+        }
+    }
+}
