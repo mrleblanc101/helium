@@ -58,6 +58,9 @@ export default {
     transform: translate(-50%, -50%);
     pointer-events: none;
     fill: $color-blue;
+    @media (max-width: 767px) {
+        display: none;
+    }
 }
 section {
     display: flex;
@@ -65,6 +68,7 @@ section {
     justify-content: center;
 }
 .section-inner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -102,7 +106,13 @@ form {
         border: 1px solid $color-black;
     }
 }
-
+.form-wrapper,
+.collaboration-wrapper {
+    padding: 45px 0;
+    @media (min-width: 768px) {
+        padding: 90px 0;
+    }
+}
 .collaboration-wrapper {
     position: relative;
     display: flex;
@@ -113,23 +123,39 @@ form {
     color: $color-white;
     background-color: $color-blue;
     border-radius: 50%;
-    width: 486px;
+    max-width: 486px;
+    width: calc(100% + 30px);
     aspect-ratio: 1 / 1;
-    padding: 70px;
+    padding: 40px;
+    margin: 0 -15px;
+    @media (min-width: 768px) {
+        padding: 70px;
+    }
     h2 {
         position: absolute;
-        top: 50px;
-        font-size: 20px;
+        top: 30px;
+        font-size: 14px;
         margin: 0;
+        font-weight: 400;
+        @media (min-width: 768px) {
+            top: 50px;
+            font-size: 20px;
+        }
     }
     h3 {
-        font-size: 30px;
+        font-size: 22px;
         margin: 0 0 20px;
+        @media (min-width: 768px) {
+            font-size: 30px;
+        }
     }
     p {
         margin-top: 0;
         margin-bottom: 30px;
-        font-size: 20px;
+        font-size: 16px;
+        @media (min-width: 768px) {
+            font-size: 20px;
+        }
     }
 }
 </style>

@@ -82,6 +82,7 @@ export default {
     position: absolute;
     z-index: 10;
     top: 0;
+    align-self: center;
     width: 100%;
     display: flex;
     align-items: center;

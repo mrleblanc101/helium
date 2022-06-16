@@ -47,6 +47,8 @@ export default {
 
 <style lang="scss" scoped>
 .overlay-footer {
+    display: flex;
+    flex-direction: column;
     position: relative;
     z-index: 2;
     background-color: $color-white;
