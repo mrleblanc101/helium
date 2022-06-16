@@ -69,7 +69,7 @@ export default {
     position: absolute;
     z-index: 10;
     top: 0;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
