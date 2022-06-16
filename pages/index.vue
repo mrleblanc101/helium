@@ -79,6 +79,10 @@
                 </div>
             </div>
         </section>
+        <!-- TODO: Fetch projects from Nuxt-content -->
+        <nuxt-link to="/" class="project-link">
+            <img src="/img/innukopteres.jpg" width="16" heigh="9" loading="lazy" />
+        </nuxt-link>
     </div>
 </template>
 
@@ -314,6 +318,12 @@ export default {
         @media (min-width: 768px) {
             font-size: 100px;
         }
+    }
+}
+.project-link {
+    img {
+        width: 100%;
+        display: block;
     }
 }
 </style>
