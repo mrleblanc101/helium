@@ -54,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 .icon-travaillons-enssemble {
     width: 1400px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -70,6 +70,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
 .section-inner {
     position: relative;
@@ -87,6 +88,9 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media (min-width: 1024px) {
+        margin: 0 8%;
+    }
 }
 .form-wrapper {
     max-width: 600px;

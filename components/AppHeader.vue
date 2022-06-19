@@ -169,6 +169,19 @@ a {
                 opacity: 0;
             }
         }
+        &.nuxt-link-exact-active {
+            @media (max-width: 1023px) {
+                padding-left: 40px;
+            }
+            &::before {
+                color: currentColor;
+                opacity: 1;
+                @media (min-width: 1024px) {
+                    top: 100%;
+                    color: $color-black;
+                }
+            }
+        }
         &:hover {
             @media (max-width: 1023px) {
                 padding-left: 40px;
@@ -179,11 +192,6 @@ a {
                     top: 100%;
                     color: $color-blue;
                 }
-            }
-        }
-        &.nuxt-link-exact-active {
-            &::before {
-                color: currentColor;
             }
         }
     }

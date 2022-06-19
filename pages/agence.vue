@@ -2,7 +2,7 @@
     <div>
         <section>
             <div class="section-inner max-width-container">
-                <h1>Votre succès est aussi le nôtre!</h1>
+                <h1>Votre succès est <br />aussi le nôtre!</h1>
                 <div class="bubbles-wrapper">
                     <FloatingBubble class="collaboration-wrapper">
                         <h2>Philosophie</h2>
@@ -71,9 +71,15 @@ section {
 h1 {
     margin-top: 50vh;
     font-size: 60px;
-    max-width: 430px;
+    width: 100%;
+    max-width: 600px;
+    font-weight: 400;
     text-align: center;
+    align-self: flex-end;
     transform: translateY(-50%);
+    @media (min-width: 1024px) {
+        margin: 50vh 8% 150px;
+    }
 }
 .bubbles-wrapper {
     display: flex;
