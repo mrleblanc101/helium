@@ -3,8 +3,6 @@ import svgo from './svgoConfig.js';
 export default {
     target: 'static',
 
-    ssr: false,
-
     router: {
         base: '/helium/',
     },
@@ -33,7 +31,10 @@ export default {
 
     css: [{ src: '@/assets/scss/app.scss', lang: 'scss' }],
 
-    plugins: [],
+    plugins: [
+        { src: '@/plugins/vue-marquee-text-component.js', mode: 'client' },
+        { src: '@/plugins/vue-typer.js', mode: 'client' },
+    ],
 
     components: true,
 

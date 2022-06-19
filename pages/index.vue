@@ -3,23 +3,31 @@
         <section class="section-home">
             <div class="section-inner max-width-container">
                 <h1>
-                    Nous aidons les
-                    <VueTyper
-                        :text="['marques', 'entreprises', 'compagnies', 'entrepreneurs', 'organisations']"
-                        initial-action="erasing"
-                        erase-style="backspace"
-                        :type-delay="150"
-                        :pre-type-delay="1000"
-                        :pre-erase-delay="3500"
-                        :erase-delay="150"
-                    /><br />
-                    à acquérir un avantage concurrentiel<br />
-                    dans le monde de demain.
+                    <client-only>
+                        Nous aidons les
+                        <VueTyper
+                            :text="['marques', 'entreprises', 'compagnies', 'entrepreneurs', 'organisations']"
+                            initial-action="erasing"
+                            erase-style="backspace"
+                            :type-delay="150"
+                            :pre-type-delay="1000"
+                            :pre-erase-delay="3500"
+                            :erase-delay="150"
+                        /><br />
+                        à acquérir un avantage concurrentiel<br />
+                        dans le monde de demain.
+                        <template #placeholder>
+                            Nous aidons les marques à acquérir un avantage concurrentiel<br />
+                            dans le monde de demain.
+                        </template>
+                    </client-only>
                 </h1>
                 <div class="marquee">
-                    <MarqueeText :duration="15" :repeat="10">
-                        Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
-                    </MarqueeText>
+                    <client-only>
+                        <MarqueeText :duration="15" :repeat="10">
+                            Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
+                        </MarqueeText>
+                    </client-only>
                 </div>
             </div>
         </section>
@@ -72,10 +80,14 @@
         <section class="section-projets">
             <div class="section-inner">
                 <div class="marquee">
-                    <MarqueeText :duration="15" :repeat="10">Quelques&nbsp;&nbsp;</MarqueeText>
+                    <client-only>
+                        <MarqueeText :duration="15" :repeat="10">Quelques&nbsp;&nbsp;</MarqueeText>
+                    </client-only>
                 </div>
                 <div class="marquee">
-                    <MarqueeText :duration="15" :repeat="10" reverse>Projets&nbsp;&nbsp;</MarqueeText>
+                    <client-only>
+                        <MarqueeText :duration="15" :repeat="10" reverse>Projets&nbsp;&nbsp;</MarqueeText>
+                    </client-only>
                 </div>
             </div>
         </section>
@@ -87,16 +99,10 @@
 </template>
 
 <script>
-import { VueTyper } from 'vue-typer';
-import MarqueeText from 'vue-marquee-text-component';
 import imgExperience from '@/assets/svg/img-experience.svg?raw';
 
 export default {
     name: 'HomePage',
-    components: {
-        VueTyper,
-        MarqueeText,
-    },
     data() {
         return {
             interval: null,
