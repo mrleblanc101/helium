@@ -71,7 +71,7 @@ export default {};
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
-    padding: 50px 36px;
+    padding: 50px 20px;
     @media (min-width: 1024px) {
         padding: 0 40px;
         height: (650px + 80px);

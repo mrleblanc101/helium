@@ -8,7 +8,7 @@ export default {
     },
 
     head: {
-        title: 'Hélium',
+        title: 'Agence Hélium',
         htmlAttrs: {
             lang: 'fr',
         },

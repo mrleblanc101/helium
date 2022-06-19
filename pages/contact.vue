@@ -2,43 +2,45 @@
     <div>
         <section>
             <div class="section-inner max-width-container">
-                <div class="form-wrapper">
-                    <p>
-                        Parlez-nous de votre projet, de vos idées! Nous pourrons ensuite planifier une rencontre, pour
-                        en parler plus en détail.
-                    </p>
-                    <form>
-                        <label class="cell-50">
-                            Nom
-                            <input type="text" />
-                        </label>
-                        <label class="cell-50">
-                            Entreprise (facultaf)
-                            <input type="text" />
-                        </label>
-                        <label class="cell-50">
-                            Telephone
-                            <input type="text" />
-                        </label>
-                        <label class="cell-50">
-                            Courriel
-                            <input type="text" />
-                        </label>
-                        <label class="cell-100">
-                            Message
-                            <textarea rows="6"></textarea>
-                        </label>
-                        <button class="button primary" type="submit">Envoyer</button>
-                    </form>
+                <div class="section-wrapper">
+                    <div class="form-wrapper">
+                        <p>
+                            Parlez-nous de votre projet, de vos idées! Nous pourrons ensuite planifier une rencontre,
+                            pour en parler plus en détail.
+                        </p>
+                        <form>
+                            <label class="cell-50">
+                                Nom
+                                <input type="text" />
+                            </label>
+                            <label class="cell-50">
+                                Entreprise (facultaf)
+                                <input type="text" />
+                            </label>
+                            <label class="cell-50">
+                                Telephone
+                                <input type="text" />
+                            </label>
+                            <label class="cell-50">
+                                Courriel
+                                <input type="text" />
+                            </label>
+                            <label class="cell-100">
+                                Message
+                                <textarea rows="6"></textarea>
+                            </label>
+                            <button class="button primary" type="submit">Envoyer</button>
+                        </form>
+                    </div>
+                    <div class="collaboration-wrapper">
+                        <h2>Collaboration</h2>
+                        <h3>Vous êtes pigiste?</h3>
+                        <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
+                        <button type="button" class="button secondary">Envoi-nous ton portfolio</button>
+                    </div>
                 </div>
-                <div class="collaboration-wrapper">
-                    <h2>Collaboration</h2>
-                    <h3>Vous êtes pigiste?</h3>
-                    <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
-                    <button type="button" class="button secondary">Envoi-nous ton portfolio</button>
-                </div>
-                <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
             </div>
+            <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
         </section>
     </div>
 </template>
@@ -58,6 +60,8 @@ export default {
     transform: translate(-50%, -50%);
     pointer-events: none;
     fill: $color-blue;
+    max-height: 90vh;
+    max-width: 50vw;
     @media (max-width: 767px) {
         display: none;
     }
@@ -72,6 +76,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
+}
+.section-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 .form-wrapper {
@@ -104,13 +115,14 @@ form {
         border-radius: 8px;
         padding: 10px;
         border: 1px solid $color-black;
+        font-weight: 400;
     }
 }
 .form-wrapper,
 .collaboration-wrapper {
-    padding: 45px 0;
+    margin: 45px 0;
     @media (min-width: 768px) {
-        padding: 90px 0;
+        margin: 90px 0;
     }
 }
 .collaboration-wrapper {
@@ -124,10 +136,8 @@ form {
     background-color: $color-blue;
     border-radius: 50%;
     max-width: 486px;
-    width: calc(100% + 30px);
     aspect-ratio: 1 / 1;
     padding: 40px;
-    margin: 0 -15px;
     @media (min-width: 768px) {
         padding: 70px;
     }

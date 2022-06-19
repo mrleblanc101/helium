@@ -6,16 +6,9 @@
                 inline
                 class="icon-logo-big"
                 src="@/assets/svg/logo-expertises.svg"
-                alt="Hélium"
             />
-            <img
-                v-else-if="$route.name === 'agence'"
-                inline
-                class="icon-logo-big"
-                src="@/assets/svg/logo-agence.svg"
-                alt="Hélium"
-            />
-            <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
+            <img v-else-if="$route.name === 'agence'" inline class="icon-logo-big" src="@/assets/svg/logo-agence.svg" />
+            <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" />
         </NuxtLink>
         <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
             <span class="line"></span>
@@ -24,7 +17,7 @@
         </button>
         <div ref="nav" class="nav-wrapper">
             <NuxtLink to="/">
-                <img inline class="icon-logo" src="@/assets/svg/logo.svg" alt="Hélium" />
+                <img inline class="icon-logo" src="@/assets/svg/logo.svg" />
             </NuxtLink>
             <nav class="nav-main">
                 <ul>
@@ -87,7 +80,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 36px;
+    padding: 22px 20px;
     @media (min-width: 1024px) {
         padding: 38px 36px;
     }
@@ -137,7 +130,7 @@ a {
     .icon-logo {
         position: absolute;
         top: 22px;
-        left: 36px;
+        left: 20px;
         @media (min-width: 1024px) {
             display: none;
         }
