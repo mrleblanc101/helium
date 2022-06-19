@@ -69,28 +69,53 @@ section {
     justify-content: center;
 }
 h1 {
-    margin-top: 50vh;
-    font-size: 60px;
+    margin: 50vh 0 0;
+    font-size: 30px;
     width: 100%;
-    max-width: 600px;
     font-weight: 400;
     text-align: center;
     align-self: flex-end;
     transform: translateY(-50%);
+    @media (min-width: 768px) {
+    }
     @media (min-width: 1024px) {
-        margin: 50vh 8% 150px;
+        max-width: 600px;
+        font-size: 60px;
+        margin: 50vh 9% 0;
     }
 }
 .bubbles-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 100px;
-    max-width: 1055px;
+    flex-direction: column;
+    gap: 32px 0;
+    width: calc(100% + 80px);
+    margin: 80px -80px;
+    max-width: 700px;
+    @media (min-width: 768px) {
+        width: calc(100% + 120px);
+        margin: 80px -120px;
+    }
+    @media (min-width: 1024px) {
+        margin: 150px 0;
+        width: 100%;
+        max-width: 1055px;
+    }
     .floating-bubble {
-        width: calc(50% - 50px);
+        width: 300px;
         &:nth-child(odd) {
-            margin-top: 330px;
+            align-self: flex-end;
+        }
+        &:nth-child(even) {
+            align-self: flex-start;
+        }
+        @media (min-width: 550px) {
+            margin-bottom: -150px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media (min-width: 1024px) {
+            width: calc(50% - 50px);
         }
     }
 }

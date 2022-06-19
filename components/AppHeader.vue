@@ -83,7 +83,7 @@ export default {
     justify-content: space-between;
     padding: 22px 20px;
     @media (min-width: 1024px) {
-        padding: 38px 36px;
+        padding: 38px 40px;
     }
 }
 nav {
@@ -201,6 +201,7 @@ a {
     position: absolute;
     bottom: 40px;
     @media (min-width: 1024px) {
+        margin-left: 40px;
         position: static;
     }
     a {
@@ -222,8 +223,9 @@ a {
     left: -58px;
     top: -74px;
     fill: $color-blue;
-    @media (min-width: 768px) {
-        width: 850px;
+    @media (min-width: 1024px) {
+        width: 45vw;
+        max-width: 850px;
         left: (-130px - 40px);
         top: 38px;
     }

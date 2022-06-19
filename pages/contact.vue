@@ -89,7 +89,7 @@ section {
     align-items: center;
     justify-content: center;
     @media (min-width: 1024px) {
-        margin: 0 8%;
+        margin: 0 9%;
     }
 }
 .form-wrapper {
