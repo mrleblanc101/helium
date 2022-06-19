@@ -39,7 +39,7 @@
                         Si vous êtes une nouvelle entreprise, nous vous aiderons jusqu’à votre lancement, si vous avez
                         déjà une entreprise, nous vous aiderons à atteindre vos objectifs.
                     </p>
-                    <NuxtLink class="button secondary" to="/expertise">En savoir plus</NuxtLink>
+                    <NuxtLink class="button secondary" to="/expertises">En savoir plus</NuxtLink>
                 </div>
                 <div class="bubbles">
                     <button

@@ -61,8 +61,8 @@ export default {
     pointer-events: none;
     fill: $color-blue;
     max-height: 90vh;
-    max-width: 50vw;
-    @media (max-width: 767px) {
+    width: 50vw;
+    @media (max-width: 1023px) {
         display: none;
     }
 }
@@ -75,8 +75,11 @@ section {
     position: relative;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     justify-content: center;
+    align-items: center;
+    @media (min-width: 1024px) {
+        align-items: flex-end;
+    }
 }
 .section-wrapper {
     position: relative;
@@ -98,7 +101,7 @@ form {
     gap: 20px 24px;
     .cell-50 {
         width: 100%;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             width: calc(50% - 12px);
         }
     }
@@ -121,7 +124,7 @@ form {
 .form-wrapper,
 .collaboration-wrapper {
     margin: 45px 0;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         margin: 90px 0;
     }
 }
@@ -138,7 +141,7 @@ form {
     max-width: 486px;
     aspect-ratio: 1 / 1;
     padding: 40px;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
         padding: 70px;
     }
     h2 {
@@ -147,7 +150,7 @@ form {
         font-size: 14px;
         margin: 0;
         font-weight: 400;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             top: 50px;
             font-size: 20px;
         }
@@ -155,7 +158,7 @@ form {
     h3 {
         font-size: 22px;
         margin: 0 0 20px;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             font-size: 30px;
         }
     }
@@ -163,7 +166,7 @@ form {
         margin-top: 0;
         margin-bottom: 30px;
         font-size: 16px;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             font-size: 20px;
         }
     }
