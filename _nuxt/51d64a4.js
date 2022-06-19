@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{338:function(e,n,t){"use strict";t.r(n);var c={name:"ExpertiseSlugPage"},r=t(20),component=Object(r.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("section",{})}),[],!1,null,"6b08a30e",null);n.default=component.exports}}]);
