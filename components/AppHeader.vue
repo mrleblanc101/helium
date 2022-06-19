@@ -52,6 +52,7 @@ export default {
     watch: {
         $route() {
             this.isOpen = false;
+            enableBodyScroll(this.$refs.nav);
         },
     },
     beforeDestroy() {
