@@ -212,10 +212,11 @@ a {
     position: absolute;
     left: -58px;
     top: -74px;
+    fill: $color-blue;
     @media (min-width: 768px) {
         width: 850px;
         left: (-130px - 40px);
-        top: auto;
+        top: 38px;
     }
 }
 .icon-social {
