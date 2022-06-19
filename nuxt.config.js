@@ -17,17 +17,18 @@ export default {
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
-            { name: 'theme-color', content: '#242aff' },
+            { name: 'theme-color', content: '#2400FF' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/helium/favicon.ico' },
+            { rel: 'icon', type: 'image/svg+xml', href: '/helium/favicon.svg' },
             { rel: 'apple-touch-icon', href: '/helium/apple-touch-icon.png' },
-            { rel: 'mask-icon', href: '/helium/safari-pinned-tab.ico', color: '#242aff' },
+            { rel: 'mask-icon', href: '/helium/safari-pinned-tab.ico', color: '#2400FF' },
             { rel: 'manifest', href: '/helium/site.webmanifest' },
         ],
     },
 
-    loading: { color: '#242aff', height: '5px' },
+    loading: { color: '#2400FF', height: '5px' },
 
     css: [{ src: '@/assets/scss/app.scss', lang: 'scss' }],
 
