@@ -20,11 +20,11 @@ export default {
             { name: 'theme-color', content: '#2400FF' },
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/helium/favicon.ico' },
-            { rel: 'icon', type: 'image/svg+xml', href: '/helium/favicon.svg' },
-            { rel: 'apple-touch-icon', href: '/helium/apple-touch-icon.png' },
-            { rel: 'mask-icon', href: '/helium/safari-pinned-tab.ico', color: '#2400FF' },
-            { rel: 'manifest', href: '/helium/site.webmanifest' },
+            { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
+            { rel: 'icon', type: 'image/svg+xml', href: 'favicon.svg' },
+            { rel: 'apple-touch-icon', href: 'apple-touch-icon.png' },
+            { rel: 'mask-icon', href: 'safari-pinned-tab.ico', color: '#2400FF' },
+            { rel: 'manifest', href: 'site.webmanifest' },
         ],
     },
 

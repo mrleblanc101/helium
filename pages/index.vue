@@ -93,7 +93,7 @@
         </section>
         <!-- TODO: Fetch projects from Nuxt-content -->
         <nuxt-link to="/" class="project-link">
-            <img src="/img/innukopteres.jpg" width="16" heigh="9" loading="lazy" />
+            <img src="img/innukopteres.jpg" width="16" heigh="9" loading="lazy" />
         </nuxt-link>
     </div>
 </template>
