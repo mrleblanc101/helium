@@ -21,7 +21,7 @@
             <div class="col-infos">
                 <h2>Travaillons ensemble!</h2>
                 <div class="contact-wrapper">
-                    <div class="contact-wrapper-links">
+                    <div>
                         <a href="mailto:info@agencehelium.com">info@agencehelium.com</a>
                         <a href="tel:418-961-8858">(418) 961-8858</a>
                     </div>
@@ -181,12 +181,6 @@ a {
         }
         &:hover {
             text-decoration: underline;
-        }
-    }
-    .contact-wrapper-links {
-        display: none;
-        @media (min-width: 767px) {
-            display: block;
         }
     }
 }

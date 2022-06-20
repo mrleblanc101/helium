@@ -35,15 +35,20 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="section-founders">
             <div class="section-inner max-width-container">
-                <h2>Nos origines</h2>
-                <p>
-                    Avant la création d’Hélium, notre co-fondateur Vincent, avait créé une entreprise, Boréal Production
-                    sur la Côte-Nord, afin d’approfondir ses connaissances dans le milieu. Pendant son BAC en design
-                    graphique à l’Université Laval, il a décidé de lancer Hélium. Aujourd’hui, nous faisons la gestion
-                    de projets et dirigeons la création de tout ce que nous entreprenons.
-                </p>
+                <div>
+                    <h2>Nos origines</h2>
+                    <p>
+                        Avant la création d’Hélium, notre co-fondateur Vincent, avait créé une entreprise, Boréal
+                        Production sur la Côte-Nord, afin d’approfondir ses connaissances dans le milieu. Pendant son
+                        BAC en design graphique à l’Université Laval, il a décidé de lancer Hélium. Aujourd’hui, nous
+                        faisons la gestion de projets et dirigeons la création de tout ce que nous entreprenons.
+                    </p>
+                </div>
+                <div>
+                    <img src="@/assets/img/photo-vincent.png" alt="" />
+                </div>
             </div>
         </section>
     </div>
@@ -116,6 +121,40 @@ h1 {
         }
         @media (min-width: 1024px) {
             width: calc(50% - 50px);
+        }
+    }
+}
+.section-founders {
+    .section-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        gap: 50px 100px;
+        text-align: center;
+        @media (min-width: 768px) {
+            text-align: left;
+        }
+    }
+    h2 {
+        font-size: 40px;
+        font-weight: 400;
+        max-width: 700px;
+        margin: 0;
+        margin-bottom: 36px;
+        @media (min-width: 768px) {
+            font-size: 60px;
+        }
+    }
+    p {
+        font-size: 16px;
+        opacity: 0.7;
+        max-width: 700px;
+        margin-bottom: 62px;
+        line-height: 1.5;
+        @media (min-width: 768px) {
+            font-size: 24px;
         }
     }
 }
