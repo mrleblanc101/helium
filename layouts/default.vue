@@ -16,7 +16,7 @@ export default {
     name: 'DefaultLayout',
     data() {
         return {
-            preloadHasRun: false,
+            preloadHasRun: true,
         };
     },
     mounted() {

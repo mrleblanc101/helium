@@ -1,41 +1,48 @@
 <template>
-    <header class="header max-width-container" :class="{ 'is-open': isOpen }">
-        <NuxtLink to="/">
-            <img
-                v-if="$route.name === 'expertises'"
-                inline
-                class="icon-logo-big"
-                src="@/assets/svg/logo-expertises.svg"
-            />
-            <img v-else-if="$route.name === 'agence'" inline class="icon-logo-big" src="@/assets/svg/logo-agence.svg" />
-            <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" />
-        </NuxtLink>
-        <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </button>
-        <div ref="nav" class="nav-wrapper">
-            <nav class="nav-main">
-                <ul>
-                    <li class="hide-for-large">
-                        <NuxtLink to="/">Accueil</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/expertises">Expertises</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/realisations">Réalisations</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/agence">Agence</NuxtLink>
-                    </li>
-                    <li>
-                        <NuxtLink to="/contact">Contact</NuxtLink>
-                    </li>
-                </ul>
-            </nav>
-            <NavSocial />
+    <header class="header" :class="{ 'is-open': isOpen }">
+        <div class="header-inner max-width-container">
+            <NuxtLink to="/">
+                <img
+                    v-if="$route.name === 'expertises'"
+                    inline
+                    class="icon-logo-big"
+                    src="@/assets/svg/logo-expertises.svg"
+                />
+                <img
+                    v-else-if="$route.name === 'agence'"
+                    inline
+                    class="icon-logo-big"
+                    src="@/assets/svg/logo-agence.svg"
+                />
+                <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" />
+            </NuxtLink>
+            <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div ref="nav" class="nav-wrapper">
+                <nav class="nav-main">
+                    <ul>
+                        <li class="hide-for-large">
+                            <NuxtLink to="/">Accueil</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/expertises">Expertises</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/realisations">Réalisations</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/agence">Agence</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/contact">Contact</NuxtLink>
+                        </li>
+                    </ul>
+                </nav>
+                <NavSocial />
+            </div>
         </div>
     </header>
 </template>
@@ -76,8 +83,9 @@ export default {
     position: absolute;
     z-index: 10;
     top: 0;
-    align-self: center;
     width: 100%;
+}
+.header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;

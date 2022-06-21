@@ -17,7 +17,8 @@
                         à acquérir un avantage concurrentiel<br />
                         dans le monde de demain.
                         <template #placeholder>
-                            Nous aidons les marques à acquérir un avantage concurrentiel<br />
+                            Nous aidons les marques<br />
+                            à acquérir un avantage concurrentiel<br />
                             dans le monde de demain.
                         </template>
                     </client-only>

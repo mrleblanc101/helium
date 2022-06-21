@@ -118,10 +118,16 @@ a {
             left: -20px;
             opacity: 0;
             transition: all 150ms ease;
+            @media (min-width: 1024px) {
+                left: -40px;
+            }
         }
         @media (hover: hover) {
             &:hover {
                 transform: translateX(20px);
+                @media (min-width: 1024px) {
+                    transform: translateX(40px);
+                }
                 &::before {
                     opacity: 1;
                 }
