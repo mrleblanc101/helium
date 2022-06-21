@@ -3,8 +3,10 @@
         <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
             <img inline src="@/assets/svg/logo-preload.svg" />
         </div>
-        <AppHeader />
-        <Nuxt />
+        <div class="page-overlay">
+            <AppHeader />
+            <Nuxt />
+        </div>
         <AppFooter />
     </div>
 </template>
@@ -67,6 +69,11 @@ export default {
             width: 260px;
         }
     }
+}
+.page-overlay {
+    position: relative;
+    background-color: $color-white;
+    z-index: 2;
 }
 @keyframes raise-the-curtain {
     from {

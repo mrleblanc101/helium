@@ -92,20 +92,21 @@
                 </div>
             </div>
         </section>
-        <!-- TODO: Fetch projects from Nuxt-content -->
-        <div class="project">
-            <nuxt-link class="project-link" to="/">
-                <h2 class="project-title">Innukoptères</h2>
-                <img inline src="@/assets/svg/voir-projet.svg" />
-            </nuxt-link>
-            <img src="img/projet-1.png" width="16" heigh="9" loading="lazy" />
-        </div>
-        <div class="project">
-            <nuxt-link class="project-link" to="/">
-                <h2 class="project-title">Sept-Îles Honda</h2>
-                <img inline src="@/assets/svg/voir-projet.svg" />
-            </nuxt-link>
-            <img src="img/projet-2.png" width="16" heigh="9" loading="lazy" />
+        <div class="slide-over">
+            <div class="project">
+                <nuxt-link class="project-link" to="/">
+                    <h2 class="project-title">Innukoptères</h2>
+                    <img inline src="@/assets/svg/voir-projet.svg" />
+                </nuxt-link>
+                <img src="img/projet-1.png" width="16" heigh="9" loading="lazy" />
+            </div>
+            <div class="project">
+                <nuxt-link class="project-link" to="/">
+                    <h2 class="project-title">Sept-Îles Honda</h2>
+                    <img inline src="@/assets/svg/voir-projet.svg" />
+                </nuxt-link>
+                <img src="img/projet-2.png" width="16" heigh="9" loading="lazy" />
+            </div>
         </div>
     </div>
 </template>
@@ -130,16 +131,6 @@ export default {
     },
     mounted() {
         this.resetInterval();
-
-        const slides = document.querySelectorAll('.project, .footer');
-        for (let i = 0; i < slides.length; i++) {
-            const scene = this.$scrollmagic
-                .scene({
-                    triggerElement: slides[i],
-                })
-                .setPin(slides[i], { pushFollowers: false });
-            this.$scrollmagic.addScene(scene);
-        }
     },
     methods: {
         changeSlide(index) {
@@ -340,6 +331,7 @@ section {
     }
 }
 .section-projets {
+    background-color: $color-white;
     min-height: 0;
     padding: 100px 0;
     justify-content: flex-start;
@@ -358,7 +350,8 @@ section {
     }
 }
 .project {
-    position: relative;
+    position: sticky;
+    bottom: 0;
     min-height: 100vh;
     overflow: hidden;
     .project-link {
@@ -395,6 +388,23 @@ section {
         right: 0;
         object-fit: cover;
         transition: all 600ms ease;
+    }
+}
+@mixin descending-z-index($count: 30) {
+    $target: 0;
+    $index: $count;
+    @while $index > 0 {
+        &:nth-child(#{$target}) {
+            z-index: #{$index};
+        }
+        $target: $target + 1;
+        $index: $index - 1;
+    }
+}
+.slide-over {
+    position: relative;
+    > * {
+        @include descending-z-index(3);
     }
 }
 </style>

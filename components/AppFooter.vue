@@ -49,17 +49,13 @@ export default {};
 <style lang="scss" scoped>
 .footer {
     display: flex;
-    align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $color-blue;
     color: $color-white;
     text-align: center;
-    position: relative;
-    z-index: 2;
+    position: sticky;
+    bottom: 0;
     @media (min-width: 1024px) {
-        // bottom: 0;
-        // left: 0;
-        // right: 0;
         text-align: left;
     }
 }
@@ -68,6 +64,7 @@ export default {};
     flex-direction: column;
     width: 100%;
     gap: 24px;
+    margin: auto;
     align-items: center;
     justify-content: space-evenly;
     height: 100%;
