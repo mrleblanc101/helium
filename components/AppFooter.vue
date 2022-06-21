@@ -54,12 +54,12 @@ export default {};
     background-color: $color-blue;
     color: $color-white;
     text-align: center;
+    position: relative;
+    z-index: 2;
     @media (min-width: 1024px) {
-        // position: fixed;
         // bottom: 0;
         // left: 0;
         // right: 0;
-        z-index: 1;
         text-align: left;
     }
 }
