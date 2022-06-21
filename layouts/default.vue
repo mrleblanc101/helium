@@ -3,10 +3,8 @@
         <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
             <img inline src="@/assets/svg/logo-preload.svg" />
         </div>
-        <div class="overlay-footer">
-            <AppHeader />
-            <Nuxt />
-        </div>
+        <AppHeader />
+        <Nuxt />
         <AppFooter />
     </div>
 </template>
@@ -46,16 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.overlay-footer {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 2;
-    background-color: $color-white;
-    @media (min-width: 1024px) {
-        margin-bottom: 100vh;
-    }
-}
 .preload {
     position: fixed;
     z-index: 9999;

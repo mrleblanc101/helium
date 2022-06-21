@@ -24,7 +24,7 @@
                 </h1>
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="15" :repeat="10">
+                        <MarqueeText :duration="60" :repeat="10">
                             Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
                         </MarqueeText>
                     </client-only>
@@ -81,20 +81,31 @@
             <div class="section-inner">
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="15" :repeat="10">Quelques&nbsp;&nbsp;</MarqueeText>
+                        <MarqueeText :duration="60" :repeat="10">Quelques&nbsp;&nbsp;</MarqueeText>
                     </client-only>
                 </div>
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="15" :repeat="10" reverse>Projets&nbsp;&nbsp;</MarqueeText>
+                        <MarqueeText :duration="60" :repeat="10" reverse>Projets&nbsp;&nbsp;</MarqueeText>
                     </client-only>
                 </div>
             </div>
         </section>
         <!-- TODO: Fetch projects from Nuxt-content -->
-        <nuxt-link to="/" class="project-link">
-            <img src="img/innukopteres.jpg" width="16" heigh="9" loading="lazy" />
-        </nuxt-link>
+        <div class="project">
+            <nuxt-link class="project-link" to="/">
+                <h2 class="project-title">Innukoptères</h2>
+                <img inline src="@/assets/svg/voir-projet.svg" />
+            </nuxt-link>
+            <img src="img/projet-1.png" width="16" heigh="9" loading="lazy" />
+        </div>
+        <div class="project">
+            <nuxt-link class="project-link" to="/">
+                <h2 class="project-title">Sept-Îles Honda</h2>
+                <img inline src="@/assets/svg/voir-projet.svg" />
+            </nuxt-link>
+            <img src="img/projet-2.png" width="16" heigh="9" loading="lazy" />
+        </div>
     </div>
 </template>
 
@@ -118,6 +129,16 @@ export default {
     },
     mounted() {
         this.resetInterval();
+
+        const slides = document.querySelectorAll('.project, .footer');
+        for (let i = 0; i < slides.length; i++) {
+            const scene = this.$scrollmagic
+                .scene({
+                    triggerElement: slides[i],
+                })
+                .setPin(slides[i], { pushFollowers: false });
+            this.$scrollmagic.addScene(scene);
+        }
     },
     methods: {
         changeSlide(index) {
@@ -335,9 +356,44 @@ section {
         }
     }
 }
-.project-link {
+.project {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    .project-link {
+        position: absolute;
+        top: 18%;
+        right: 8%;
+        display: block;
+        color: $color-white;
+        text-decoration: none;
+        z-index: 2;
+        h2 {
+            font-size: 42px;
+        }
+        svg {
+            margin-top: 50px;
+        }
+        &:hover ~ img {
+            transform: scale(1.02);
+        }
+    }
+    .project-title {
+        writing-mode: vertical-rl;
+        text-orientation: sideways;
+        transform: rotate(180deg);
+    }
     img {
         display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        transition: all 600ms ease;
     }
 }
 </style>

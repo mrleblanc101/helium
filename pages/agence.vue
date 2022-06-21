@@ -125,12 +125,13 @@ h1 {
     }
 }
 .section-founders {
+    display: flex;
+    align-items: center;
     .section-inner {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
+        flex-direction: row;
         justify-content: center;
-        flex-wrap: wrap-reverse;
         gap: 50px 100px;
         text-align: center;
         @media (min-width: 768px) {
