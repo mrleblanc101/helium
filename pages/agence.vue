@@ -130,11 +130,12 @@ h1 {
     .section-inner {
         display: flex;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column-reverse;
         justify-content: center;
         gap: 50px 100px;
         text-align: center;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
+            flex-direction: row;
             text-align: left;
         }
     }

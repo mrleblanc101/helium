@@ -75,7 +75,7 @@
                         des solutions en fonction de votre clientèle cible.
                     </p>
                 </div>
-                <div v-html="imgExperience"></div>
+                <ImgExperience />
             </div>
         </section>
         <section class="section-projets">
@@ -112,15 +112,17 @@
 </template>
 
 <script>
-import imgExperience from '@/assets/svg/img-experience.svg?raw';
+import ImgExperience from '@/assets/svg/img-experience.svg?inline';
 
 export default {
     name: 'HomePage',
+    components: {
+        ImgExperience,
+    },
     data() {
         return {
             interval: null,
             currentSlide: 0,
-            imgExperience,
             slides: [
                 'Stratégie <br />de marque',
                 'Identité <br />visuelle',
@@ -355,18 +357,30 @@ section {
     min-height: 100vh;
     overflow: hidden;
     .project-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         top: 18%;
         right: 8%;
-        display: block;
         color: $color-white;
         text-decoration: none;
         z-index: 2;
         h2 {
-            font-size: 42px;
+            margin: 0;
+            font-size: 32px;
+            @media (min-width: 768px) {
+                font-size: 42px;
+            }
         }
         svg {
-            margin-top: 50px;
+            margin-top: 30px;
+            width: 80px;
+            @media (min-width: 768px) {
+                margin-top: 50px;
+                width: 182px;
+            }
         }
         &:hover ~ img {
             transform: scale(1.02);

@@ -36,7 +36,8 @@
                         <h2>Collaboration</h2>
                         <h3>Vous êtes pigiste?</h3>
                         <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
-                        <button type="button" class="button secondary">Envoi-nous ton portfolio</button>
+                        <!-- TODO: Ajouter email -->
+                        <a href="mailto:" type="button" class="button secondary">Envoi-nous ton portfolio</a>
                     </FloatingBubble>
                 </div>
             </div>
