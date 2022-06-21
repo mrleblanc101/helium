@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{340:function(e,n,t){"use strict";t.r(n);var c={name:"RealisationsIndexPage"},o=t(20),component=Object(o.a)(c,(function(){var e=this.$createElement;return(this._self._c||e)("section",{})}),[],!1,null,"0709c4aa",null);n.default=component.exports}}]);
