@@ -1,7 +1,7 @@
 <svg id="eOJXRhPt6ZS1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 520 520" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
     <style>
         #eOJXRhPt6ZS5_to {
-            animation: eOJXRhPt6ZS5_to__to 10000ms ease infinite normal forwards;
+            animation: eOJXRhPt6ZS5_to__to 30s linear infinite normal forwards;
         }
         @keyframes eOJXRhPt6ZS5_to__to {
             0% {
@@ -15,7 +15,7 @@
             }
         }
         #eOJXRhPt6ZS9_to {
-            animation: eOJXRhPt6ZS9_to__to 10000ms ease infinite normal forwards;
+            animation: eOJXRhPt6ZS9_to__to 30s linear infinite normal forwards;
         }
         @keyframes eOJXRhPt6ZS9_to__to {
             0% {

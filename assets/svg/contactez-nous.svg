@@ -3,13 +3,11 @@
         <style>
         .animating {
             transform-origin: center;
-            animation: rotate 6s infinite linear;
+            animation: rotate 12s infinite linear;
         }
         svg:focus .animating,
         svg:hover .animating {
-            /* animation-play-state: paused; */
-            animation-direction: reverse;
-            animation-duration: 3s;
+            animation-play-state: paused;
         }
         @keyframes rotate {
             from { transform: rotate(360deg); }

@@ -115,14 +115,16 @@ a {
         &::before {
             content: '\2022';
             position: absolute;
-            left: 0;
+            left: -20px;
             opacity: 0;
             transition: all 150ms ease;
         }
-        &:hover {
-            padding-left: 40px;
-            &::before {
-                opacity: 1;
+        @media (hover: hover) {
+            &:hover {
+                transform: translateX(20px);
+                &::before {
+                    opacity: 1;
+                }
             }
         }
     }

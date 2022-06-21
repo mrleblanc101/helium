@@ -16,11 +16,11 @@
             <span class="line"></span>
         </button>
         <div ref="nav" class="nav-wrapper">
-            <NuxtLink to="/">
-                <img inline class="icon-logo" src="@/assets/svg/logo.svg" />
-            </NuxtLink>
             <nav class="nav-main">
                 <ul>
+                    <li class="hide-for-large">
+                        <NuxtLink to="/">Accueil</NuxtLink>
+                    </li>
                     <li>
                         <NuxtLink to="/expertises">Expertises</NuxtLink>
                     </li>
@@ -142,7 +142,7 @@ a {
     ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         @media (min-width: 1024px) {
             flex-direction: row;
         }
@@ -160,7 +160,7 @@ a {
         &::before {
             content: '\2022';
             position: absolute;
-            left: 0;
+            left: -40px;
             opacity: 0;
             transition: all 150ms ease;
             @media (min-width: 1024px) {
@@ -172,7 +172,7 @@ a {
         }
         &.nuxt-link-exact-active {
             @media (max-width: 1023px) {
-                padding-left: 40px;
+                transform: translateX(40px);
             }
             &::before {
                 color: currentColor;
@@ -183,15 +183,17 @@ a {
                 }
             }
         }
-        &:hover {
-            @media (max-width: 1023px) {
-                padding-left: 40px;
-            }
-            &::before {
-                opacity: 1;
-                @media (min-width: 1024px) {
-                    top: 100%;
-                    color: $color-blue;
+        @media (hover: hover) {
+            &:hover {
+                @media (max-width: 1023px) {
+                    transform: translateX(40px);
+                }
+                &::before {
+                    opacity: 1;
+                    @media (min-width: 1024px) {
+                        top: 100%;
+                        color: $color-blue;
+                    }
                 }
             }
         }
@@ -268,6 +270,11 @@ a {
                 transform: translateY(-7px) rotate(-45deg);
             }
         }
+    }
+}
+.hide-for-large {
+    @media (min-width: 1024px) {
+        display: none;
     }
 }
 </style>
