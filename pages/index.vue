@@ -227,9 +227,8 @@ section {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-wrap: wrap-reverse;
-        gap: 50px 100px;
         text-align: center;
         @media (min-width: 768px) {
             text-align: left;
