@@ -42,6 +42,7 @@ section {
     margin: 12% 0;
     @media (min-width: 768px) {
         margin: 8% 0;
+        font-size: 56px;
     }
     a {
         color: $color-blue;

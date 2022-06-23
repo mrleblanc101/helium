@@ -127,6 +127,7 @@ form {
         font-weight: 400;
     }
     .button {
+        display: block;
         margin-left: auto;
     }
 }
