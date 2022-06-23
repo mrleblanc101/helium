@@ -63,7 +63,7 @@ export default {};
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 24px;
+    gap: 48px 24px;
     margin: auto;
     align-items: center;
     justify-content: space-evenly;
@@ -159,10 +159,11 @@ a {
         text-align: right;
         font-size: 30px;
         font-weight: 400;
-        margin-bottom: 28px;
+        margin-bottom: 14px;
         margin-top: 0;
         @media (min-width: 1024px) {
             font-size: 70px;
+            margin-bottom: 28px;
         }
     }
 }

@@ -229,6 +229,7 @@ section {
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         text-align: center;
+        gap: 50px 0;
         @media (min-width: 768px) {
             text-align: left;
         }
@@ -274,14 +275,18 @@ section {
         display: grid;
         align-items: center;
         justify-content: center;
-        width: 145px;
-        height: 145px;
+        width: 200px;
+        height: 200px;
         color: $color-white;
         text-align: center;
         z-index: 0;
         appearance: none;
         background: none;
         border: none;
+        @media (min-width: 768px) {
+            width: 145px;
+            height: 145px;
+        }
         &:not(.is-active) {
             @media (max-width: 767px) {
                 display: none;
@@ -313,7 +318,9 @@ section {
         }
         &.is-active {
             &::before {
-                transform: scale(1.35);
+                @media (min-width: 768px) {
+                    transform: scale(1.35);
+                }
             }
             .label {
                 opacity: 1;

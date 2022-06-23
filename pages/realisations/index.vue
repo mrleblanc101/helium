@@ -30,22 +30,32 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+    display: flex;
+    align-items: center;
+}
 .project {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 24px;
-    margin: 120px 0;
+    margin: 12% 0;
+    @media (min-width: 768px) {
+        margin: 8% 0;
+    }
     a {
         color: $color-blue;
         text-decoration: none;
     }
     .cell {
         position: relative;
-        width: 50%;
+        width: 60%;
         border-radius: 10px;
         z-index: 1;
         overflow: hidden;
+        @media (min-width: 768px) {
+            width: 47%;
+        }
         img {
             display: block;
             transition: all 300ms ease;
@@ -58,14 +68,23 @@ export default {
     }
     .marquee-text-wrap {
         position: absolute;
-        left: 50vw;
-        width: 50vw;
+        left: 59vw;
+        width: 41vw;
+        transform: translateY(-50%);
+        @media (min-width: 768px) {
+            left: 47vw;
+            width: 53vw;
+        }
     }
     &:nth-child(even) {
         justify-content: flex-end;
         .marquee-text-wrap {
-            right: 50vw;
+            right: 59vw;
             left: auto;
+            @media (min-width: 768px) {
+                right: 47vw;
+                left: auto;
+            }
         }
     }
 }
