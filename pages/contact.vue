@@ -9,6 +9,7 @@
                             pour en parler plus en détail.
                         </h1>
                         <form>
+                            <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
                             <label class="cell-50">
                                 Nom
                                 <input type="text" />
@@ -40,8 +41,8 @@
                         <a href="mailto:" type="button" class="button secondary">Envoi-nous ton portfolio</a>
                     </FloatingBubble>
                 </div>
+                <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
             </div>
-            <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
         </section>
     </div>
 </template>
@@ -54,22 +55,20 @@ export default {
 
 <style lang="scss" scoped>
 .icon-travaillons-enssemble {
-    width: 1400px;
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    right: calc(625px + 18%);
+    top: 140px;
+    max-height: 100%;
     pointer-events: none;
     fill: $color-blue;
-    max-height: 90vh;
-    width: 50vw;
+    z-index: -1;
+    width: 100vw;
     @media (max-width: 1023px) {
         display: none;
     }
 }
 section {
     display: flex;
-    align-items: center;
     justify-content: center;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
 }
@@ -90,7 +89,7 @@ section {
     align-items: center;
     justify-content: center;
     @media (min-width: 1024px) {
-        margin: 0 9%;
+        padding: 100px 9%;
     }
 }
 .form-wrapper {
@@ -127,12 +126,15 @@ form {
         border: 1px solid $color-black;
         font-weight: 400;
     }
+    .button {
+        margin-left: auto;
+    }
 }
 .form-wrapper,
 .bubble-wrapper {
     margin: 45px 0;
     @media (min-width: 1024px) {
-        margin: 90px 0;
+        margin: 100px 0;
     }
 }
 </style>
