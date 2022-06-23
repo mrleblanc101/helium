@@ -93,19 +93,12 @@
             </div>
         </section>
         <div class="slide-over">
-            <div class="project">
-                <nuxt-link class="project-link" to="/">
-                    <h2 class="project-title">Innukoptères</h2>
+            <div v-for="project in projects" :key="project.slug" class="project">
+                <nuxt-link class="project-link" :to="project.path">
+                    <h2 class="project-title">{{ project.title }}</h2>
                     <img inline src="@/assets/svg/voir-projet.svg" />
                 </nuxt-link>
-                <img src="img/projet-1.png" width="16" heigh="9" loading="lazy" />
-            </div>
-            <div class="project">
-                <nuxt-link class="project-link" to="/">
-                    <h2 class="project-title">Sept-Îles Honda</h2>
-                    <img inline src="@/assets/svg/voir-projet.svg" />
-                </nuxt-link>
-                <img src="img/projet-2.png" width="16" heigh="9" loading="lazy" />
+                <img :src="project.banner" width="16" heigh="9" loading="lazy" />
             </div>
         </div>
     </div>
@@ -118,6 +111,12 @@ export default {
     name: 'HomePage',
     components: {
         ImgExperience,
+    },
+    async asyncData({ $content }) {
+        const projects = await $content('realisations', { text: false }).limit(2).fetch();
+        return {
+            projects,
+        };
     },
     data() {
         return {

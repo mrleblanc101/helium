@@ -1,5 +1,5 @@
 <template>
-    <section class=""></section>
+    <section>{{ $route.params.slug }}</section>
 </template>
 
 <script>
