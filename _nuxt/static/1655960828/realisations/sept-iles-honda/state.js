@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fhelium\u002F_nuxt\u002Fstatic\u002F1655960828",layout:"default",error:a,serverRendered:true,routePath:"\u002Frealisations\u002Fsept-iles-honda",config:{_app:{basePath:"\u002Fhelium\u002F",assetsPath:"\u002Fhelium\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"781aea86"}}}}(null));
