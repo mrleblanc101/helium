@@ -120,6 +120,7 @@ export default {
     },
     data() {
         return {
+            projects: null,
             interval: null,
             currentSlide: 0,
             slides: [

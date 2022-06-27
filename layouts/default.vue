@@ -23,9 +23,11 @@ export default {
     },
     mounted() {
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
-        if (!this.$cookies.get('preloadHasRun')) {
-            disableBodyScroll(this.$refs.preload);
-        }
+        this.$nextTick(() => {
+            if (!this.preloadHasRun) {
+                disableBodyScroll(this.$refs.preload);
+            }
+        });
     },
     beforeDestroy() {
         clearAllBodyScrollLocks();
