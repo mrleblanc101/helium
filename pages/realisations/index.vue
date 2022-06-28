@@ -1,17 +1,36 @@
 <template>
     <section>
-        <div class="section-inner max-width-container">
-            <div v-for="(project, index) in projects" :key="project.slug" class="project">
-                <nuxt-link :to="project.path">
+        <div class="max-width-container">
+            <div class="page-header">
+                <h1>
                     <client-only>
-                        <MarqueeText :duration="15" :repeat="50" :reverse="!(index % 2)">
-                            {{ project.title }}&nbsp;•&nbsp;
-                        </MarqueeText>
+                        Notre impact chez les
+                        <VueTyper
+                            :text="['marques', 'entreprises', 'compagnies', 'entrepreneurs', 'organisations']"
+                            initial-action="erasing"
+                            erase-style="backspace"
+                            :type-delay="150"
+                            :pre-type-delay="1000"
+                            :pre-erase-delay="3500"
+                            :erase-delay="150"
+                        />
+                        <template #placeholder>Notre impact chez les marques</template>
                     </client-only>
-                </nuxt-link>
-                <nuxt-link class="cell" :to="project.path">
-                    <img :src="project.banner" width="16" heigh="9" loading="lazy" />
-                </nuxt-link>
+                </h1>
+            </div>
+            <div class="section-inner">
+                <div v-for="(project, index) in projects" :key="project.slug" class="project">
+                    <nuxt-link :to="project.path">
+                        <client-only>
+                            <MarqueeText :duration="15" :repeat="50" :reverse="!(index % 2)">
+                                {{ project.title }}&nbsp;•&nbsp;
+                            </MarqueeText>
+                        </client-only>
+                    </nuxt-link>
+                    <nuxt-link class="cell" :to="project.path">
+                        <img :src="project.banner" width="16" heigh="9" loading="lazy" />
+                    </nuxt-link>
+                </div>
             </div>
         </div>
     </section>
@@ -33,16 +52,46 @@ export default {
 section {
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+.page-header {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: (120px - 40px);
+    @media (min-width: 768px) {
+        min-height: 600px;
+    }
+}
+h1 {
+    max-width: 1056px;
+    width: 100%;
+    font-weight: 400;
+    margin: 0;
+    font-size: 30px;
+    @media (min-width: 768px) {
+        font-size: 60px;
+    }
+    ::v-deep .vue-typer {
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
+    ::v-deep .typed {
+        color: $color-blue;
+    }
 }
 .project {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     font-size: 24px;
-    margin: 12% 0;
+    margin: 0 0 12%;
     @media (min-width: 768px) {
-        margin: 8% 0;
-        font-size: 56px;
+        margin: 0 0 8%;
+        font-size: 50px;
     }
     a {
         color: $color-blue;
