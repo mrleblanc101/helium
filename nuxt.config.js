@@ -35,6 +35,7 @@ export default {
     plugins: [
         { src: '@/plugins/vue-marquee-text-component.js', mode: 'client' },
         { src: '@/plugins/vue-typer.js', mode: 'client' },
+        { src: '@/plugins/vue-awesome-swiper.js', mode: 'client' },
     ],
 
     components: true,

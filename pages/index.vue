@@ -42,18 +42,15 @@
                     </p>
                     <NuxtLink class="button secondary" to="/expertises">En savoir plus</NuxtLink>
                 </div>
-                <div class="bubbles">
-                    <button
-                        v-for="(slide, index) in slides"
-                        :key="`slide-${index}`"
-                        type="button"
-                        class="bubble"
-                        :class="{ 'is-active': index === currentSlide }"
-                        @click="changeSlide(index)"
-                    >
-                        <span class="index">{{ index + 1 }}</span>
-                        <span class="label" v-html="slide"></span>
-                    </button>
+                <div class="expertises">
+                    <client-only>
+                        <swiper ref="expertises" :options="swiperOptions">
+                            <swiper-slide v-for="(expertise, index) in expertises" :key="expertise.slug">
+                                <span class="index">{{ index + 1 }}</span>
+                                <span class="label" v-html="expertise.title"></span>
+                            </swiper-slide>
+                        </swiper>
+                    </client-only>
                 </div>
             </div>
         </section>
@@ -114,38 +111,45 @@ export default {
     },
     async asyncData({ $content }) {
         const projects = await $content('realisations', { text: false }).limit(2).fetch();
+        const expertises = await $content('expertises', { text: false }).fetch();
         return {
             projects,
+            expertises,
         };
     },
     data() {
         return {
-            projects: null,
+            expertises: [],
+            projects: [],
             interval: null,
             currentSlide: 0,
-            slides: [
-                'Stratégie <br />de marque',
-                'Identité <br />visuelle',
-                'Déploiement <br />de la marque',
-                'Communications',
-            ],
+            swiperOptions: {
+                centeredSlides: true,
+                loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 50,
+                autoplay: {
+                    delay: 5000,
+                },
+            },
         };
     },
-    mounted() {
-        this.resetInterval();
-    },
-    methods: {
-        changeSlide(index) {
-            this.currentSlide = index;
-            this.resetInterval();
-        },
-        resetInterval() {
-            clearInterval(this.interval);
-            this.interval = setInterval(() => {
-                this.currentSlide = this.currentSlide !== 3 ? this.currentSlide + 1 : 0;
-            }, 3000);
+    computed: {
+        swiper() {
+            return this.$refs.expertises.$swiper;
         },
     },
+    // mounted() {
+    //     this.resetInterval();
+    // },
+    // methods: {
+    //     resetInterval() {
+    //         clearInterval(this.interval);
+    //         this.interval = setInterval(() => {
+    //             this.currentSlide = this.currentSlide !== 3 ? this.currentSlide + 1 : 0;
+    //         }, 3000);
+    //     },
+    // },
 };
 </script>
 
@@ -258,20 +262,28 @@ section {
 }
 .section-expertises {
     overflow: hidden;
-    .bubbles {
-        display: flex;
-        gap: 50px;
-        justify-content: center;
-        @media (max-width: 1023px) {
-            max-width: 400px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-        @media (min-width: 1024px) {
-            flex-direction: column;
-        }
+    .expertises {
+        text-align: center;
+        width: 100%;
     }
-    .bubble {
+    // .expertises {
+    //     display: flex;
+    //     gap: 50px;
+    //     justify-content: center;
+    //     @media (max-width: 1023px) {
+    //         max-width: 400px;
+    //         margin: 0 auto;
+    //         flex-wrap: wrap;
+    //     }
+    //     @media (min-width: 1024px) {
+    //         flex-direction: column;
+    //    }
+    // }
+    .swiper-container {
+        margin: 35px -20px;
+        overflow: visible;
+    }
+    .swiper-slide {
         position: relative;
         display: grid;
         align-items: center;
@@ -288,11 +300,6 @@ section {
             width: 145px;
             height: 145px;
         }
-        &:not(.is-active) {
-            @media (max-width: 767px) {
-                display: none;
-            }
-        }
         &::before {
             content: '';
             position: absolute;
@@ -304,30 +311,41 @@ section {
             transition: all 300ms ease;
         }
         .index {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 50%;
             font-size: 28px;
             grid-row: 1 / 1;
             grid-column: 1 / 1;
             opacity: 1;
-            transition: all 300ms ease;
+            transition: opacity 300ms ease, all 300ms ease;
         }
         .label {
             font-size: 24px;
             grid-row: 1 / 1;
             grid-column: 1 / 1;
             opacity: 0;
-            transition: all 300ms ease;
+            transition: opacity 300ms ease;
         }
-        &.is-active {
+        &.swiper-slide-active {
             &::before {
-                @media (min-width: 768px) {
-                    transform: scale(1.35);
-                }
+                transform: scale(1.35);
             }
             .label {
                 opacity: 1;
+                transition: opacity 300ms ease;
             }
             .index {
-                opacity: 0;
+                transition: opacity 300ms ease, all 300ms ease;
+                @media (max-width: 1023px) {
+                    top: 5px;
+                    color: $color-burning-orange;
+                }
+                @media (min-width: 1024px) {
+                    opacity: 0;
+                    transition-delay: 0ms;
+                }
             }
         }
     }
