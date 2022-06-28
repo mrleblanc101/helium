@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/expertises/identite", {data:[{}],fetch:{},mutations:void 0});
