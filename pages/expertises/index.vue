@@ -18,8 +18,8 @@
                             <span class="expertise-index">{{ expertise.order.toString().padStart(2, '0') }}</span>
                             <div>
                                 <h2 class="expertise-title">{{ expertise.title.split(' ')[0] }}</h2>
-                                <p class="expertise-tags">{{ expertise.preview.tags }}...</p>
-                                <p class="expertise-description">{{ expertise.preview.description.split('.')[0] }}.</p>
+                                <p class="expertise-tags">{{ expertise.preview.tags }}</p>
+                                <p class="expertise-description">{{ expertise.preview.description }}</p>
                                 <span class="button secondary expertise-button">En savoir plus</span>
                             </div>
                         </nuxt-link>
