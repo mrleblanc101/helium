@@ -1,5 +1,9 @@
 ---
 title: Stratégie de marque
+order: 1
+preview:
+    tags: Positionnement, profils cibles, optimisation…
+    description: La stratégie de marque est le pilier de votre compagnie, un plan à long terme pour attirer des clients à votre entreprise.
 description: La stratégie est un plan à long terme pour attirer des clients à votre entreprise. Nous vous aiderons à établir un plan stratégique de la marque qui comprend les étapes exactes pour bâtir ou améliorer votre entreprise avec succès, accroître votre visibilité et motiver les gens à devenir client chez vous.
 tags:
     - Découverte et recherche (secteur d’activité)

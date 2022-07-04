@@ -1,5 +1,9 @@
 ---
 title: Déploiement de la marque
+order: 3
+preview:
+    tags: Site web, SEO, emballage…
+    description: En fonction de votre clientèle, nous déploierons les éléments exacts dont votre entreprise a besoin.
 description: En fonction de votre stratégie et de votre identité, notre équipe peut transformer les visuels de votre marque en matériel numérique ou physique, qui trouve un écho auprès de votre clientèle. Nous définirons ensemble les éléments exacts dont votre entreprise a besoin.
 tags:
     - Conception et développement Web

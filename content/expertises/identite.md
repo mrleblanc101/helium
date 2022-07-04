@@ -1,5 +1,9 @@
 ---
 title: Identité visuelle
+order: 2
+preview:
+    tags: Logo, typographie, style graphique…
+    description: Une fois que nous aurons les informations de la stratégie de marque en main, nous traduirons les mots en images.​
 description: Avec les informations de la stratégie de marque, nous traduirons les mots en images. Ces conceptions refléteront la voix et les attributs de votre entreprise tout en se concentrant sur votre clientèle cible.
 tags:
     - Conception ou actualisation d’un logotype
