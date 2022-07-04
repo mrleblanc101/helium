@@ -1,4 +1,4 @@
 ---
 title: Innukopteres
-banner: img/innukopteres.png
+banner: img/projects/innukopteres.png
 ---

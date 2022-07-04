@@ -1,4 +1,4 @@
 ---
 title: Sept-Îles Honda
-banner: img/sept-iles-honda.png
+banner: img/projects/sept-iles-honda.png
 ---
