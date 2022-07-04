@@ -3,7 +3,7 @@
         <div class="header-inner max-width-container">
             <NuxtLink to="/">
                 <img
-                    v-if="$route.name === 'expertises'"
+                    v-if="$route.name === 'expertises' || $route.name === 'expertises-slug'"
                     inline
                     class="icon-logo-big"
                     src="@/assets/svg/logo-expertises.svg"

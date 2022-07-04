@@ -2,10 +2,12 @@
     <div>
         <section class="section-title">
             <div class="section-inner max-width-container">
-                <h1>
-                    Si vous êtes une nouvelle entreprise, nous vous aiderons jusqu’à votre lancement, si vous avez déjà
-                    une entreprise, nous vous aiderons à <u>atteindre vos objectifs</u>.
-                </h1>
+                <div class="section-wrapper">
+                    <h1>
+                        Si vous êtes une nouvelle entreprise, nous vous aiderons jusqu’à votre lancement, si vous avez
+                        déjà une entreprise, nous vous aiderons à <u>atteindre vos objectifs</u>.
+                    </h1>
+                </div>
             </div>
         </section>
         <section class="section-menu">
@@ -32,7 +34,7 @@
 export default {
     name: 'ExpertiseIndexPage',
     async asyncData({ $content }) {
-        const expertises = await $content('expertises', { text: false }).sortBy('order').fetch();
+        const expertises = await $content('expertises').sortBy('order').fetch();
         return {
             expertises,
         };
@@ -53,11 +55,9 @@ export default {
         align-items: center;
         justify-content: center;
     }
-    h1 {
+    .section-wrapper {
         margin: 50vh 0 0;
-        font-size: 28px;
         width: 100%;
-        font-weight: 400;
         text-align: center;
         align-self: flex-end;
         transform: translateY(-50%);
@@ -66,6 +66,10 @@ export default {
             max-width: 650px;
             margin: 50vh 9% 0;
         }
+    }
+    h1 {
+        font-size: 28px;
+        font-weight: 400;
     }
 }
 .expertise {

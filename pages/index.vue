@@ -110,8 +110,8 @@ export default {
         ImgExperience,
     },
     async asyncData({ $content }) {
-        const projects = await $content('realisations', { text: false }).limit(2).fetch();
-        const expertises = await $content('expertises', { text: false }).fetch();
+        const projects = await $content('realisations').limit(2).fetch();
+        const expertises = await $content('expertises').fetch();
         return {
             projects,
             expertises,

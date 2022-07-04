@@ -14,15 +14,15 @@ tags:
     - Optimisation du parcours client (Ux)
 details:
     - title: Recherche
-      details: La découverte ainsi que la recherche du secteur d’activité doit se faire si vous êtes une nouvelle entreprise ou si vos compétiteurs ne sont pas clairement défini. Dans ce processus, nous procéderons à l’analyse de votre secteur dans la région souhaité, permettant d’identifier les forces et faiblesses de ceux qui vous entourent.
-      img:
+      description: La découverte ainsi que la recherche du secteur d’activité doit se faire si vous êtes une nouvelle entreprise ou si vos compétiteurs ne sont pas clairement défini. Dans ce processus, nous procéderons à l’analyse de votre secteur dans la région souhaité, permettant d’identifier les forces et faiblesses de ceux qui vous entourent.
+      img: img/expertises/strategie/commerce.svg
     - title: Positionnement
-      details: Le positionnement est le cœur d’une marque. Il définit ce qu’est la marque, ses avantages concurrentiels et ce qu’elle signifie pour le marché ciblé. Au positionnement est lié la promesse de la marque. En bref, ces éléments, une fois bien établie, permettre de créer un lien émotionnel entre une marque et un client, un bien fait à long terme.
-      img:
+      description: Le positionnement est le cœur d’une marque. Il définit ce qu’est la marque, ses avantages concurrentiels et ce qu’elle signifie pour le marché ciblé. Au positionnement est lié la promesse de la marque. En bref, ces éléments, une fois bien établie, permettre de créer un lien émotionnel entre une marque et un client, un bien fait à long terme.
+      img: img/expertises/strategie/cible.svg
     - title: Profils cibles
-      details: À qui vous adressez-vous? Bien définir ses clients est un passage obligatoire pour avoir la meilleure rentabilité possible. Avoir des profils cibles vous servirons pendant toute la durée de vie de votre entreprise. Ils pourront êtres actualisés avec le temps et seront grandement employé pour la création de l’identité ainsi que les communications.
-      img:
+      description: À qui vous adressez-vous? Bien définir ses clients est un passage obligatoire pour avoir la meilleure rentabilité possible. Avoir des profils cibles vous servirons pendant toute la durée de vie de votre entreprise. Ils pourront êtres actualisés avec le temps et seront grandement employé pour la création de l’identité ainsi que les communications.
+      img: img/expertises/strategie/clientele.svg
     - title: Optimisation
-      details: Pour finir, l’optimisation du parcours client, que se soit physique ou virtuel, a un grand impact sur le taux de conversion et la fidélisation. Il est important que tout soit optimiser pour rendre l’expérience agréable et efficace.
-      img:
+      description: Pour finir, l’optimisation du parcours client, que se soit physique ou virtuel, a un grand impact sur le taux de conversion et la fidélisation. Il est important que tout soit optimiser pour rendre l’expérience agréable et efficace.
+      img: img/expertises/strategie/optimisation.svg
 ---

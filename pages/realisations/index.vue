@@ -40,7 +40,7 @@
 export default {
     name: 'RealisationsIndexPage',
     async asyncData({ $content }) {
-        const projects = await $content('realisations', { text: false }).limit(2).fetch();
+        const projects = await $content('realisations').limit(2).fetch();
         return {
             projects,
         };

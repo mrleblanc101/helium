@@ -76,6 +76,7 @@ export default {
     position: relative;
     background-color: $color-white;
     z-index: 2;
+    overflow: clip;
 }
 @keyframes raise-the-curtain {
     from {
