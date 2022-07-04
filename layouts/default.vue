@@ -21,7 +21,7 @@ export default {
             preloadHasRun: true,
         };
     },
-    mounted() {
+    beforeMount() {
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
         this.$nextTick(() => {
             if (!this.preloadHasRun) {

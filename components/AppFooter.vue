@@ -70,7 +70,7 @@ export default {};
     height: 100%;
     padding: 50px 20px;
     @media (min-width: 1024px) {
-        padding: 0 40px;
+        padding: 40px;
         height: (650px + 80px);
         flex-wrap: wrap;
         justify-content: space-between;

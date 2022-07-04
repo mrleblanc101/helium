@@ -19,13 +19,12 @@
                     <img inline class="icon-social" src="@/assets/svg/behance.svg" />
                 </a>
             </li>
-            <!-- TODO: Lien -->
-            <!-- <li>
-                <a href="" target="_blank">
+            <li>
+                <a href="https://www.linkedin.com/company/agencehelium/" target="_blank">
                     <span class="visuallyhidden">LinkedIn</span>
                     <img inline class="icon-social" src="@/assets/svg/linkedin.svg" />
                 </a>
-            </li> -->
+            </li>
         </ul>
     </nav>
 </template>
