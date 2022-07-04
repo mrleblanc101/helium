@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/expertises/deploiement", {data:[{}],fetch:{},mutations:void 0});
