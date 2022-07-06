@@ -1,8 +1,10 @@
 <template>
     <div>
-        <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
-            <img inline src="@/assets/svg/logo-preload.svg" />
-        </div>
+        <client-only>
+            <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
+                <img inline src="@/assets/svg/logo-preload.svg" />
+            </div>
+        </client-only>
         <div class="page-overlay">
             <AppHeader />
             <Nuxt />
@@ -23,11 +25,9 @@ export default {
     },
     beforeMount() {
         this.preloadHasRun = this.$cookies.get('preloadHasRun');
-        this.$nextTick(() => {
-            if (!this.preloadHasRun) {
-                disableBodyScroll(this.$refs.preload);
-            }
-        });
+        if (!this.preloadHasRun) {
+            disableBodyScroll(this.$refs.preload);
+        }
     },
     beforeDestroy() {
         clearAllBodyScrollLocks();
