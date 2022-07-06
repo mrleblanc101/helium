@@ -93,7 +93,7 @@
             <div v-for="project in projects" :key="project.slug" class="project">
                 <nuxt-link class="project-link" :to="project.path">
                     <h2 class="project-title">{{ project.title }}</h2>
-                    <img inline src="@/assets/svg/voir-projet.svg" />
+                    <img inline src="@/assets/svg/btn-voir-projet.svg" />
                 </nuxt-link>
                 <img :src="project.banner" width="16" heigh="9" loading="lazy" />
             </div>
@@ -185,9 +185,9 @@ section {
             @media (min-width: 768px) {
                 display: inline-block;
             }
-        }
-        ::v-deep .typed {
-            color: $color-blue;
+            ::v-deep .typed {
+                color: $color-blue;
+            }
         }
     }
     .marquee {

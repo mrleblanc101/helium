@@ -4,6 +4,7 @@
             <div class="section-inner max-width-container">
                 <div class="section-wrapper">
                     <h1>
+                        <span class="expertise-index">{{ expertise.order.toString().padStart(2, '0') }}</span>
                         {{ expertise.title }}
                     </h1>
                     <p>{{ expertise.description }}</p>
@@ -30,6 +31,7 @@
                 </li>
             </ul>
         </section>
+        <MenuExpertises :expertises="expertises" />
     </div>
 </template>
 
@@ -37,8 +39,10 @@
 export default {
     name: 'ExpertiseSlugPage',
     async asyncData({ $content, params }) {
+        const expertises = await $content('expertises').sortBy('order').fetch();
         const expertise = await $content('expertises', params.slug).limit(1).fetch();
         return {
+            expertises,
             expertise,
         };
     },
@@ -76,6 +80,15 @@ export default {
         color: $color-blue;
         @media (min-width: 768px) {
             font-size: 50px;
+        }
+        .expertise-index {
+            display: block;
+            font-size: 25px;
+            font-weight: 700;
+            color: $color-burning-orange;
+            @media (min-width: 768px) {
+                display: none;
+            }
         }
     }
     p {

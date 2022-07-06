@@ -68,13 +68,13 @@ h1 {
     @media (min-width: 768px) {
         font-size: 60px;
     }
-    ::v-deep .vue-typer {
+    .vue-typer {
         @media (max-width: 1023px) {
             display: block;
         }
-    }
-    ::v-deep .typed {
-        color: $color-blue;
+        ::v-deep .typed {
+            color: $color-blue;
+        }
     }
 }
 .project {

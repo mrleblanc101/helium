@@ -26,7 +26,7 @@
                         <a href="tel:418-961-8858">(418) 961-8858</a>
                     </div>
                     <NuxtLink to="/contact">
-                        <img inline class="icon-contact" src="@/assets/svg/contactez-nous.svg" />
+                        <img inline class="icon-contact" src="@/assets/svg/btn-contactez-nous.svg" />
                         <span class="visuallyhidden">Contactez-nous</span>
                     </NuxtLink>
                 </div>
