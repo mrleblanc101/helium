@@ -90,7 +90,7 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 22px 20px;
-    color: $color-white;
+    color: $color-black;
     @media (min-width: 1024px) {
         padding: 38px 40px;
         color: $color-black;
@@ -127,6 +127,9 @@ a {
     transform: translate3d(0, 0, 0);
     clip-path: circle(0% at 100% 0);
     padding: 22px;
+    @media (max-width: 1023px) {
+        color: $color-white;
+    }
     @media (min-width: 1024px) {
         position: static;
         clip-path: none;
