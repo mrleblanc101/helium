@@ -31,13 +31,13 @@ export default {};
         top: 30px;
         font-size: 14px;
         margin: 0;
-        font-weight: 400;
         @media (min-width: 1024px) {
             top: 50px;
             font-size: 20px;
         }
     }
     h3 {
+        font-weight: 700;
         font-size: 22px;
         margin: 0 0 20px;
         @media (min-width: 1024px) {

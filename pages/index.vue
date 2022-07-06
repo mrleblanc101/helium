@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <div class="slide-over">
+        <div class="projects-underlay">
             <div v-for="project in projects" :key="project.slug" class="project">
                 <nuxt-link class="project-link" :to="project.path">
                     <h2 class="project-title">{{ project.title }}</h2>
@@ -155,6 +155,8 @@ export default {
 
 <style lang="scss" scoped>
 section {
+    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +171,6 @@ section {
         font-size: 30px;
         max-width: 300px;
         margin: 0 auto;
-        font-weight: 400;
         @media (min-width: 768px) {
             font-size: 60px;
             max-width: 1060px;
@@ -208,7 +209,6 @@ section {
         font-size: 20px;
         max-width: 1060px;
         margin: 0 auto;
-        font-weight: 400;
         text-align: center;
         line-height: 1.5;
         @media (min-width: 768px) {
@@ -241,7 +241,6 @@ section {
     }
     h2 {
         font-size: 40px;
-        font-weight: 400;
         max-width: 700px;
         margin: 0;
         margin-bottom: 36px;
@@ -439,7 +438,7 @@ section {
         $index: $index - 1;
     }
 }
-.slide-over {
+.projects-underlay {
     position: relative;
     > * {
         @include descending-z-index(3);

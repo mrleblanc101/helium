@@ -10,7 +10,7 @@
                 </div>
             </div>
         </section>
-        <div class="section-tags">
+        <section class="section-tags">
             <div class="section-inner max-width-container">
                 <ul>
                     <li v-for="tag in expertise.tags" :key="tag">
@@ -18,20 +18,18 @@
                     </li>
                 </ul>
             </div>
-        </div>
-        <div class="section-details">
-            <div class="section-inner max-width-container">
-                <ul>
-                    <li v-for="item in expertise.details" :key="item.title">
-                        <img :src="item.img" alt="" width="200" height="200" />
-                        <div>
-                            <h2>{{ item.title }}</h2>
-                            <p>{{ item.description }}</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        </section>
+        <section class="section-details">
+            <ul>
+                <li v-for="item in expertise.details" :key="item.title">
+                    <img class="icon-expertise" :src="item.img" alt="" />
+                    <div>
+                        <h2>{{ item.title }}</h2>
+                        <p>{{ item.description }}</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </div>
 </template>
 
@@ -54,6 +52,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-title {
+    min-height: 100vh;
     .section-inner {
         display: flex;
         flex-direction: column;
@@ -75,7 +74,6 @@ export default {
     h1 {
         font-size: 20px;
         color: $color-blue;
-        font-weight: 400;
         @media (min-width: 768px) {
             font-size: 50px;
         }
@@ -93,9 +91,11 @@ export default {
     .section-inner {
         display: flex;
         justify-content: center;
-        padding: 52px 0;
+        padding-top: 52px;
+        padding-bottom: 52px;
         @media (min-width: 768px) {
-            padding: 104px 0;
+            padding-top: 104px;
+            padding-bottom: 104px;
         }
     }
     ul {
@@ -118,19 +118,86 @@ export default {
         display: flex;
         &::before {
             content: '\2022';
-            margin-right: 12px;
+            margin-right: 0.3em;
         }
     }
 }
 .section-details {
     ul {
         list-style: none;
+        margin: 0;
+        padding: 0;
+        max-width: 1220px;
+        margin: 0 auto;
     }
     li {
+        position: relative;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        padding: 50px 30px 40px;
+        gap: 0 15%;
+        z-index: 0;
+        text-align: center;
+        @media (min-width: 768px) {
+            flex-direction: row;
+            text-align: left;
+            padding: 110px 6%;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100vw;
+            box-shadow: 0 40px 60px rgba(0, 0, 0, 0.06);
+            pointer-events: none;
+            z-index: -1;
+        }
+        &:nth-child(even) {
+            &::before {
+                left: 0;
+                // left: -110px;
+                border-bottom-left-radius: 60px;
+            }
+        }
         &:nth-child(odd) {
-            flex-direction: row-reverse;
+            @media (min-width: 768px) {
+                flex-direction: row-reverse;
+            }
+            &::before {
+                right: 0;
+                // right: -110px;
+                border-bottom-right-radius: 60px;
+            }
+        }
+        h2 {
+            margin-top: 35px;
+            font-size: 20px;
+            @media (min-width: 768px) {
+                margin-top: 0;
+                font-size: 40px;
+            }
+            &::before {
+                content: '\2022';
+                color: $color-blue;
+                margin-right: 0.3em;
+            }
+        }
+        p {
+            margin: 0;
+            font-size: 14px;
+            @media (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+        .icon-expertise {
+            width: 110px;
+            height: 110px;
+            @media (min-width: 768px) {
+                width: 200px;
+                height: 200px;
+            }
         }
     }
 }

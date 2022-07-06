@@ -1,50 +1,48 @@
 <template>
-    <div>
-        <section>
-            <div class="section-inner max-width-container">
-                <div class="section-wrapper">
-                    <div class="form-wrapper">
-                        <h1>
-                            Parlez-nous de votre projet, de vos idées! Nous pourrons ensuite planifier une rencontre,
-                            pour en parler plus en détail.
-                        </h1>
-                        <form>
-                            <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
-                            <label class="cell-50">
-                                Nom
-                                <input type="text" />
-                            </label>
-                            <label class="cell-50">
-                                Entreprise (facultaf)
-                                <input type="text" />
-                            </label>
-                            <label class="cell-50">
-                                Telephone
-                                <input type="text" />
-                            </label>
-                            <label class="cell-50">
-                                Courriel
-                                <input type="text" />
-                            </label>
-                            <label class="cell-100">
-                                Message
-                                <textarea rows="6"></textarea>
-                            </label>
-                            <button class="button primary" type="submit">Envoyer</button>
-                        </form>
-                    </div>
-                    <FloatingBubble class="bubble-wrapper">
-                        <h2>Collaboration</h2>
-                        <h3>Vous êtes pigiste?</h3>
-                        <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
-                        <!-- TODO: Ajouter email -->
-                        <a href="mailto:" type="button" class="button secondary">Envoi-nous ton portfolio</a>
-                    </FloatingBubble>
+    <section>
+        <div class="section-inner max-width-container">
+            <div class="section-wrapper">
+                <div class="form-wrapper">
+                    <h1>
+                        Parlez-nous de votre projet, de vos idées! Nous pourrons ensuite planifier une rencontre, pour
+                        en parler plus en détail.
+                    </h1>
+                    <form>
+                        <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
+                        <label class="cell-50">
+                            Nom
+                            <input type="text" />
+                        </label>
+                        <label class="cell-50">
+                            Entreprise (facultaf)
+                            <input type="text" />
+                        </label>
+                        <label class="cell-50">
+                            Telephone
+                            <input type="text" />
+                        </label>
+                        <label class="cell-50">
+                            Courriel
+                            <input type="text" />
+                        </label>
+                        <label class="cell-100">
+                            Message
+                            <textarea rows="6"></textarea>
+                        </label>
+                        <button class="button primary" type="submit">Envoyer</button>
+                    </form>
                 </div>
-                <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
+                <FloatingBubble class="bubble-wrapper">
+                    <h2>Collaboration</h2>
+                    <h3>Vous êtes pigiste?</h3>
+                    <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
+                    <!-- TODO: Ajouter email -->
+                    <a href="mailto:" type="button" class="button secondary">Envoi-nous ton portfolio</a>
+                </FloatingBubble>
             </div>
-        </section>
-    </div>
+            <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
+        </div>
+    </section>
 </template>
 
 <script>
@@ -97,7 +95,6 @@ section {
     font-size: 20px;
     h1 {
         font-size: 20px;
-        font-weight: 400;
         margin: 0 0 60px;
     }
 }
@@ -124,7 +121,6 @@ form {
         border-radius: 8px;
         padding: 10px;
         border: 1px solid $color-black;
-        font-weight: 400;
     }
     .button {
         display: block;

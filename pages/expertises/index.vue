@@ -49,6 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .section-title {
+    min-height: 100vh;
     .section-inner {
         display: flex;
         flex-direction: column;
@@ -69,7 +70,6 @@ export default {
     }
     h1 {
         font-size: 28px;
-        font-weight: 400;
     }
 }
 .expertise {
@@ -105,7 +105,6 @@ export default {
         font-size: 30px;
         margin-top: 0;
         margin-bottom: 20px;
-        font-weight: 400;
         @media (min-width: 768px) {
             font-size: 76px;
             margin-bottom: 45px;

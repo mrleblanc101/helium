@@ -2,6 +2,9 @@ html,
 body {
     font-family: 'PP Radio Grotesk';
     width: 100%;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    // text-rendering: optimizeLegibility;
 }
 *,
 *::before,
@@ -26,10 +29,6 @@ button,
         padding: 40px;
     }
 }
-section {
-    overflow: hidden;
-    min-height: 100vh;
-}
 img {
     width: 100%;
     max-width: 100%;
@@ -41,5 +40,6 @@ h4,
 h5,
 h6,
 p {
+    font-weight: 400;
     margin-top: 0;
 }

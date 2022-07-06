@@ -1,6 +1,6 @@
 <template>
-    <section>
-        <div class="max-width-container">
+    <div>
+        <section class="max-width-container">
             <div class="page-header">
                 <h1>
                     <client-only>
@@ -18,7 +18,7 @@
                     </client-only>
                 </h1>
             </div>
-            <div class="section-inner">
+            <section class="section-inner">
                 <div v-for="(project, index) in projects" :key="project.slug" class="project">
                     <nuxt-link :to="project.path">
                         <client-only>
@@ -31,9 +31,9 @@
                         <img :src="project.banner" width="16" heigh="9" loading="lazy" />
                     </nuxt-link>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -49,11 +49,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
 .page-header {
     min-height: 400px;
     display: flex;
@@ -68,7 +63,6 @@ section {
 h1 {
     max-width: 1056px;
     width: 100%;
-    font-weight: 400;
     margin: 0;
     font-size: 30px;
     @media (min-width: 768px) {

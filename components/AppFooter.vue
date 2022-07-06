@@ -158,7 +158,6 @@ a {
         display: inline-block;
         text-align: right;
         font-size: 30px;
-        font-weight: 400;
         margin-bottom: 14px;
         margin-top: 0;
         @media (min-width: 1024px) {

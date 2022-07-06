@@ -77,7 +77,6 @@ h1 {
     margin: 50vh 0 0;
     font-size: 30px;
     width: 100%;
-    font-weight: 400;
     text-align: center;
     align-self: flex-end;
     transform: translateY(-50%);
@@ -141,7 +140,6 @@ h1 {
     }
     h2 {
         font-size: 40px;
-        font-weight: 400;
         max-width: 700px;
         margin: 0;
         margin-bottom: 36px;
