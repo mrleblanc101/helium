@@ -40,7 +40,7 @@ export default {
     name: 'ExpertiseSlugPage',
     async asyncData({ $content, params }) {
         const expertises = await $content('expertises').sortBy('order').fetch();
-        const expertise = await $content('expertises', params.slug).limit(1).fetch();
+        const expertise = await $content('expertises', params.slug).fetch();
         return {
             expertises,
             expertise,

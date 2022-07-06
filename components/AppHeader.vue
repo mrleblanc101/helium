@@ -1,5 +1,5 @@
 <template>
-    <header class="header" :class="{ 'is-open': isOpen }">
+    <header class="header" :class="[{ 'is-open': isOpen }, $route.name]">
         <div class="header-inner max-width-container">
             <NuxtLink to="/">
                 <img
@@ -90,8 +90,13 @@ export default {
     align-items: center;
     justify-content: space-between;
     padding: 22px 20px;
+    color: $color-white;
     @media (min-width: 1024px) {
         padding: 38px 40px;
+        color: $color-black;
+        .realisations-slug & {
+            color: $color-white;
+        }
     }
 }
 nav {
@@ -108,7 +113,6 @@ a {
 }
 .nav-wrapper {
     position: fixed;
-    color: $color-white;
     display: flex;
     flex-direction: column;
     top: 0;
@@ -125,7 +129,6 @@ a {
     padding: 22px;
     @media (min-width: 1024px) {
         position: static;
-        color: $color-black;
         clip-path: none;
         flex-direction: row;
         background-color: transparent;
@@ -178,7 +181,7 @@ a {
                 opacity: 0;
             }
         }
-        &.nuxt-link-exact-active {
+        &.nuxt-link-active {
             @media (max-width: 1023px) {
                 transform: translateX(40px);
             }
@@ -187,7 +190,7 @@ a {
                 opacity: 1;
                 @media (min-width: 1024px) {
                     top: 100%;
-                    color: $color-black;
+                    color: currentColor;
                 }
             }
         }
