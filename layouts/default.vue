@@ -1,15 +1,17 @@
 <template>
     <div>
         <client-only>
-            <div v-if="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
+            <div v-show="preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
                 <img inline src="@/assets/svg/logo-preload.svg" />
             </div>
         </client-only>
         <div class="page-overlay">
-            <AppHeader />
-            <Nuxt />
+            <div class="footer-overlay">
+                <AppHeader />
+                <Nuxt />
+            </div>
+            <AppFooter />
         </div>
-        <AppFooter />
     </div>
 </template>
 
@@ -23,8 +25,10 @@ export default {
             preloadHasRun: true,
         };
     },
-    beforeMount() {
-        this.preloadHasRun = this.$cookies.get('preloadHasRun');
+    created() {
+        this.preloadHasRun = !this.$cookies.get('preloadHasRun');
+    },
+    mounted() {
         if (!this.preloadHasRun) {
             disableBodyScroll(this.$refs.preload);
         }
@@ -73,6 +77,14 @@ export default {
     }
 }
 .page-overlay {
+    opacity: 1;
+    transition: all 1000ms ease;
+    [data-n-head-ssr] & {
+        transition: all 1000ms ease;
+        opacity: 0;
+    }
+}
+.footer-overlay {
     position: relative;
     background-color: $color-white;
     z-index: 2;
