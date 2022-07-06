@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-show="preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
+        <div v-show="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
             <img inline src="@/assets/svg/logo-preload.svg" />
         </div>
         <div class="page-overlay">
@@ -24,7 +24,7 @@ export default {
         };
     },
     created() {
-        this.preloadHasRun = !this.$cookies.get('preloadHasRun');
+        this.preloadHasRun = !!this.$cookies.get('preloadHasRun');
     },
     mounted() {
         this.$nextTick(() => {
