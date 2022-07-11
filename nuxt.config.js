@@ -67,6 +67,10 @@ export default {
         },
     },
 
+    generate: {
+        devtools: true,
+    },
+
     build: {
         extend(config) {
             config.module.rules.push({
