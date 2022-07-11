@@ -42,9 +42,22 @@
                     </p>
                     <NuxtLink class="button secondary" to="/expertises">En savoir plus</NuxtLink>
                 </div>
-                <div class="expertises">
+                <div class="expertises desktop-only">
+                    <button
+                        v-for="(expertise, index) in expertises"
+                        :key="expertise.slug"
+                        type="button"
+                        class="swiper-slide"
+                        :class="{ 'is-active': index === currentSlide }"
+                        @click="changeSlide(index)"
+                    >
+                        <span class="index">{{ index + 1 }}</span>
+                        <span class="label" v-html="expertise.title"></span>
+                    </button>
+                </div>
+                <div class="expertises mobile-only">
                     <client-only>
-                        <swiper ref="expertises" :options="swiperOptions">
+                        <swiper ref="expertises" :options="swiperOptions" class="mobile-only">
                             <swiper-slide v-for="(expertise, index) in expertises" :key="expertise.slug">
                                 <span class="index">{{ index + 1 }}</span>
                                 <span class="label" v-html="expertise.title"></span>
@@ -62,7 +75,6 @@
                 </h2>
             </div>
         </section>
-
         <!-- <section class="section-projets">
             <div class="section-inner">
                 <div class="marquee">
@@ -140,17 +152,21 @@ export default {
             return this.$refs.expertises.$swiper;
         },
     },
-    // mounted() {
-    //     this.resetInterval();
-    // },
-    // methods: {
-    //     resetInterval() {
-    //         clearInterval(this.interval);
-    //         this.interval = setInterval(() => {
-    //             this.currentSlide = this.currentSlide !== 3 ? this.currentSlide + 1 : 0;
-    //         }, 3000);
-    //     },
-    // },
+    mounted() {
+        this.resetInterval();
+    },
+    methods: {
+        changeSlide(index) {
+            this.currentSlide = index;
+            this.resetInterval();
+        },
+        resetInterval() {
+            clearInterval(this.interval);
+            this.interval = setInterval(() => {
+                this.currentSlide = this.currentSlide !== 3 ? this.currentSlide + 1 : 0;
+            }, 3000);
+        },
+    },
 };
 </script>
 
@@ -230,14 +246,14 @@ section {
 .section-experience {
     .section-inner {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-evenly;
         flex-wrap: wrap-reverse;
         text-align: center;
         gap: 50px 0;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             text-align: left;
+            flex-wrap: nowrap;
         }
     }
     h2 {
@@ -264,21 +280,31 @@ section {
     overflow: hidden;
     .expertises {
         text-align: center;
-        width: 100%;
+        // start-comment
+        gap: 50px;
+        justify-content: center;
+        @media (max-width: 1023px) {
+            max-width: 400px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        @media (min-width: 1024px) {
+            flex-direction: column;
+        }
+        // end-comment
+        &.desktop-only {
+            display: none;
+            @media (min-width: 1024px) {
+                display: inline-flex;
+            }
+        }
+        &.mobile-only {
+            @media (min-width: 1024px) {
+                display: none;
+            }
+        }
     }
-    // .expertises {
-    //     display: flex;
-    //     gap: 50px;
-    //     justify-content: center;
-    //     @media (max-width: 1023px) {
-    //         max-width: 400px;
-    //         margin: 0 auto;
-    //         flex-wrap: wrap;
-    //     }
-    //     @media (min-width: 1024px) {
-    //         flex-direction: column;
-    //    }
-    // }
     .swiper-container {
         margin: 35px -20px;
         overflow: visible;
@@ -296,7 +322,7 @@ section {
         appearance: none;
         background: none;
         border: none;
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             width: 145px;
             height: 145px;
         }
@@ -328,6 +354,7 @@ section {
             opacity: 0;
             transition: opacity 300ms ease;
         }
+        &.is-active,
         &.swiper-slide-active {
             &::before {
                 transform: scale(1.35);
