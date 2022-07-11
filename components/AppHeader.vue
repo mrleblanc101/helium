@@ -2,18 +2,14 @@
     <header class="header" :class="[{ 'is-open': isOpen }, $route.name]">
         <div class="header-inner max-width-container">
             <NuxtLink to="/">
-                <img
-                    v-if="$route.name === 'expertises' || $route.name === 'expertises-slug'"
-                    inline
-                    class="icon-logo-big"
-                    src="@/assets/svg/logo-expertises.svg"
-                />
-                <img
-                    v-else-if="$route.name === 'agence'"
-                    inline
-                    class="icon-logo-big"
-                    src="@/assets/svg/logo-agence.svg"
-                />
+                <template v-if="$route.name === 'expertises' || $route.name === 'expertises-slug'">
+                    <img inline class="icon-logo-hero desktop-only" src="@/assets/svg/logo-expertises-desktop.svg" />
+                    <img inline class="icon-logo-hero mobile-only" src="@/assets/svg/logo-expertises-mobile.svg" />
+                </template>
+                <template v-else-if="$route.name === 'agence'">
+                    <img inline class="icon-logo-hero desktop-only" src="@/assets/svg/logo-agence-desktop.svg" />
+                    <img inline class="icon-logo-hero mobile-only" src="@/assets/svg/logo-agence-mobile.svg" />
+                </template>
                 <img v-else inline class="icon-logo" src="@/assets/svg/logo.svg" />
             </NuxtLink>
             <button type="button" class="btn-menu" :class="{ 'is-open': isOpen }" @click="toggle">
@@ -233,7 +229,7 @@ a {
 .icon-logo {
     width: 126px;
 }
-.icon-logo-big {
+.icon-logo-hero {
     width: 320px;
     position: absolute;
     left: -58px;
@@ -244,6 +240,17 @@ a {
         max-width: 850px;
         left: -8%;
         top: 38px;
+    }
+    &.desktop-only {
+        display: none;
+        @media (min-width: 1024px) {
+            display: block;
+        }
+    }
+    &.mobile-only {
+        @media (min-width: 1024px) {
+            display: none;
+        }
     }
 }
 .icon-social {
