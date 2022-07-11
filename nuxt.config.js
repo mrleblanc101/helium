@@ -8,7 +8,9 @@ export default {
     },
 
     head: {
-        title: 'Agence Hélium',
+        titleTemplate: (titleChunk) => {
+            return titleChunk ? `${titleChunk} | Agence Hélium` : 'Agence Hélium';
+        },
         htmlAttrs: {
             lang: 'fr',
         },

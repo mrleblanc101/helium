@@ -45,6 +45,9 @@ export default {
             projects,
         };
     },
+    head: {
+        title: 'Réalisations',
+    },
 };
 </script>
 

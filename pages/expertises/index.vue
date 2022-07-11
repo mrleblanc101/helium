@@ -47,6 +47,9 @@ export default {
             expertises: [],
         };
     },
+    head: {
+        title: 'Expertises',
+    },
 };
 </script>
 

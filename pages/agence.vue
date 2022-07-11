@@ -57,6 +57,9 @@
 <script>
 export default {
     name: 'AgencePage',
+    head: {
+        title: 'Agence',
+    },
 };
 </script>
 

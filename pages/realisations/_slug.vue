@@ -26,6 +26,12 @@ export default {
             realisation: {},
         };
     },
+    head() {
+        return {
+            title: `${this.realisation.title} - Réalisations`,
+            // description: this.realisation.context,
+        };
+    },
 };
 </script>
 

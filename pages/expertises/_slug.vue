@@ -51,6 +51,12 @@ export default {
             expertise: {},
         };
     },
+    head() {
+        return {
+            title: `${this.expertise.title} - Expertises`,
+            // description: this.expertise.preview.description,
+        };
+    },
 };
 </script>
 

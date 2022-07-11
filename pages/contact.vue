@@ -50,6 +50,9 @@
 <script>
 export default {
     name: 'ContactPage',
+    head: {
+        title: 'Contact',
+    },
 };
 </script>
 
