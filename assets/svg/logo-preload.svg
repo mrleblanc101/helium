@@ -1,97 +1,254 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="a" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" width="5.00402cm" height="4.98877cm" viewBox="0 0 141.84638 141.41409">
-  <defs>
-    <style>
-    .animating {
-        transform-origin: center;
-        animation: rotate 12s infinite linear;
-    }
-    @keyframes rotate {
-        from { transform: rotate(360deg); }
-        to { transform: rotate(0); }
-    }
-    </style>
-  </defs>
-  <g class="animating" font-size="8.79px">
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(80.32233 10.49966) rotate(11.58759)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(85.84382 11.61441) rotate(17.0106)"><tspan x="0" y="0">G</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(91.88776 13.51334) rotate(22.26821)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(96.29303 15.30875) rotate(27.18652)"><tspan x="0" y="0">N</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(101.29596 17.87515) rotate(32.77112)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(106.54108 21.30533) rotate(37.94838)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(110.29499 24.29263) rotate(41.15704)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(111.86628 25.58267) rotate(45.04192)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(116.25788 30.03043) rotate(50.42526)"><tspan x="0" y="0">R</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(119.60749 34.11783) rotate(55.14106)"><tspan x="0" y="0">É</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(122.34577 38.01431) rotate(60.27282)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(124.7403 42.15054) rotate(64.44756)"><tspan x="0" y="0">T</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(127.04401 47.12125) rotate(67.84314)"><tspan x="0" y="0">I</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(127.73639 48.66128) rotate(71.48145)"><tspan x="0" y="0">V</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(129.58893 54.31558) rotate(76.55361)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(130.66022 58.99966) rotate(79.80459)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(131.0821 61.00308) rotate(83.68088)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(131.71686 66.58609) rotate(89.00211)"><tspan x="0" y="0">G</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(131.78034 72.92789) rotate(94.14851)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(131.44538 77.66812) rotate(99.02576)"><tspan x="0" y="0">N</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(130.56257 83.2399) rotate(104.65079)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(128.93952 89.27408) rotate(109.86667)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(127.26178 93.77896) rotate(113.12445)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(126.51862 95.6774) rotate(117.05555)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(123.63678 101.24087) rotate(122.49279)"><tspan x="0" y="0">R</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(120.78815 105.67251) rotate(127.19894)"><tspan x="0" y="0">É</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(117.92389 109.47867) rotate(132.31126)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(114.73932 113.01919) rotate(136.42967)"><tspan x="0" y="0">T</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(110.72761 116.74722) rotate(139.78462)"><tspan x="0" y="0">I</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(109.47663 117.8815) rotate(143.38037)"><tspan x="0" y="0">V</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(104.66999 121.40787) rotate(148.41414)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(100.54303 123.88882) rotate(151.66039)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(98.77839 124.90884) rotate(155.5394)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(93.66901 127.25259) rotate(160.9501)"><tspan x="0" y="0">G</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(87.6778 129.27115) rotate(166.19701)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(83.04206 130.41763) rotate(171.13238)"><tspan x="0" y="0">N</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(77.48737 131.28726) rotate(176.69007)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(71.211 131.60416) rotate(-178.18542)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(66.4405 131.40787) rotate(-175.01495)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(64.38386 131.29068) rotate(-171.08673)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(58.20905 130.28677) rotate(-165.63852)"><tspan x="0" y="0">R</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(53.11237 128.95962) rotate(-160.88438)"><tspan x="0" y="0">É</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(48.60846 127.41959) rotate(-155.71502)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(44.25593 125.48648) rotate(-151.55257)"><tspan x="0" y="0">T</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(39.45319 122.80972) rotate(-148.15545)"><tspan x="0" y="0">I</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(38.00007 121.97623) rotate(-144.56063)"><tspan x="0" y="0">V</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(33.15534 118.4816) rotate(-139.52761)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(29.53913 115.33462) rotate(-136.32355)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(28.02155 113.9689) rotate(-132.48088)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(24.21296 109.83511) rotate(-127.13456)"><tspan x="0" y="0">G</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(20.4278 104.75894) rotate(-121.9315)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(17.89557 100.71011) rotate(-117.01216)"><tspan x="0" y="0">N</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(15.33112 95.68716) rotate(-111.38934)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(13.09284 89.84439) rotate(-106.16755)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(11.80573 85.23794) rotate(-102.93205)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(11.28815 83.26968) rotate(-99.00419)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(10.34382 77.06705) rotate(-93.58039)"><tspan x="0" y="0">R</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(10.0362 71.8273) rotate(-88.95847)"><tspan x="0" y="0">É</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(10.10261 67.05777) rotate(-83.86107)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(10.58698 62.298) rotate(-79.69284)"><tspan x="0" y="0">T</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(11.62897 56.9313) rotate(-76.30787)"><tspan x="0" y="0">I</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(11.9737 55.26578) rotate(-72.65554)"><tspan x="0" y="0">V</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(13.78522 49.59048) rotate(-67.57606)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(15.65729 45.17789) rotate(-64.33889)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(16.49323 43.29947) rotate(-60.44671)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(19.25007 38.40152) rotate(-55.07592)"><tspan x="0" y="0">G</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(22.92194 33.22671) rotate(-49.86853)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(25.98542 29.57974) rotate(-44.99873)"><tspan x="0" y="0">N</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(29.96491 25.59634) rotate(-39.44618)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(34.81159 21.66617) rotate(-34.29986)"><tspan x="0" y="0">E</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(38.81061 18.99576) rotate(-31.06667)"><tspan x="0" y="0"> </tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(40.52643 17.88785) rotate(-27.14272)"><tspan x="0" y="0">C</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(46.10846 15.06656) rotate(-21.69678)"><tspan x="0" y="0">R</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(51.00886 13.13931) rotate(-16.94481)"><tspan x="0" y="0">É</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(55.56159 11.7316) rotate(-11.76624)"><tspan x="0" y="0">A</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(60.22175 10.73209) rotate(-7.60532)"><tspan x="0" y="0">T</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(65.66511 10.07095) rotate(-4.23893)"><tspan x="0" y="0">I</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(67.35846 9.90103) rotate(-.9283)"><tspan x="0" y="0">V</tspan></text>
-    <text class="c" font-family="PP Radio Grotesk" transform="translate(73.31159 9.85562) rotate(4.30514)"><tspan x="0" y="0">E</tspan></text>
-  </g>
-  <path id="b" data-name="Tracé 31" class="d" d="M106.70665,62.39476c-2.96792-2.8533-7.04499-4.25548-11.44401-4.289-8.01019-.06123-14.95285,4.63975-16.06998,14.30028h-5.56697v-27.07322h-6.58516v27.07322h-13.38036c-5.60495,0-9.10312,2.44443-9.10312,5.96206V45.33282h-6.58556v46.56378h6.58556c0-11.31669,1.11388-13.96913,8.16644-13.96913h14.31704v13.96913h6.58516v-13.9694h5.55873c1.08942,9.71216,8.04709,14.43801,16.07822,14.37678,.42424-.00433,.84613-.02158,1.26567-.05177,6.15939-.38589,11.75651-3.50965,14.26919-9.60214l-5.72038-2.26142-.00392,.00865-.12489-.04947c-1.80348,4.40849-5.67686,6.34511-9.68527,6.41242-.28276,.00392-.5635-.00351-.84139-.01973-4.28941-.3152-7.89949-3.07321-8.70182-8.81333h25.67604c.13504-.88042,.20178-1.76997,.19963-2.66069,0-5.80108-1.89472-10.0621-4.88886-12.87188m-1.69198,9.93829h-19.28024c1.019-5.99963,5.06011-8.64059,9.69675-8.57409,2.02488,.02893,3.93555,.5243,5.53143,1.57141,2.00826,1.37867,3.49938,3.64941,4.0522,7.00268"/>
+<svg id="a" data-name="Calque 1" width="5.00402cm" height="4.98877cm" viewBox="0 0 141.84638 141.41409">
+    <defs>
+        <style>
+            .animating {
+                transform-origin: center;
+                animation: rotate 12s infinite linear;
+            }
+            @keyframes rotate {
+                from { transform: rotate(360deg); }
+                to { transform: rotate(0); }
+            }
+</style>
+    </defs>
+    <g class="animating" font-size="8.79px">
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(80.32233 10.49966) rotate(11.58759)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(85.84382 11.61441) rotate(17.0106)">
+            <tspan x="0" y="0">G</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(91.88776 13.51334) rotate(22.26821)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(96.29303 15.30875) rotate(27.18652)">
+            <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(101.29596 17.87515) rotate(32.77112)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(106.54108 21.30533) rotate(37.94838)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(110.29499 24.29263) rotate(41.15704)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(111.86628 25.58267) rotate(45.04192)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(116.25788 30.03043) rotate(50.42526)">
+            <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(119.60749 34.11783) rotate(55.14106)">
+            <tspan x="0" y="0">É</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(122.34577 38.01431) rotate(60.27282)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(124.7403 42.15054) rotate(64.44756)">
+            <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(127.04401 47.12125) rotate(67.84314)">
+            <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(127.73639 48.66128) rotate(71.48145)">
+            <tspan x="0" y="0">V</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(129.58893 54.31558) rotate(76.55361)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(130.66022 58.99966) rotate(79.80459)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(131.0821 61.00308) rotate(83.68088)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(131.71686 66.58609) rotate(89.00211)">
+            <tspan x="0" y="0">G</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(131.78034 72.92789) rotate(94.14851)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(131.44538 77.66812) rotate(99.02576)">
+            <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(130.56257 83.2399) rotate(104.65079)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(128.93952 89.27408) rotate(109.86667)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(127.26178 93.77896) rotate(113.12445)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(126.51862 95.6774) rotate(117.05555)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(123.63678 101.24087) rotate(122.49279)">
+            <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(120.78815 105.67251) rotate(127.19894)">
+            <tspan x="0" y="0">É</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(117.92389 109.47867) rotate(132.31126)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(114.73932 113.01919) rotate(136.42967)">
+            <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(110.72761 116.74722) rotate(139.78462)">
+            <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(109.47663 117.8815) rotate(143.38037)">
+            <tspan x="0" y="0">V</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(104.66999 121.40787) rotate(148.41414)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(100.54303 123.88882) rotate(151.66039)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(98.77839 124.90884) rotate(155.5394)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(93.66901 127.25259) rotate(160.9501)">
+            <tspan x="0" y="0">G</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(87.6778 129.27115) rotate(166.19701)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(83.04206 130.41763) rotate(171.13238)">
+            <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(77.48737 131.28726) rotate(176.69007)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(71.211 131.60416) rotate(-178.18542)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(66.4405 131.40787) rotate(-175.01495)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(64.38386 131.29068) rotate(-171.08673)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(58.20905 130.28677) rotate(-165.63852)">
+            <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(53.11237 128.95962) rotate(-160.88438)">
+            <tspan x="0" y="0">É</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(48.60846 127.41959) rotate(-155.71502)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(44.25593 125.48648) rotate(-151.55257)">
+            <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(39.45319 122.80972) rotate(-148.15545)">
+            <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(38.00007 121.97623) rotate(-144.56063)">
+            <tspan x="0" y="0">V</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(33.15534 118.4816) rotate(-139.52761)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(29.53913 115.33462) rotate(-136.32355)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(28.02155 113.9689) rotate(-132.48088)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(24.21296 109.83511) rotate(-127.13456)">
+            <tspan x="0" y="0">G</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(20.4278 104.75894) rotate(-121.9315)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(17.89557 100.71011) rotate(-117.01216)">
+            <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(15.33112 95.68716) rotate(-111.38934)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(13.09284 89.84439) rotate(-106.16755)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(11.80573 85.23794) rotate(-102.93205)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(11.28815 83.26968) rotate(-99.00419)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(10.34382 77.06705) rotate(-93.58039)">
+            <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(10.0362 71.8273) rotate(-88.95847)">
+            <tspan x="0" y="0">É</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(10.10261 67.05777) rotate(-83.86107)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(10.58698 62.298) rotate(-79.69284)">
+            <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(11.62897 56.9313) rotate(-76.30787)">
+            <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(11.9737 55.26578) rotate(-72.65554)">
+            <tspan x="0" y="0">V</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(13.78522 49.59048) rotate(-67.57606)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(15.65729 45.17789) rotate(-64.33889)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(16.49323 43.29947) rotate(-60.44671)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(19.25007 38.40152) rotate(-55.07592)">
+            <tspan x="0" y="0">G</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(22.92194 33.22671) rotate(-49.86853)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(25.98542 29.57974) rotate(-44.99873)">
+            <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(29.96491 25.59634) rotate(-39.44618)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(34.81159 21.66617) rotate(-34.29986)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(38.81061 18.99576) rotate(-31.06667)">
+            <tspan x="0" y="0"></tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(40.52643 17.88785) rotate(-27.14272)">
+            <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(46.10846 15.06656) rotate(-21.69678)">
+            <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(51.00886 13.13931) rotate(-16.94481)">
+            <tspan x="0" y="0">É</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(55.56159 11.7316) rotate(-11.76624)">
+            <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(60.22175 10.73209) rotate(-7.60532)">
+            <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(65.66511 10.07095) rotate(-4.23893)">
+            <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(67.35846 9.90103) rotate(-.9283)">
+            <tspan x="0" y="0">V</tspan>
+        </text>
+        <text class="c" font-family="PP Radio Grotesk" transform="translate(73.31159 9.85562) rotate(4.30514)">
+            <tspan x="0" y="0">E</tspan>
+        </text>
+    </g>
+    <path id="b" data-name="Tracé 31" class="d" d="M106.70665,62.39476c-2.96792-2.8533-7.04499-4.25548-11.44401-4.289-8.01019-.06123-14.95285,4.63975-16.06998,14.30028h-5.56697v-27.07322h-6.58516v27.07322h-13.38036c-5.60495,0-9.10312,2.44443-9.10312,5.96206V45.33282h-6.58556v46.56378h6.58556c0-11.31669,1.11388-13.96913,8.16644-13.96913h14.31704v13.96913h6.58516v-13.9694h5.55873c1.08942,9.71216,8.04709,14.43801,16.07822,14.37678,.42424-.00433,.84613-.02158,1.26567-.05177,6.15939-.38589,11.75651-3.50965,14.26919-9.60214l-5.72038-2.26142-.00392,.00865-.12489-.04947c-1.80348,4.40849-5.67686,6.34511-9.68527,6.41242-.28276,.00392-.5635-.00351-.84139-.01973-4.28941-.3152-7.89949-3.07321-8.70182-8.81333h25.67604c.13504-.88042,.20178-1.76997,.19963-2.66069,0-5.80108-1.89472-10.0621-4.88886-12.87188m-1.69198,9.93829h-19.28024c1.019-5.99963,5.06011-8.64059,9.69675-8.57409,2.02488,.02893,3.93555,.5243,5.53143,1.57141,2.00826,1.37867,3.49938,3.64941,4.0522,7.00268" />
 </svg>
