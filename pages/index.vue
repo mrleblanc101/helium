@@ -123,7 +123,7 @@ export default {
         ImgExperience,
     },
     async asyncData({ $content }) {
-        const projects = await $content('realisations').limit(2).sortBy('createdAt', 'asc').fetch();
+        const projects = await $content('realisations').limit(2).sortBy('order').fetch();
         const expertises = await $content('expertises').fetch();
         return {
             projects,

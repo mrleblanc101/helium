@@ -61,12 +61,6 @@ export default {
         fix: true,
     },
 
-    vue: {
-        config: {
-            devtools: true,
-        },
-    },
-
     generate: {
         devtools: true,
     },

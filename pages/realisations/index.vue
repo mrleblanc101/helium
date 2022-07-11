@@ -40,7 +40,7 @@
 export default {
     name: 'RealisationsIndexPage',
     async asyncData({ $content }) {
-        const projects = await $content('realisations').sortBy('createdAt', 'asc').fetch();
+        const projects = await $content('realisations').sortBy('order').fetch();
         return {
             projects,
         };
