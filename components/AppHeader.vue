@@ -25,7 +25,7 @@
                 <nav class="nav-main">
                     <ul>
                         <li class="hide-for-large">
-                            <NuxtLink to="/">Accueil</NuxtLink>
+                            <NuxtLink to="/" exact>Accueil</NuxtLink>
                         </li>
                         <li>
                             <NuxtLink to="/expertises">Expertises</NuxtLink>
@@ -109,7 +109,6 @@ nav {
 }
 a {
     color: currentColor;
-    text-decoration: none;
 }
 .nav-wrapper {
     position: fixed;
@@ -242,7 +241,7 @@ a {
     @media (min-width: 1024px) {
         width: 45vw;
         max-width: 850px;
-        left: (-130px - 40px);
+        left: -9.5%;
         top: 38px;
     }
 }

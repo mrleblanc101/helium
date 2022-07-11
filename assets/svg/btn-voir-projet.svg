@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="184" height="184">
+<svg xmlns="http://www.w3.org/2000/svg" class="btn-voir-projet" width="184" height="184">
     <defs>
         <style>
-        .animating {
+        .btn-voir-projet {
+            transition: transform 150ms ease;
+        }
+        .btn-voir-projet:hover {
+            transform: scale(1.05);
+        }
+        .btn-voir-projet .animating {
             transform-origin: center;
             animation: rotate 12s infinite linear;
         }

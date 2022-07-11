@@ -71,7 +71,6 @@ li {
     align-items: baseline;
     padding: 20px 20px 30px;
     border-radius: 10px;
-    text-decoration: none;
     background-color: $color-blue;
     color: $color-white;
     width: 100%;

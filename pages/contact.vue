@@ -7,8 +7,8 @@
                         Parlez-nous de votre projet, de vos besoins! Nous pourrons ensuite planifier une rencontre, pour
                         en parler plus en détail.
                     </h1>
-                    <form>
-                        <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
+                    <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
+                    <form action="https://formspree.io/f/{form_id}" method="post">
                         <label class="cell-50">
                             Nom
                             <input type="text" />
@@ -131,7 +131,7 @@ form {
 }
 .form-wrapper,
 .bubble-wrapper {
-    margin: 45px 0;
+    margin: 80px 0 45px;
     @media (min-width: 1024px) {
         margin: 100px 0;
     }

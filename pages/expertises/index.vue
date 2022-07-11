@@ -15,7 +15,7 @@
             <client-only>
                 Notre vision d’une
                 <VueTyper
-                    :text="['marques', 'entreprises', 'compagnies', 'organisations']"
+                    :text="['marque', 'entreprise', 'compagnie', 'organisation']"
                     initial-action="erasing"
                     erase-style="backspace"
                     :type-delay="150"

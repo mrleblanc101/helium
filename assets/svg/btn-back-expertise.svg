@@ -1,7 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="240.199" height="240.295" viewBox="0 0 240.199 240.295">
+<svg xmlns="http://www.w3.org/2000/svg" class="btn-back-expertise" width="240.199" height="240.295" viewBox="0 0 240.199 240.295">
   <defs>
     <style>
-    .animating {
+    .btn-back-expertise {
+        transition: transform 150ms ease;
+    }
+    .btn-back-expertise:hover {
+        transform: scale(1.05);
+    }
+    .btn-back-expertise .animating {
         transform-origin: center;
         animation: rotate 12s infinite linear;
     }
@@ -15,7 +21,7 @@
     </clipPath>
   </defs>
   <g id="btn-back-expertise" transform="translate(275.099 5612.147) rotate(180)">
-    <text id="_" data-name="→" transform="translate(109.472 5529.704)" fill="#2400ff" font-size="120" font-family="PPRadioGrotesk-Light, PP Radio Grotesk" font-weight="300"><tspan x="0" y="0">→</tspan></text>
+    <text data-name="→" transform="translate(109.472 5529.704)" fill="#2400ff" font-size="120" font-family="PPRadioGrotesk-Light, PP Radio Grotesk" font-weight="300"><tspan x="0" y="0">→</tspan></text>
     <g id="Groupe_195" data-name="Groupe 195" transform="translate(275.099 5612.147) rotate(180)">
       <g class="animating" id="Groupe_193" data-name="Groupe 193" clip-path="url(#clip-path)">
         <path id="Tracé_739" data-name="Tracé 739" d="M4.435,1C8.945-1.311,13.4.457,16.03,5.6l2.1,4.115,6.536-3.343,2.012,3.934L5.5,21.141,1.385,13.092C-1.246,7.949-.073,3.3,4.435,1m8.205,6.339C11.31,4.732,9.219,3.855,6.587,5.2S3.443,8.756,4.774,11.359l2.105,4.115,7.867-4.024Z" transform="translate(12.126 161.818)" fill="#2400ff"/>

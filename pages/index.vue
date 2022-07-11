@@ -111,7 +111,7 @@ export default {
         ImgExperience,
     },
     async asyncData({ $content }) {
-        const projects = await $content('realisations').limit(2).fetch();
+        const projects = await $content('realisations').limit(2).sortBy('createdAt', 'asc').fetch();
         const expertises = await $content('expertises').fetch();
         return {
             projects,
@@ -130,7 +130,7 @@ export default {
                 slidesPerView: 'auto',
                 spaceBetween: 50,
                 autoplay: {
-                    delay: 5000,
+                    delay: 3000,
                 },
             },
         };
@@ -393,7 +393,6 @@ section {
         top: 18%;
         right: 8%;
         color: $color-white;
-        text-decoration: none;
         z-index: 2;
         h2 {
             margin: 0;

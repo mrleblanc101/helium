@@ -1,13 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="184" height="184">
+<svg xmlns="http://www.w3.org/2000/svg" class="btn-contactez-nous" width="184" height="184">
     <defs>
         <style>
-        .animating {
+        .btn-contactez-nous {
+            transition: transform 150ms ease;
+        }
+        .btn-contactez-nous:hover {
+            transform: scale(1.05);
+        }
+        .btn-contactez-nous .animating {
             transform-origin: center;
             animation: rotate 12s infinite linear;
-        }
-        svg:focus .animating,
-        svg:hover .animating {
-            animation-play-state: paused;
         }
         @keyframes rotate {
             from { transform: rotate(360deg); }

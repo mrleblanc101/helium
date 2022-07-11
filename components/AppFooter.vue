@@ -4,7 +4,7 @@
             <nav class="nav-main">
                 <ul>
                     <li>
-                        <NuxtLink to="/">Accueil</NuxtLink>
+                        <NuxtLink to="/" exact>Accueil</NuxtLink>
                     </li>
                     <li>
                         <NuxtLink to="/expertises">Expertises</NuxtLink>
@@ -90,7 +90,6 @@ svg {
 }
 a {
     color: currentColor;
-    text-decoration: none;
 }
 .nav-main {
     ul {

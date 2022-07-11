@@ -40,7 +40,7 @@
 export default {
     name: 'RealisationsIndexPage',
     async asyncData({ $content }) {
-        const projects = await $content('realisations').limit(2).fetch();
+        const projects = await $content('realisations').sortBy('createdAt', 'asc').fetch();
         return {
             projects,
         };
@@ -89,7 +89,6 @@ h1 {
     }
     a {
         color: $color-blue;
-        text-decoration: none;
     }
     .cell {
         position: relative;

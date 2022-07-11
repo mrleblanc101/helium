@@ -42,7 +42,6 @@ ul {
 }
 a {
     color: currentColor;
-    text-decoration: none;
     display: flex;
     padding: 10px;
     transition: all 150ms ease;

@@ -55,7 +55,6 @@ section {
         gap: 10px;
         align-items: center;
         color: currentColor;
-        text-decoration: none;
         font-size: 30px;
     }
 }
