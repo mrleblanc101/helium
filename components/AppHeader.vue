@@ -167,7 +167,7 @@ a {
         padding: 20px 0;
         transition: all 150ms ease;
         @media (min-width: 1024px) {
-            padding: 10px 35px;
+            padding: 10px clamp(20px, 2.2vw, 35px);
             font-size: 20px;
         }
         &::before {
@@ -215,6 +215,7 @@ a {
 .nav-social {
     position: absolute;
     bottom: 40px;
+    margin-left: -35px;
     @media (min-width: 1024px) {
         margin-left: 40px;
         position: static;
@@ -239,9 +240,9 @@ a {
     top: -74px;
     fill: $color-blue;
     @media (min-width: 1024px) {
-        width: 45vw;
+        width: 40vw;
         max-width: 850px;
-        left: -9.5%;
+        left: -8%;
         top: 38px;
     }
 }

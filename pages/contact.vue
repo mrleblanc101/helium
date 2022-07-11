@@ -58,7 +58,7 @@ export default {
     position: absolute;
     right: calc(625px + 15%);
     top: 140px;
-    max-height: 100%;
+    // max-height: 100%;
     pointer-events: none;
     fill: $color-blue;
     z-index: -1;

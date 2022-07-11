@@ -80,10 +80,8 @@ h1 {
     text-align: center;
     align-self: flex-end;
     transform: translateY(-50%);
-    @media (min-width: 768px) {
-    }
     @media (min-width: 1024px) {
-        max-width: 600px;
+        max-width: 650px;
         font-size: 60px;
         margin: 50vh 9% 0;
     }

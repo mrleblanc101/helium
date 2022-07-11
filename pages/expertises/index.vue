@@ -65,7 +65,7 @@ export default {
         text-align: center;
         align-self: flex-end;
         transform: translateY(-50%);
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             text-align: left;
             max-width: 650px;
             margin: 50vh 9% 0;
