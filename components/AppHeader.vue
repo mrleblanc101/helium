@@ -87,6 +87,9 @@ export default {
     justify-content: space-between;
     padding: 22px 20px;
     color: $color-black;
+    .realisations-slug & {
+        color: $color-white;
+    }
     @media (min-width: 1024px) {
         padding: 38px 40px;
         color: $color-black;
@@ -263,7 +266,7 @@ a {
     border: none;
     background: none;
     padding: 0;
-    color: $color-black;
+    color: currentColor;
     transition-delay: 500ms;
     @media (min-width: 1024px) {
         display: none;
