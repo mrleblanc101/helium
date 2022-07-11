@@ -84,9 +84,10 @@ h1 {
     align-self: flex-end;
     transform: translateY(-50%);
     @media (min-width: 1024px) {
-        max-width: 650px;
+        width: 650px;
+        max-width: calc(100% - 40vw);
         font-size: 60px;
-        margin: 50vh 9% 0;
+        margin: 50vh 7% 0;
     }
 }
 .bubbles-wrapper {

@@ -161,7 +161,7 @@ a {
         display: inline-block;
         font-size: 40px;
         padding: 20px 0;
-        transition: all 150ms ease;
+        transition: transform 150ms ease;
         @media (min-width: 1024px) {
             padding: 10px clamp(20px, 2.2vw, 35px);
             font-size: 20px;
@@ -171,7 +171,7 @@ a {
             position: absolute;
             left: -40px;
             opacity: 0;
-            transition: all 150ms ease;
+            transition: opacity 150ms ease;
             @media (min-width: 1024px) {
                 left: 50%;
                 transform: translateX(-50%);
@@ -219,7 +219,7 @@ a {
     a {
         display: flex;
         padding: 10px;
-        transition: all 150ms ease;
+        transition: opacity 150ms ease;
         color: currentColor;
         &:hover {
             opacity: 0.7;

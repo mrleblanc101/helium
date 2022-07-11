@@ -334,7 +334,7 @@ section {
             border-radius: 50%;
             background-color: $color-blue;
             z-index: -1;
-            transition: all 300ms ease;
+            transition: transform 300ms ease;
         }
         .index {
             position: absolute;
@@ -455,7 +455,7 @@ section {
         left: 0;
         right: 0;
         object-fit: cover;
-        transition: all 600ms ease;
+        transition: transform 600ms ease;
     }
 }
 @mixin descending-z-index($count: 30) {

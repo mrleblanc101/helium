@@ -70,8 +70,9 @@ export default {
         transform: translateY(-50%);
         @media (min-width: 1024px) {
             text-align: left;
-            max-width: 650px;
-            margin: 50vh 9% 0;
+            width: 650px;
+            max-width: calc(100% - 40vw);
+            margin: 50vh 7% 0;
         }
     }
     h1 {

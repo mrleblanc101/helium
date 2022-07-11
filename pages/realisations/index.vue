@@ -104,7 +104,7 @@ h1 {
         }
         img {
             display: block;
-            transition: all 300ms ease;
+            transition: transform 300ms ease;
         }
         &:hover {
             img {

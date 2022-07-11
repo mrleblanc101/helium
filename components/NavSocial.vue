@@ -44,7 +44,7 @@ a {
     color: currentColor;
     display: flex;
     padding: 10px;
-    transition: all 150ms ease;
+    transition: opacity 150ms ease;
     &:hover {
         opacity: 0.7;
     }

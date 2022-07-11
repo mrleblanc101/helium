@@ -78,9 +78,9 @@ export default {
 }
 .page-overlay {
     opacity: 1;
-    transition: all 1000ms ease;
+    transition: opacity 1000ms ease;
     [data-n-head-ssr] & {
-        transition: all 1000ms ease;
+        transition: opacity 1000ms ease;
         opacity: 0;
     }
 }

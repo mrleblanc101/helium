@@ -103,7 +103,7 @@ a {
         display: inline-block;
         font-size: 30px;
         padding: 15px 0;
-        transition: all 150ms ease;
+        transition: transform 150ms ease;
         @media (min-width: 1024px) {
             font-size: 60px;
             padding: 35px 0;
@@ -113,7 +113,7 @@ a {
             position: absolute;
             left: -20px;
             opacity: 0;
-            transition: all 150ms ease;
+            transition: opacity 150ms ease;
             @media (min-width: 1024px) {
                 left: -40px;
             }
