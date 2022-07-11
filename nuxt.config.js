@@ -20,7 +20,7 @@ export default {
             { hid: 'description', name: 'description', content: '' },
             { name: 'format-detection', content: 'telephone=no' },
             { name: 'theme-color', content: '#2400FF' },
-            { property: 'og:image', content: 'img/og-image.png' },
+            { property: 'og:image', content: '/og-image.png' },
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' },
