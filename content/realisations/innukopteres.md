@@ -13,4 +13,10 @@ objectifs:
     - Amélioration de l’expérience utilisateur Web
     - Vidéo pouvant être utilisée pour la promotion
     - Banque de photos pour le Web et les médias
+gallery:
+    - 33: img/projects/innukopteres/img-1.png
+    - 33: img/projects/innukopteres/img-2.png
+    - 33: img/projects/innukopteres/img-3.png
+    - 33: img/projects/innukopteres/img-4.png
+    - 66: img/projects/innukopteres/img-3.png
 ---

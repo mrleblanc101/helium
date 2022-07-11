@@ -11,4 +11,17 @@ objectifs:
     - Déploiement de l’identité de Volkswagen
     - Création d’une page Facebook
     - Gagner de la visibilité et de la notoriété rapidement
+gallery:
+    - 27.5: img/projects/michaud-volkswagen/img-1.png
+    - 45: img/projects/michaud-volkswagen/img-2.png
+    - 27.5: img/projects/michaud-volkswagen/img-3.png
+    - 25: img/projects/michaud-volkswagen/img-4.png
+    - 75: img/projects/michaud-volkswagen/img-5.png
+    - 75: img/projects/michaud-volkswagen/img-6.png
+    - 25: img/projects/michaud-volkswagen/img-7.png
+    - 25: img/projects/michaud-volkswagen/img-8.png
+    - 75: img/projects/michaud-volkswagen/img-9.png
+    - 33: img/projects/michaud-volkswagen/img-10.png
+    - 33: img/projects/michaud-volkswagen/img-11.png
+    - 33: img/projects/michaud-volkswagen/img-12.png
 ---

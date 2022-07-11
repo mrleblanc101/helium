@@ -1,15 +1,33 @@
 <template>
-    <section :style="{ backgroundImage: `url(${realisation.banner})` }">
-        <div class="section-inner max-width-container">
-            <div class="header-wrapper">
-                <h1>{{ realisation.title }}</h1>
-                <nuxt-link to="/realisations">
-                    <img inline src="@/assets/svg/arrow-left.svg" height="18" />
-                    Réalisations
-                </nuxt-link>
+    <div>
+        <section :style="{ backgroundImage: `url(${realisation.banner})` }">
+            <div class="section-inner max-width-container">
+                <div class="header-wrapper">
+                    <h1>{{ realisation.title }}</h1>
+                    <nuxt-link to="/realisations">
+                        <img inline src="@/assets/svg/arrow-left.svg" height="18" />
+                        Réalisations
+                    </nuxt-link>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section v-if="realisation.gallery">
+            <div class="section-inner max-width-container">
+                <div class="grid">
+                    <template v-for="(item, i) in realisation.gallery">
+                        <div
+                            v-for="(src, size, j) in item"
+                            :key="`item-${i}-${j}`"
+                            class="cell"
+                            :class="`width-${size.replace('.', '-')}`"
+                        >
+                            <img :src="src" alt="" />
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+    </div>
 </template>
 
 <script>
@@ -62,6 +80,41 @@ section {
         align-items: center;
         color: currentColor;
         font-size: 30px;
+    }
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+    .cell {
+        padding: 15px;
+    }
+    .width-25 {
+        width: 25%;
+    }
+    .width-27-5 {
+        width: 27.5%;
+    }
+    .width-33 {
+        width: 33.33333%;
+    }
+    .width-45 {
+        width: 45%;
+    }
+    .width-50 {
+        width: 50%;
+    }
+    .width-66 {
+        width: 66.66666%;
+    }
+    .width-75 {
+        width: 75%;
+    }
+    img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }
 </style>

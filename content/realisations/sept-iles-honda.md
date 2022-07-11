@@ -13,4 +13,13 @@ objectifs:
     - Amélioration de l’expérience utilisateur Web
     - Vidéo pouvant être utilisée pour la promotion
     - Banque de photos pour le Web et les médias
+gallery:
+    - 25: img/projects/sept-iles-honda/img-1.png
+    - 75: img/projects/sept-iles-honda/img-2.png
+    - 75: img/projects/sept-iles-honda/img-3.png
+    - 25: img/projects/sept-iles-honda/img-4.png
+    - 25: img/projects/sept-iles-honda/img-5.png
+    - 75: img/projects/sept-iles-honda/img-6.png
+    - 75: img/projects/sept-iles-honda/img-7.png
+    - 25: img/projects/sept-iles-honda/img-8.png
 ---
