@@ -1,5 +1,7 @@
-@import 'normalize';
-@import 'fonts';
-@import 'utility';
-@import 'base';
-@import 'buttons';
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/utility';
+@import 'base/global';
+@import 'base/buttons';
+
+@import 'modules/toast';

@@ -7,27 +7,37 @@
                         Parlez-nous de votre projet, de vos besoins! Nous pourrons ensuite planifier une rencontre, pour
                         en parler plus en détail.
                     </h1>
-                    <!-- TODO: Dynamiser le form avec https://formspree.io/ -->
-                    <form action="https://formspree.io/f/{form_id}" method="post">
+                    <form
+                        ref="form"
+                        action="https://formspree.io/f/mwkydwyv"
+                        method="post"
+                        @submit.prevent="handleSubmit"
+                    >
+                        <input type="hidden" name="_language" value="fr" />
                         <label class="cell-50">
-                            Nom
-                            <input type="text" />
+                            Nom complet
+                            <input type="text" name="name" required />
+                            <span v-if="errors.name" class="form-error" v-html="errors.name"></span>
                         </label>
                         <label class="cell-50">
                             Entreprise (facultatif)
-                            <input type="text" />
+                            <input type="text" name="company" />
+                            <span v-if="errors.company" class="form-error" v-html="errors.company"></span>
                         </label>
                         <label class="cell-50">
                             Téléphone
-                            <input type="text" />
+                            <input type="tel" name="phone" required />
+                            <span v-if="errors.phone" class="form-error" v-html="errors.phone"></span>
                         </label>
                         <label class="cell-50">
                             Courriel
-                            <input type="text" />
+                            <input type="email" name="email" required />
+                            <span v-if="errors.email" class="form-error" v-html="errors.email"></span>
                         </label>
                         <label class="cell-100">
                             Message
-                            <textarea rows="6"></textarea>
+                            <textarea rows="6" name="message" required></textarea>
+                            <span v-if="errors.message" class="form-error" v-html="errors.message"></span>
                         </label>
                         <button class="button primary" type="submit">Envoyer</button>
                     </form>
@@ -36,8 +46,7 @@
                     <h2>Collaboration</h2>
                     <h3>Vous êtes pigiste?</h3>
                     <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
-                    <!-- TODO: Ajouter email -->
-                    <a href="mailto:vincent@agencehelium.com" type="button" class="button secondary"
+                    <a href="mailto:info@agencehelium.com" type="button" class="button secondary"
                         >Envoi-nous ton portfolio</a
                     >
                 </FloatingBubble>
@@ -50,8 +59,61 @@
 <script>
 export default {
     name: 'ContactPage',
+    data() {
+        return {
+            errors: {},
+        };
+    },
     head: {
         title: 'Contact',
+    },
+    computed: {
+        labels() {
+            return {
+                REQUIRED_FIELD_MISSING: "Ce champ est obligatoire, mais aucune valeur n'a été fournie",
+                REQUIRED_FIELD_EMPTY: 'Ce champ est obligatoire, mais une chaîne vide a été fournie',
+                TYPE_EMAIL: 'Ce champ doit contenir un courriel',
+                TYPE_NUMERIC: 'Ce champ doit contenir un nombre',
+                TYPE_TEXT: 'Ce champ doit contenir du texte',
+            };
+        },
+    },
+    methods: {
+        handleSubmit(event) {
+            const form = this.$refs.form;
+            const data = new FormData(event.target);
+            this.errors = {};
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    Accept: 'application/json',
+                },
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        this.$toast.success('Merci, nous vous répondrons dans les plus bref délais');
+                        form.reset();
+                    } else {
+                        response.json().then((data) => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                this.errors = data.errors.reduce((acc, error) => {
+                                    acc[error.field] = this.labels[error.code];
+                                    return acc;
+                                }, {});
+                                this.$toast.error(
+                                    'Le formulaire est invalide. Veuillez corriger les erreurs et réessayer.',
+                                );
+                            } else {
+                                this.$toast.error('Un problème est servenu lors de la soumission de votre formulaire');
+                            }
+                        });
+                    }
+                })
+                .catch(() => {
+                    this.$toast.error('Un problème est servenu lors de la soumission de votre formulaire');
+                });
+        },
     },
 };
 </script>
@@ -106,11 +168,12 @@ section {
 form {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 24px;
+    gap: 16px 20px;
     .cell-50 {
         width: 100%;
         @media (min-width: 1024px) {
-            width: calc(50% - 12px);
+            flex: 1;
+            width: 50%;
         }
     }
     .cell-100 {
@@ -122,14 +185,20 @@ form {
     }
     input,
     textarea {
-        margin-top: 12px;
+        font-size: 16px;
+        margin-top: 8px;
         border-radius: 8px;
-        padding: 10px;
+        padding: 12px 10px;
         border: 1px solid $color-black;
     }
     .button {
         display: block;
         margin-left: auto;
+    }
+    .form-error {
+        font-size: 14px;
+        margin-top: 4px;
+        color: $color-error;
     }
 }
 .form-wrapper,
