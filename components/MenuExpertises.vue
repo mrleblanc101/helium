@@ -67,18 +67,34 @@ li {
     justify-content: center;
 }
 .expertise {
+    position: relative;
     display: flex;
     align-items: baseline;
     padding: 20px 20px 30px;
-    border-radius: 10px;
-    background-color: $color-blue;
     color: $color-white;
     width: 100%;
     height: 100%;
+    z-index: 0;
     @media (min-width: 768px) {
         padding: 50px 50px 60px;
     }
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 10px;
+        z-index: -1;
+        background-color: $color-blue;
+        transition: transform 300ms ease;
+    }
     &:hover {
+        &::before {
+            transform: scale(1.05);
+        }
         .button.secondary {
             &::before {
                 height: 100%;
