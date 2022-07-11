@@ -3,7 +3,7 @@
     <style>
         .animating {
             transform-origin: center;
-            animation: rotate 24s infinite linear;
+            animation: rotate 60s infinite linear;
         }
         @keyframes rotate {
             from { transform: rotate(360deg); }

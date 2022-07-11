@@ -126,6 +126,7 @@ h1 {
 .section-founders {
     display: flex;
     align-items: center;
+    min-height: 100vh;
     .section-inner {
         display: flex;
         align-items: center;

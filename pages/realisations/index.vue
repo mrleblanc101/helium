@@ -11,7 +11,7 @@
                             erase-style="backspace"
                             :type-delay="150"
                             :pre-type-delay="1000"
-                            :pre-erase-delay="3500"
+                            :pre-erase-delay="1500"
                             :erase-delay="150"
                         />
                         <template #placeholder>Notre impact chez les marques</template>

@@ -11,7 +11,7 @@
                             erase-style="backspace"
                             :type-delay="150"
                             :pre-type-delay="1000"
-                            :pre-erase-delay="3500"
+                            :pre-erase-delay="1500"
                             :erase-delay="150"
                         /><br />
                         à acquérir un avantage concurrentiel<br />
@@ -25,7 +25,7 @@
                 </h1>
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="60" :repeat="10">
+                        <MarqueeText :duration="40" :repeat="10">
                             Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
                         </MarqueeText>
                     </client-only>
@@ -62,20 +62,8 @@
                 </h2>
             </div>
         </section>
-        <section class="section-experience">
-            <div class="section-inner max-width-container">
-                <div>
-                    <h2>L’expérience client</h2>
-                    <p>
-                        «&nbsp;L’expérience client est l’ensemble des perceptions et émotions qu’une marque procure à
-                        ses acheteurs lorsqu’ils entrent en contact avec elle.&nbsp;» En d’autres termes, nous concevons
-                        des solutions en fonction de votre clientèle cible.
-                    </p>
-                </div>
-                <ImgExperience />
-            </div>
-        </section>
-        <section class="section-projets">
+
+        <!-- <section class="section-projets">
             <div class="section-inner">
                 <div class="marquee">
                     <client-only>
@@ -88,8 +76,21 @@
                     </client-only>
                 </div>
             </div>
-        </section>
+        </section> -->
         <div class="projects-underlay">
+            <section class="section-experience">
+                <div class="section-inner max-width-container">
+                    <div>
+                        <h2>Des réalisations axées sur l’expérience client.</h2>
+                        <p>
+                            «&nbsp;L’expérience client est l’ensemble des perceptions et émotions qu’une marque procure
+                            à ses acheteurs lorsqu’ils entrent en contact avec elle.&nbsp;» En d’autres termes, nous
+                            concevons des solutions en fonction de votre clientèle cible.
+                        </p>
+                    </div>
+                    <ImgExperience />
+                </div>
+            </section>
             <div v-for="project in projects" :key="project.slug" class="project">
                 <nuxt-link class="project-link" :to="project.path">
                     <h2 class="project-title">{{ project.title }}</h2>
@@ -350,6 +351,10 @@ section {
     }
 }
 .section-experience {
+    position: sticky;
+    bottom: 0;
+    background: black;
+    color: white;
     ::v-deep svg {
         width: 100%;
         max-width: 520px;

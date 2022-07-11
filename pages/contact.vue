@@ -4,7 +4,7 @@
             <div class="section-wrapper">
                 <div class="form-wrapper">
                     <h1>
-                        Parlez-nous de votre projet, de vos idées! Nous pourrons ensuite planifier une rencontre, pour
+                        Parlez-nous de votre projet, de vos besoins! Nous pourrons ensuite planifier une rencontre, pour
                         en parler plus en détail.
                     </h1>
                     <form>
@@ -14,11 +14,11 @@
                             <input type="text" />
                         </label>
                         <label class="cell-50">
-                            Entreprise (facultaf)
+                            Entreprise (facultatif)
                             <input type="text" />
                         </label>
                         <label class="cell-50">
-                            Telephone
+                            Téléphone
                             <input type="text" />
                         </label>
                         <label class="cell-50">
@@ -37,7 +37,9 @@
                     <h3>Vous êtes pigiste?</h3>
                     <p>Nous faisons affaire avec des collaborateurs pour nous épauler dans nos projets.</p>
                     <!-- TODO: Ajouter email -->
-                    <a href="mailto:" type="button" class="button secondary">Envoi-nous ton portfolio</a>
+                    <a href="mailto:vincent@agencehelium.com" type="button" class="button secondary"
+                        >Envoi-nous ton portfolio</a
+                    >
                 </FloatingBubble>
             </div>
             <img inline class="icon-travaillons-enssemble" src="@/assets/svg/travaillons-enssemble.svg" />
@@ -54,7 +56,7 @@ export default {
 <style lang="scss" scoped>
 .icon-travaillons-enssemble {
     position: absolute;
-    right: calc(625px + 18%);
+    right: calc(625px + 15%);
     top: 140px;
     max-height: 100%;
     pointer-events: none;

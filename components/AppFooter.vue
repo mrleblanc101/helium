@@ -136,6 +136,10 @@ a {
     display: none;
     @media (min-width: 1024px) {
         display: block;
+        ::v-deep .icon-social {
+            width: 42px;
+            height: 42px;
+        }
     }
 }
 .icon-logo {
@@ -176,6 +180,7 @@ a {
         justify-content: center;
         width: 100%;
         justify-content: space-between;
+        padding-left: 20px;
     }
     a {
         color: $color-alto;
