@@ -62,6 +62,11 @@ export default {
     },
 
     build: {
+        vue: {
+            config: {
+                devtools: true,
+            },
+        },
         extend(config) {
             config.module.rules.push({
                 test: /\.vue$/,
