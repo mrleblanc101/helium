@@ -26,14 +26,16 @@
             <div class="section-inner max-width-container">
                 <div class="grid">
                     <template v-for="(item, i) in realisation.gallery">
-                        <div
+                        <button
                             v-for="(src, size, j) in item"
                             :key="`item-${i}-${j}`"
+                            type="button"
                             class="cell"
                             :class="`width-${size.replace('.', '-')}`"
+                            @click="index = i"
                         >
-                            <img :src="src" alt="" @click="index = i" />
-                        </div>
+                            <img :src="src" alt="" />
+                        </button>
                     </template>
                 </div>
             </div>
@@ -107,31 +109,56 @@ section {
         margin: -15px;
     }
     .cell {
+        appearance: none;
+        background: none;
+        border: none;
+        box-shadow: none;
         padding: 5px;
         @media (min-width: 1024px) {
             padding: 15px;
         }
     }
     .width-25 {
-        width: 25%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 25%;
+        }
     }
     .width-27-5 {
-        width: 27.5%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 27.5%;
+        }
     }
     .width-33 {
-        width: 33.33333%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 33.33333%;
+        }
     }
     .width-45 {
-        width: 45%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 45%;
+        }
     }
     .width-50 {
-        width: 50%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 50%;
+        }
     }
     .width-66 {
-        width: 66.66666%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 66.66666%;
+        }
     }
     .width-75 {
-        width: 75%;
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 75%;
+        }
     }
     img {
         display: block;
