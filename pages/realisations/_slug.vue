@@ -11,7 +11,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="section-about">
             <div class="marquee">
                 <client-only>
                     <MarqueeText :duration="30" :repeat="10">
@@ -20,23 +20,25 @@
                 </client-only>
             </div>
             <div class="section-inner max-width-container">
-                <div>
-                    <h2>Entreprise</h2>
-                    {{ realisation.entreprise }}
-                </div>
-                <div>
-                    <h2>Contexte</h2>
-                    {{ realisation.contexte }}
-                </div>
-                <div>
-                    <h2>Objectifs</h2>
-                    <ul>
-                        <li v-for="objectif in realisation.objectifs" :key="objectif">{{ objectif }}</li>
-                    </ul>
+                <div class="about-grid">
+                    <div class="cell">
+                        <h2>Entreprise</h2>
+                        <p>{{ realisation.entreprise }}</p>
+                    </div>
+                    <div class="cell">
+                        <h2>Contexte</h2>
+                        <p>{{ realisation.contexte }}</p>
+                    </div>
+                    <div class="cell">
+                        <h2>Objectifs</h2>
+                        <ul>
+                            <li v-for="objectif in realisation.objectifs" :key="objectif">{{ objectif }}</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <section v-if="realisation.gallery">
+        <section v-if="realisation.gallery" class="section-gallery">
             <client-only>
                 <CoolLightBox
                     :items="gallery"
@@ -49,7 +51,7 @@
                 />
             </client-only>
             <div class="section-inner max-width-container">
-                <div class="grid">
+                <div class="gallery-grid">
                     <template v-for="(item, i) in realisation.gallery">
                         <button
                             v-for="(src, size, j) in item"
@@ -113,38 +115,85 @@ export default {
     min-height: 100vh;
     background-position: center;
     background-size: cover;
+    .section-inner {
+        flex-grow: 1;
+    }
 }
-.section-inner {
-    flex-grow: 1;
+
+.section-about {
+    .section-inner {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 .header-wrapper {
     position: absolute;
     bottom: 95px;
     color: $color-white;
     h1 {
-        font-size: 50px;
+        font-size: 30px;
         margin-bottom: 8px;
         font-weight: 700;
+        @media (min-width: 768px) {
+            font-size: 50px;
+        }
     }
     a {
         display: flex;
         gap: 10px;
         align-items: center;
         color: currentColor;
-        font-size: 30px;
+        font-size: 20px;
+        @media (min-width: 768px) {
+            font-size: 30px;
+        }
     }
 }
 .marquee {
     display: flex;
     white-space: nowrap;
-    font-size: 30px;
-    padding: 50px 0 80px;
+    font-size: 24px;
+    padding: 50px 0 40px;
     color: $color-blue;
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
+        padding: 50px 0 120px;
         font-size: 30px;
     }
 }
-.grid {
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    gap: 40px 5%;
+    h2 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        @media (min-width: 1024px) {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+    }
+    ul {
+        margin: 0;
+        padding-left: 1rem;
+    }
+    p {
+        margin: 0;
+    }
+}
+.section-gallery {
+    .section-inner {
+        padding-top: 60px;
+        padding-bottom: 80px;
+        @media (min-width: 1024px) {
+            padding-top: 120px;
+            padding-bottom: 180px;
+        }
+    }
+}
+.gallery-grid {
     display: flex;
     flex-wrap: wrap;
     margin: -5px;
