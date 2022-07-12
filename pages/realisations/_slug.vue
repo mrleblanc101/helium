@@ -34,7 +34,15 @@
                             :class="`width-${size.replace('.', '-')}`"
                             @click="index = i"
                         >
-                            <img :src="src" alt="" />
+                            <img v-if="!src.startsWith('http')" :src="src" alt="" />
+                            <iframe
+                                v-else
+                                :src="src"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                            ></iframe>
                         </button>
                     </template>
                 </div>
@@ -165,6 +173,15 @@ section {
         height: 100%;
         width: 100%;
         object-fit: cover;
+    }
+    iframe {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        @media (min-width: 768px) {
+            height: 100%;
+            object-fit: cover;
+        }
     }
 }
 </style>
