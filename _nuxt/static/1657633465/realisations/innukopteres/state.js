@@ -1,0 +1,1 @@
+window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fhelium\u002F_nuxt\u002Fstatic\u002F1657633465",layout:"default",error:a,serverRendered:true,routePath:"\u002Frealisations\u002Finnukopteres",config:{_app:{basePath:"\u002Fhelium\u002F",assetsPath:"\u002Fhelium\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"d6ef12fe"}}}}(null));
