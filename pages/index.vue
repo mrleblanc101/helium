@@ -25,7 +25,7 @@
                 </h1>
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="40" :repeat="10">
+                        <MarqueeText :duration="30" :repeat="10">
                             Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
                         </MarqueeText>
                     </client-only>

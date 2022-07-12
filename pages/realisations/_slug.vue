@@ -1,6 +1,6 @@
 <template>
     <div>
-        <section :style="{ backgroundImage: `url(${realisation.banner})` }">
+        <section class="section-hero" :style="{ backgroundImage: `url(${realisation.banner})` }">
             <div class="section-inner max-width-container">
                 <div class="header-wrapper">
                     <h1>{{ realisation.title }}</h1>
@@ -8,6 +8,31 @@
                         <img inline src="@/assets/svg/arrow-left.svg" height="18" />
                         Réalisations
                     </nuxt-link>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="marquee">
+                <client-only>
+                    <MarqueeText :duration="30" :repeat="10">
+                        <span v-for="tag in realisation.tags" :key="tag"> {{ tag }}&nbsp;•&nbsp;</span>
+                    </MarqueeText>
+                </client-only>
+            </div>
+            <div class="section-inner max-width-container">
+                <div>
+                    <h2>Entreprise</h2>
+                    {{ realisation.entreprise }}
+                </div>
+                <div>
+                    <h2>Contexte</h2>
+                    {{ realisation.contexte }}
+                </div>
+                <div>
+                    <h2>Objectifs</h2>
+                    <ul>
+                        <li v-for="objectif in realisation.objectifs" :key="objectif">{{ objectif }}</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -81,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
+.section-hero {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -106,6 +131,16 @@ section {
         gap: 10px;
         align-items: center;
         color: currentColor;
+        font-size: 30px;
+    }
+}
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    font-size: 30px;
+    padding: 50px 0 80px;
+    color: $color-blue;
+    @media (min-width: 768px) {
         font-size: 30px;
     }
 }
