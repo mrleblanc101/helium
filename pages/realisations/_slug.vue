@@ -12,6 +12,17 @@
             </div>
         </section>
         <section v-if="realisation.gallery">
+            <client-only>
+                <CoolLightBox
+                    :items="gallery"
+                    :index="index"
+                    :slideshow="false"
+                    :gallery="false"
+                    :close-on-click-outside-mobile="true"
+                    thumbs-position="bottom"
+                    @close="index = null"
+                />
+            </client-only>
             <div class="section-inner max-width-container">
                 <div class="grid">
                     <template v-for="(item, i) in realisation.gallery">
@@ -21,7 +32,7 @@
                             class="cell"
                             :class="`width-${size.replace('.', '-')}`"
                         >
-                            <img :src="src" alt="" />
+                            <img :src="src" alt="" @click="index = i" />
                         </div>
                     </template>
                 </div>
@@ -41,6 +52,7 @@ export default {
     },
     data() {
         return {
+            index: null,
             realisation: {},
         };
     },
@@ -49,6 +61,11 @@ export default {
             title: `${this.realisation.title} - Réalisations`,
             // description: this.realisation.context,
         };
+    },
+    computed: {
+        gallery() {
+            return this.realisation.gallery.map((i) => ({ src: Object.values(i)[0] }));
+        },
     },
 };
 </script>
@@ -85,9 +102,15 @@ section {
 .grid {
     display: flex;
     flex-wrap: wrap;
-    margin: -15px;
+    margin: -5px;
+    @media (min-width: 1024px) {
+        margin: -15px;
+    }
     .cell {
-        padding: 15px;
+        padding: 5px;
+        @media (min-width: 1024px) {
+            padding: 15px;
+        }
     }
     .width-25 {
         width: 25%;
