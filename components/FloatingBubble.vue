@@ -1,6 +1,8 @@
 <template>
     <div class="floating-bubble">
-        <slot></slot>
+        <div class="floating-bubble-inner">
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -11,21 +13,34 @@ export default {};
 <style lang="scss" scoped>
 .floating-bubble {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: $color-white;
-    background-color: $color-blue;
-    border-radius: 50%;
+    width: 100%;
     max-width: 486px;
-    padding-bottom: 100%;
-    height: 0;
-    padding: 40px;
-    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.16);
-    @media (min-width: 1024px) {
-        padding: 70px;
+    &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    .floating-bubble-inner {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        color: $color-white;
+        background-color: $color-blue;
+        border-radius: 50%;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.16);
+        @media (min-width: 1024px) {
+            padding: 70px;
+        }
     }
     h2 {
         position: absolute;

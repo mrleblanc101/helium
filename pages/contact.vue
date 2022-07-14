@@ -166,18 +166,17 @@ section {
     }
 }
 form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px 20px;
-    .cell-50 {
-        width: 100%;
-        @media (min-width: 1024px) {
-            flex: 1;
-            width: 50%;
-        }
+    display: grid;
+    grid-template-columns: 1fr;
+    @media (min-width: 1024px) {
+        grid-template-columns: 1fr 1fr;
     }
+    gap: 16px 20px;
     .cell-100 {
-        width: 100%;
+        grid-column: 1 / span 1;
+        @media (min-width: 1024px) {
+            grid-column: 1 / span 2;
+        }
     }
     label {
         display: flex;
@@ -193,7 +192,11 @@ form {
     }
     .button {
         display: block;
+        grid-column: 1 / span 1;
         margin-left: auto;
+        @media (min-width: 1024px) {
+            grid-column: 2 / span 1;
+        }
     }
     .form-error {
         font-size: 14px;
