@@ -261,12 +261,13 @@ export default {
     }
     iframe {
         width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
+        height: 0;
+        padding-bottom: 56.25%;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         @media (min-width: 768px) {
             height: 100%;
             object-fit: cover;
+            padding-bottom: 0;
         }
     }
 }

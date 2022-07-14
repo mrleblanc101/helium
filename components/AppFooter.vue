@@ -95,7 +95,7 @@ a {
     ul {
         margin: -15px 0;
         @media (min-width: 1024px) {
-            margin: -35px 0;
+            margin: -4.5% 0;
         }
     }
     a {

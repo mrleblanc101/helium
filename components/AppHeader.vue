@@ -150,7 +150,6 @@ a {
     }
 }
 .nav-main {
-    gap: 0 25px;
     ul {
         display: flex;
         flex-direction: column;

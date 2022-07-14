@@ -20,7 +20,8 @@ export default {};
     background-color: $color-blue;
     border-radius: 50%;
     max-width: 486px;
-    aspect-ratio: 1 / 1;
+    padding-bottom: 100%;
+    height: 0;
     padding: 40px;
     box-shadow: 0 40px 60px rgba(0, 0, 0, 0.16);
     @media (min-width: 1024px) {
