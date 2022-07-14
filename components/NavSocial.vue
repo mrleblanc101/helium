@@ -50,6 +50,7 @@ a {
     }
 }
 .icon-social {
+    height: 24px;
     width: 24px;
 }
 </style>
