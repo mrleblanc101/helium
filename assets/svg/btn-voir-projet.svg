@@ -15,7 +15,7 @@
                 from { transform: rotate(360deg); }
                 to { transform: rotate(0); }
             }
-</style>
+        </style>
     </defs>
     <g data-name="Groupe 87" fill="#fff">
         <text data-name="→" transform="translate(58.5 121.435)" font-size="90" font-family="PPRadioGrotesk-Light, PP Radio Grotesk" font-weight="300">

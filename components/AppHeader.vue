@@ -233,10 +233,10 @@ a {
     width: 126px;
 }
 .icon-logo-hero {
-    width: 320px;
+    width: 330px;
     position: absolute;
-    left: -58px;
-    top: -74px;
+    left: -75px;
+    top: -100px;
     fill: $color-blue;
     @media (min-width: 1024px) {
         width: 40vw;

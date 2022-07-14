@@ -15,17 +15,14 @@
                 from { transform: rotate(360deg); }
                 to { transform: rotate(0); }
             }
-</style>
-        <clipPath id="clip-path">
-            <rect id="Rectangle_199" data-name="Rectangle 199" width="240.199" height="240.295" fill="#2400ff" />
-        </clipPath>
+        </style>
     </defs>
     <g transform="translate(275.099 5612.147) rotate(180)">
         <text data-name="→" transform="translate(109.472 5529.704)" fill="#2400ff" font-size="120" font-family="PPRadioGrotesk-Light, PP Radio Grotesk" font-weight="300">
             <tspan x="0" y="0">→</tspan>
         </text>
         <g id="Groupe_195" data-name="Groupe 195" transform="translate(275.099 5612.147) rotate(180)">
-            <g class="animating" id="Groupe_193" data-name="Groupe 193" clip-path="url(#clip-path)">
+            <g class="animating" id="Groupe_193" data-name="Groupe 193">
                 <path id="Tracé_739" data-name="Tracé 739" d="M4.435,1C8.945-1.311,13.4.457,16.03,5.6l2.1,4.115,6.536-3.343,2.012,3.934L5.5,21.141,1.385,13.092C-1.246,7.949-.073,3.3,4.435,1m8.205,6.339C11.31,4.732,9.219,3.855,6.587,5.2S3.443,8.756,4.774,11.359l2.105,4.115,7.867-4.024Z" transform="translate(12.126 161.818)" fill="#2400ff" />
                 <path id="Tracé_740" data-name="Tracé 740" d="M3.756,5.492,7.249,17.643l5.814-1.671L10.05,5.487l3.724-1.07L16.787,14.9,22.6,13.231,19.109,1.08,22.866,0l4.7,16.366L4.7,22.937,0,6.572Z" transform="translate(2.614 138.499)" fill="#2400ff" />
                 <path id="Tracé_741" data-name="Tracé 741" d="M22.933,0l.412,4.809L16.336,9.4a7.376,7.376,0,0,1,.109.877l.412,4.809,7.314-.627.377,4.4-23.7,2.03L.055,11.681C-.438,5.925,2.4,2.066,7.449,1.633a7.519,7.519,0,0,1,7.593,3.818ZM4.26,16.166l8.8-.755L12.652,10.6C12.4,7.69,10.8,6.088,7.853,6.34S3.6,8.444,3.847,11.356Z" transform="translate(0.708 118.788)" fill="#2400ff" />
