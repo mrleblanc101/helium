@@ -1,8 +1,10 @@
 <template>
     <div>
-        <div v-show="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
-            <img inline src="@/assets/svg/logo-preload.svg" />
-        </div>
+        <client-only>
+            <div v-show="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
+                <img inline src="@/assets/svg/logo-preload.svg" />
+            </div>
+        </client-only>
         <div class="page-overlay">
             <div class="footer-overlay">
                 <AppHeader />
