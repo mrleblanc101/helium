@@ -254,6 +254,7 @@ export default {
         }
     }
     img {
+        position: relative;
         display: block;
         height: 100%;
         width: 100%;
@@ -275,7 +276,6 @@ export default {
         left: 0;
         width: 100%;
         height: 100%;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         @media (min-width: 768px) {
             position: static;
             height: 100%;
