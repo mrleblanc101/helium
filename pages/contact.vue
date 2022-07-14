@@ -168,10 +168,10 @@ section {
 form {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 16px 20px;
     @media (min-width: 1024px) {
         grid-template-columns: 1fr 1fr;
     }
-    gap: 16px 20px;
     .cell-100 {
         grid-column: 1 / span 1;
         @media (min-width: 1024px) {

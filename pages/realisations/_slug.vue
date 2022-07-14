@@ -163,10 +163,10 @@ export default {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 40px 5%;
     @media (min-width: 1024px) {
         grid-template-columns: repeat(3, 1fr);
     }
-    gap: 40px 5%;
     h2 {
         font-size: 32px;
         margin-bottom: 16px;

@@ -1,5 +1,5 @@
 <template>
-    <header class="header" :class="[{ 'is-open': isOpen }, $route.name]">
+    <header class="header" :class="[$route.name, isOpen ? 'is-open' : '']">
         <div class="header-inner max-width-container">
             <NuxtLink to="/">
                 <template v-if="$route.name === 'expertises' || $route.name === 'expertises-slug'">
@@ -17,28 +17,30 @@
                 <span class="line"></span>
                 <span class="line"></span>
             </button>
-            <div ref="nav" class="nav-wrapper">
-                <nav class="nav-main">
-                    <ul>
-                        <li class="hide-for-large">
-                            <NuxtLink to="/" exact>Accueil</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/expertises">Expertises</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/realisations">Réalisations</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/agence">Agence</NuxtLink>
-                        </li>
-                        <li>
-                            <NuxtLink to="/contact">Contact</NuxtLink>
-                        </li>
-                    </ul>
-                </nav>
-                <NavSocial />
-            </div>
+            <transition :duration="750">
+                <div v-show="isOpen" ref="nav" class="nav-wrapper">
+                    <nav class="nav-main">
+                        <ul>
+                            <li class="hide-for-large">
+                                <NuxtLink to="/" exact>Accueil</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/expertises">Expertises</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/realisations">Réalisations</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/agence">Agence</NuxtLink>
+                            </li>
+                            <li>
+                                <NuxtLink to="/contact">Contact</NuxtLink>
+                            </li>
+                        </ul>
+                    </nav>
+                    <NavSocial />
+                </div>
+            </transition>
         </div>
     </header>
 </template>
@@ -121,14 +123,14 @@ a {
     background-color: $color-blue;
     align-items: center;
     justify-content: center;
-    transition: clip-path 750ms cubic-bezier(0.32, 0, 0.67, 0);
+    clip-path: circle(max(150vh, 150vw) at 100% 0);
     transform: translate3d(0, 0, 0);
-    clip-path: circle(0% at 100% 0);
     padding: 22px;
     @media (max-width: 1023px) {
         color: $color-white;
     }
     @media (min-width: 1024px) {
+        display: flex !important;
         position: static;
         clip-path: none;
         flex-direction: row;
@@ -136,9 +138,6 @@ a {
         padding: 0;
         display: flex;
         align-items: center;
-    }
-    .is-open & {
-        clip-path: circle(max(150vh, 150vw) at 100% 0);
     }
     .icon-logo {
         position: absolute;
@@ -213,7 +212,7 @@ a {
 .nav-social {
     position: absolute;
     bottom: 40px;
-    margin-left: -35px;
+    margin-left: -4.5%;
     @media (min-width: 1024px) {
         margin-left: 40px;
         position: static;
@@ -300,5 +299,13 @@ a {
     @media (min-width: 1024px) {
         display: none;
     }
+}
+.v-enter-active,
+.v-leave-active {
+    transition: clip-path 750ms cubic-bezier(0.32, 0, 0.67, 0);
+}
+.v-enter,
+.v-leave-to {
+    clip-path: circle(0% at 100% 0);
 }
 </style>

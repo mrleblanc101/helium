@@ -279,8 +279,8 @@ section {
 .section-expertises {
     overflow: hidden;
     .expertises {
+        display: inline-flex;
         text-align: center;
-        // start-comment
         gap: 50px;
         justify-content: center;
         @media (max-width: 1023px) {
@@ -292,7 +292,6 @@ section {
         @media (min-width: 1024px) {
             flex-direction: column;
         }
-        // end-comment
         &.desktop-only {
             display: none;
             @media (min-width: 1024px) {
