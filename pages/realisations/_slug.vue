@@ -62,14 +62,15 @@
                             @click="index = i"
                         >
                             <img v-if="!src.startsWith('http')" :src="src" alt="" />
-                            <iframe
-                                v-else
-                                :src="src"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
+                            <div v-else class="responsive-embed widescreen">
+                                <iframe
+                                    :src="src"
+                                    title="YouTube video player"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                ></iframe>
+                            </div>
                         </button>
                     </template>
                 </div>
@@ -259,12 +260,24 @@ export default {
         object-fit: cover;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
     }
-    iframe {
-        width: 100%;
+    .responsive-embed {
+        position: relative;
         height: 0;
         padding-bottom: 56.25%;
+        @media (min-width: 768px) {
+            padding: 0;
+            height: 100%;
+        }
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
         @media (min-width: 768px) {
+            position: static;
             height: 100%;
             object-fit: cover;
             padding-bottom: 0;
