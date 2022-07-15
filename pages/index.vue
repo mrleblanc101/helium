@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section> -->
-        <div class="projects-underlay">
+        <div class="realisations-underlay">
             <section class="section-experience">
                 <div class="section-inner max-width-container">
                     <div>
@@ -103,12 +103,12 @@
                     <ImgExperience />
                 </div>
             </section>
-            <div v-for="project in projects" :key="project.slug" class="project">
-                <nuxt-link class="project-link" :to="project.path">
-                    <h2 class="project-title">{{ project.title }}</h2>
+            <div v-for="realisation in realisations" :key="realisation.slug" class="realisation">
+                <nuxt-link class="realisation-link" :to="realisation.path">
+                    <h2 class="realisation-title">{{ realisation.title }}</h2>
                     <img inline src="@/assets/svg/btn-voir-projet.svg" />
                 </nuxt-link>
-                <img :src="project.banner" width="16" heigh="9" loading="lazy" />
+                <NuxtImg :src="realisation.banner" alt="" :quality="60" format="jpg" />
             </div>
         </div>
     </div>
@@ -123,17 +123,17 @@ export default {
         ImgExperience,
     },
     async asyncData({ $content }) {
-        const projects = await $content('realisations').limit(2).sortBy('order').fetch();
+        const realisations = await $content('realisations').limit(2).sortBy('order').fetch();
         const expertises = await $content('expertises').fetch();
         return {
-            projects,
+            realisations,
             expertises,
         };
     },
     data() {
         return {
             expertises: [],
-            projects: [],
+            realisations: [],
             interval: null,
             currentSlide: 0,
             swiperOptions: {
@@ -405,12 +405,12 @@ section {
         }
     }
 }
-.project {
+.realisation {
     position: sticky;
     bottom: 0;
     min-height: 100vh;
     overflow: hidden;
-    .project-link {
+    .realisation-link {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -439,7 +439,7 @@ section {
             transform: scale(1.02);
         }
     }
-    .project-title {
+    .realisation-title {
         writing-mode: vertical-rl;
         text-orientation: sideways;
         transform: rotate(180deg);
@@ -468,7 +468,7 @@ section {
         $index: $index - 1;
     }
 }
-.projects-underlay {
+.realisations-underlay {
     position: relative;
     > * {
         @include descending-z-index(3);

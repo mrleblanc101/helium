@@ -46,12 +46,16 @@ export default {
 
     buildModules: ['@nuxtjs/style-resources', '@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
 
-    modules: ['@nuxtjs/svg', '@nuxt/content', 'cookie-universal-nuxt', 'vue-toastification/nuxt'],
+    modules: ['@nuxtjs/svg', '@nuxt/content', 'cookie-universal-nuxt', 'vue-toastification/nuxt', '@nuxt/image'],
 
     toast: {
         transition: 'Vue-Toastification__fade',
         timeout: 8000,
         draggable: false,
+    },
+
+    image: {
+        provider: 'static',
     },
 
     content: {},

@@ -1,6 +1,7 @@
 <template>
     <div>
-        <section class="section-hero" :style="{ backgroundImage: `url(${realisation.banner})` }">
+        <section class="section-hero">
+            <NuxtImg :src="realisation.banner" alt="" :quality="60" format="jpg" />
             <div class="section-inner max-width-container">
                 <div class="header-wrapper">
                     <h1>{{ realisation.title }}</h1>
@@ -61,7 +62,7 @@
                             :class="`width-${size.replace('.', '-')}`"
                             @click="index = i"
                         >
-                            <img v-if="!src.startsWith('http')" :src="src" alt="" />
+                            <NuxtImg v-if="!src.startsWith('http')" :src="src" alt="" :quality="60" loading="lazy" />
                             <div v-else class="responsive-embed widescreen">
                                 <iframe
                                     :src="src"
@@ -110,14 +111,26 @@ export default {
 
 <style lang="scss" scoped>
 .section-hero {
+    position: relative;
     display: flex;
     flex-direction: column;
     position: relative;
     min-height: 100vh;
-    background-position: center;
-    background-size: cover;
+    overflow: hidden;
     .section-inner {
         flex-grow: 1;
+    }
+    img {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        min-height: 100%;
+        min-width: 100%;
+        left: 0;
+        right: 0;
+        object-fit: cover;
+        transition: transform 600ms ease;
     }
 }
 

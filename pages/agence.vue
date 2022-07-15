@@ -47,7 +47,7 @@
                     </p>
                 </div>
                 <div>
-                    <img src="@/assets/img/photo-vincent.png" alt="" />
+                    <NuxtImg src="img/photo-vincent.png" alt="" :quality="60" />
                 </div>
             </div>
         </section>

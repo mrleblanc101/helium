@@ -28,7 +28,7 @@
                         </client-only>
                     </nuxt-link>
                     <nuxt-link class="cell" :to="project.path">
-                        <img :src="project.banner" width="16" heigh="9" loading="lazy" />
+                        <NuxtImg :src="project.banner" alt="" :quality="60" format="jpg" />
                     </nuxt-link>
                 </div>
             </section>
