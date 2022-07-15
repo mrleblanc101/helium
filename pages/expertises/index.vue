@@ -63,7 +63,7 @@ export default {
         justify-content: center;
     }
     .section-wrapper {
-        margin: 50vh 0 0;
+        margin: 52vh 0 0;
         width: 100%;
         text-align: center;
         align-self: flex-end;
@@ -76,7 +76,11 @@ export default {
         }
     }
     h1 {
-        font-size: 28px;
+        margin: 0;
+        font-size: 24px;
+        @media (min-width: 1024px) {
+            font-size: 30px;
+        }
     }
 }
 h2 {

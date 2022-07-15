@@ -77,7 +77,7 @@ section {
     justify-content: center;
 }
 h1 {
-    margin: 50vh 0 0;
+    margin: 52vh 0 0;
     font-size: 30px;
     width: 100%;
     text-align: center;

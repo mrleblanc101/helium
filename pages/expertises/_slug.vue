@@ -70,7 +70,7 @@ export default {
         justify-content: center;
     }
     .section-wrapper {
-        margin: 50vh 0 0;
+        margin: 52vh 0 0;
         width: 100%;
         text-align: center;
         align-self: flex-end;
