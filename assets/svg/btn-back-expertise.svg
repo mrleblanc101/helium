@@ -8,6 +8,7 @@
                 transform: scale(1.05);
             }
             .btn-back-expertise .animating {
+                transform-box: fill-box;
                 transform-origin: center;
                 animation: rotate 12s infinite linear;
             }

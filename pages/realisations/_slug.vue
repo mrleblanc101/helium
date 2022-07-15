@@ -259,6 +259,7 @@ export default {
         height: 100%;
         width: 100%;
         object-fit: cover;
+        object-position: top left;
         box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
     }
     .responsive-embed {
