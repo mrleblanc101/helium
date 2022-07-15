@@ -1,7 +1,7 @@
 <template>
     <div>
         <client-only>
-            <div v-show="preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
+            <div v-show="!preloadHasRun" ref="preload" class="preload" @animationend.self="ended">
                 <img inline src="@/assets/svg/logo-preload.svg" />
             </div>
         </client-only>
@@ -30,9 +30,11 @@ export default {
     },
     mounted() {
         this.$nextTick(() => {
-            if (!this.preloadHasRun) {
-                disableBodyScroll(this.$refs.preload);
-            }
+            this.$nextTick(() => {
+                if (!this.preloadHasRun) {
+                    disableBodyScroll(this.$refs.preload);
+                }
+            });
         });
     },
     beforeDestroy() {
