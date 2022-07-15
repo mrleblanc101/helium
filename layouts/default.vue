@@ -92,20 +92,20 @@ export default {
     z-index: 2;
     overflow: clip;
 }
-// @keyframes raise-the-curtain {
-//     from {
-//         max-height: 100vh;
-//     }
-//     to {
-//         max-height: 0;
-//     }
-// }
-// @keyframes fade {
-//     from {
-//         opacity: 1;
-//     }
-//     to {
-//         opacity: 0;
-//     }
-// }
+@keyframes raise-the-curtain {
+    from {
+        max-height: 100vh;
+    }
+    to {
+        max-height: 0;
+    }
+}
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 </style>
