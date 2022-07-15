@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/agence", {data:[{_img:{"/helium/_ipx/q_60/img/photo-vincent.png":"\u002Fhelium\u002F_nuxt\u002Fimage\u002Fbc63d1.png"}}],fetch:{},mutations:void 0});
