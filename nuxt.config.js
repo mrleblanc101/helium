@@ -9,7 +9,7 @@ export default {
 
     head: {
         titleTemplate: (titleChunk) => {
-            return titleChunk ? `${titleChunk} | Agence Hélium` : 'Agence Hélium';
+            return titleChunk ? `${titleChunk} | Agence Hélium` : 'Agence Hélium | Des solutions créatives, pour vous';
         },
         htmlAttrs: {
             lang: 'fr',
@@ -17,7 +17,12 @@ export default {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: '' },
+            {
+                hid: 'description',
+                name: 'description',
+                content:
+                    'Hélium est une agence créative québécoise dédiée au développement des entreprises et des organisations par la stratégie, le design et les communications.',
+            },
             { name: 'format-detection', content: 'telephone=no' },
             { name: 'theme-color', content: '#2400FF' },
             { property: 'og:image', content: '/og-image.png' },
