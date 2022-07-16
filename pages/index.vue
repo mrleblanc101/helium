@@ -71,7 +71,8 @@
             <div class="section-inner max-width-container">
                 <h2>
                     <img inline src="@/assets/svg/logo.svg" width="168px" /> est une agence créative québécoise dédiée
-                    au développement des entreprises ou organisations par la stratégie, le design et les communications.
+                    au développement des entreprises et des organisations par la stratégie, le design et les
+                    communications.
                 </h2>
             </div>
         </section>

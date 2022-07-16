@@ -3,6 +3,10 @@ import svgo from './svgoConfig.js';
 export default {
     target: 'static',
 
+    // router: {
+    //     base: '/helium/',
+    // },
+
     head: {
         titleTemplate: (titleChunk) => {
             return titleChunk ? `${titleChunk} | Agence Hélium` : 'Agence Hélium';
