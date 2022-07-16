@@ -14,7 +14,7 @@
                             :pre-erase-delay="1500"
                             :erase-delay="150"
                         /><br />
-                        à acquérir un avantage concurrentiel<br />
+                        à acquérir un alskjdalks concurrentiel<br />
                         dans le monde de demain.
                         <template #placeholder>
                             Nous aidons les marques<br />
