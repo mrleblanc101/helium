@@ -19,16 +19,16 @@
                 </h1>
             </div>
             <section class="section-inner">
-                <div v-for="(project, index) in projects" :key="project.slug" class="project">
-                    <nuxt-link :to="project.path">
+                <div v-for="(realisation, index) in realisations" :key="realisation.slug" class="realisation">
+                    <nuxt-link :to="realisation.path">
                         <client-only>
                             <MarqueeText :duration="15" :repeat="50" :reverse="!(index % 2)">
-                                {{ project.title }}&nbsp;•&nbsp;
+                                {{ realisation.title }}&nbsp;•&nbsp;
                             </MarqueeText>
                         </client-only>
                     </nuxt-link>
-                    <nuxt-link class="cell" :to="project.path">
-                        <NuxtImg :src="project.banner" alt="" :quality="60" format="jpg" />
+                    <nuxt-link class="cell" :to="realisation.path">
+                        <NuxtImg :src="realisation.banner" alt="" :quality="60" format="jpg" />
                     </nuxt-link>
                 </div>
             </section>
@@ -40,9 +40,9 @@
 export default {
     name: 'RealisationsIndexPage',
     async asyncData({ $content }) {
-        const projects = await $content('realisations').sortBy('order').fetch();
+        const realisations = await $content('realisations').sortBy('order').fetch();
         return {
-            projects,
+            realisations,
         };
     },
     head: {
@@ -80,7 +80,7 @@ h1 {
         }
     }
 }
-.project {
+.realisation {
     display: flex;
     justify-content: flex-start;
     align-items: center;

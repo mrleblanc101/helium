@@ -92,7 +92,6 @@ export default {
     data() {
         return {
             index: null,
-            realisation: {},
         };
     },
     head() {

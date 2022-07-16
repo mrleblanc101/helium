@@ -42,11 +42,6 @@ export default {
             expertises,
         };
     },
-    data() {
-        return {
-            expertises: [],
-        };
-    },
     head: {
         title: 'Expertises',
     },

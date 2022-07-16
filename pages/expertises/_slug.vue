@@ -46,11 +46,6 @@ export default {
             expertise,
         };
     },
-    data() {
-        return {
-            expertise: {},
-        };
-    },
     head() {
         return {
             title: `${this.expertise.title} - Expertises`,

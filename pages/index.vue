@@ -76,7 +76,7 @@
                 </h2>
             </div>
         </section>
-        <!-- <section class="section-projets">
+        <!-- <section class="section-realisations">
             <div class="section-inner">
                 <div class="marquee">
                     <client-only>
@@ -133,8 +133,6 @@ export default {
     },
     data() {
         return {
-            expertises: [],
-            realisations: [],
             interval: null,
             currentSlide: 0,
             swiperOptions: {
@@ -387,7 +385,7 @@ section {
         max-width: 520px;
     }
 }
-.section-projets {
+.section-realisations {
     background-color: $color-white;
     min-height: 0;
     padding: 100px 0;
