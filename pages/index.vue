@@ -123,7 +123,7 @@ export default {
     name: 'HomePage',
     async asyncData({ $content }) {
         const realisations = await $content('realisations').limit(2).sortBy('order').fetch();
-        const expertises = await $content('expertises').fetch();
+        const expertises = await $content('expertises').sortBy('order').fetch();
         return {
             realisations,
             expertises,
