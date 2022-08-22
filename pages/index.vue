@@ -25,7 +25,7 @@
                 </h1>
                 <div class="marquee">
                     <client-only>
-                        <MarqueeText :duration="30" :repeat="10">
+                        <MarqueeText :duration="duration" :repeat="10">
                             Bienvenue dans l’extension de votre équipe&nbsp;•&nbsp;
                         </MarqueeText>
                     </client-only>
@@ -101,7 +101,7 @@
                             concevons des solutions en fonction de votre clientèle cible.
                         </p>
                     </div>
-                    <ImgExperience />
+                    <div id="lottie"></div>
                 </div>
             </section>
             <div v-for="realisation in realisations" :key="realisation.slug" class="realisation">
@@ -116,13 +116,11 @@
 </template>
 
 <script>
-import ImgExperience from '@/assets/svg/img-experience.svg?inline';
+import lottie from 'lottie-web';
+import animationData from '@/assets/data/experience.json';
 
 export default {
     name: 'HomePage',
-    components: {
-        ImgExperience,
-    },
     async asyncData({ $content }) {
         const realisations = await $content('realisations').limit(2).sortBy('order').fetch();
         const expertises = await $content('expertises').fetch();
@@ -133,6 +131,7 @@ export default {
     },
     data() {
         return {
+            duration: 30,
             interval: null,
             currentSlide: 0,
             swiperOptions: {
@@ -153,6 +152,17 @@ export default {
     },
     mounted() {
         this.resetInterval();
+
+        const params = {
+            container: document.getElementById('lottie'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData,
+        };
+        lottie.loadAnimation(params);
+
+        this.duration = window.matchMedia('(min-width: 768px)').matches ? 30 : 15;
     },
     methods: {
         changeSlide(index) {
