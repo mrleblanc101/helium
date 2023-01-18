@@ -36,7 +36,7 @@
                     <img inline class="icon-logo" src="@/assets/svg/logo.svg" />
                 </NuxtLink>
                 <NavSocial />
-                <small>Tous droits réservés. Agence Hélium © 2022</small>
+                <small>Tous droits réservés. Agence Hélium © {{ new Date().getFullYear() }}</small>
             </div>
         </div>
     </footer>

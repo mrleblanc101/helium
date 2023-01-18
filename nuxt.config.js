@@ -5,7 +5,7 @@ export default {
 
     router: {
         base: '/',
-        //     base: '/helium/',
+        // base: '/helium/',
     },
 
     head: {
